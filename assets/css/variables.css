@@ -1,0 +1,40 @@
+/*======================================
+=            Website Variables         =
+======================================*/
+
+:root {
+  /* Primary Color */
+  --primary-color: #d70018;
+  --primary-hover: #b50015;
+
+  /* Secondary */
+  --secondary-color: #ffd54f;
+
+  /* Text */
+  --text-dark: #222;
+  --text-gray: #666;
+  --text-light: #999;
+
+  /* Background */
+  --bg-color: #f5f5f5;
+  --white: #ffffff;
+
+  /* Border */
+  --border-color: #e5e5e5;
+
+  /* Shadow */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  /* Transition */
+  --transition: 0.3s ease;
+
+  /* Header */
+  --header-height: 85px;
+}
