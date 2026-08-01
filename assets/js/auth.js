@@ -98,3 +98,16 @@ function showForgotPanel() {
   registerPanel.classList.remove("active");
   forgotPanel.classList.add("active");
 }
+
+const openLoginMobile = document.getElementById("openLoginMobile");
+const openRegisterMobile = document.getElementById("openRegisterMobile");
+
+openLoginMobile.addEventListener("click", function (e) {
+  e.preventDefault();
+  openLoginModal();
+});
+
+openRegisterMobile.addEventListener("click", function (e) {
+  e.preventDefault();
+  openRegisterModal();
+});

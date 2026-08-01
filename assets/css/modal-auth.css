@@ -464,6 +464,26 @@
 .register-agree a:hover {
   text-decoration: underline;
 }
+/*Moblie Auth*/
+
+.mobile-auth {
+  display: none;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.mobile-auth a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.mobile-auth span {
+  color: #bbb;
+}
 @keyframes fadePanel {
   from {
     opacity: 0;

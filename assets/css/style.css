@@ -191,9 +191,6 @@ HEADER
 
   overflow: hidden;
 }
-.moblie-login {
-  display: none;
-}
 
 .search-box input {
   flex: 1;

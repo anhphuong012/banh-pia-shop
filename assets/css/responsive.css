@@ -116,6 +116,19 @@
   .register-full {
     grid-column: auto !important;
   }
+
+  /*Moblie Auth*/
+  .search-box {
+    width: 400px !important;
+  }
+  .mobile-auth {
+    display: flex !important;
+    margin-right: 2% !important;
+    margin-left: 3% !important;
+  }
+  .mobile-auth span {
+    margin-right: 8% !important;
+  }
 }
 
 /* Mobile */
@@ -300,6 +313,20 @@
 
   .register-full {
     grid-column: auto !important;
+  }
+
+  /*Moblie Auth*/
+
+  .search-box {
+    display: none !important;
+  }
+
+  .mobile-auth {
+    display: flex !important;
+    margin-right: 2% !important;
+  }
+  .mobile-auth span {
+    margin-right: 8% !important;
   }
 }
 
