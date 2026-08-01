@@ -28,44 +28,13 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/modal-auth.css" />
   </head>
 
   <body>
     <header>
       <!-- Top Bar -->
 
-      <!-- <div class="top-bar">
-    
-                <div class="container">
-    
-
-                    <div class="top-left">
-                    
-                        <span>
-                            <i class="bi bi-telephone-fill text-warning"></i>
-                            Hotline: 1900 1234
-                        </span>
-                    
-                        <span>
-                        <i class="bi bi-truck text-warning"></i>
-                            Miễn phí giao hàng từ 500.000đ
-                        </span>
-                    
-                    </div>
-    
-                    <div class="top-right">
-    
-                        <a href="#">Liên hệ</a>
-    
-                        <a href="#">Đăng nhập</a>
-    
-                        <a href="#">Đăng ký</a>
-    
-                    </div>
-    
-                </div>
-    
-            </div> -->
       <!--==================== TOP HEADER ====================-->
 
       <div class="top-bar">
@@ -100,23 +69,24 @@
 
           <div class="top-right">
             <a href="#">
-              <i class="bi bi-facebook"></i>
+              <i class="bi bi-facebook facebook"></i>
             </a>
 
             <a href="#">
-              <i class="bi bi-messenger"></i>
+              <i class="bi bi-messenger facebook"></i>
             </a>
 
-            <a href="#">
+            <a href="#" id="openLogin">
               <strong>Đăng nhập</strong>
             </a>
 
-            <a href="#">
+            <a href="#" id="openRegister">
               <strong>Đăng ký</strong>
             </a>
           </div>
         </div>
       </div>
+
       <!-- Main Header -->
 
       <div class="main-header">
@@ -125,12 +95,23 @@
             <img src="assets/images/logo/logo.png" />
           </a>
 
-          <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm bánh pía..." />
+          <div>
+            <div class="search-box">
+              <input type="text" placeholder="Tìm kiếm bánh pía..." />
 
-            <button>
-              <i class="bi bi-search"></i>
-            </button>
+              <button>
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <div class="moblie-login">
+              <a href="#" id="openLogin">
+                <strong>Đăng nhập</strong>
+              </a>
+
+              <a href="#" id="openRegister">
+                <strong>Đăng ký</strong>
+              </a>
+            </div>
           </div>
 
           <div class="header-action">
@@ -192,6 +173,181 @@
           </div>
         </div>
       </nav>
+
+      <!-- MODAL LOGIN-->
+
+      <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal">
+          <!-- Close -->
+
+          <button class="login-close" id="closeLogin">
+            <i class="bi bi-x-lg"></i>
+          </button>
+
+          <!-- LOGIN PANEL -->
+
+          <div class="auth-panel active" id="loginPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2>Đăng nhập</h2>
+
+              <p>Chào mừng bạn quay trở lại.</p>
+            </div>
+
+            <form class="login-form">
+              <div class="login-group">
+                <label>Email</label>
+
+                <div class="login-input">
+                  <i class="bi bi-envelope"></i>
+
+                  <input type="email" placeholder="Nhập email" />
+                </div>
+              </div>
+
+              <div class="login-group">
+                <label>Mật khẩu</label>
+
+                <div class="login-input">
+                  <i class="bi bi-lock"></i>
+
+                  <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Nhập mật khẩu"
+                  />
+
+                  <button type="button" class="toggle-password">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="login-option">
+                <label>
+                  <input type="checkbox" />
+
+                  Ghi nhớ đăng nhập
+                </label>
+
+                <a href="#" id="forgotBtn"> Quên mật khẩu? </a>
+              </div>
+
+              <button class="login-btn">Đăng nhập</button>
+            </form>
+
+            <div class="login-divider">
+              <span>Hoặc</span>
+            </div>
+
+            <div class="login-social">
+              <button>
+                <i class="bi bi-google"></i>
+
+                Google
+              </button>
+
+              <button>
+                <i class="bi bi-facebook"></i>
+
+                Facebook
+              </button>
+            </div>
+
+            <div class="login-footer">
+              Chưa có tài khoản?
+
+              <a href="#" id="registerBtn"> Đăng ký ngay </a>
+            </div>
+          </div>
+
+          <!-- REGISTER PANEL -->
+
+          <div class="auth-panel" id="registerPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2 style="margin-top: -6%">Đăng ký</h2>
+
+              <p>Tạo tài khoản để mua sắm nhanh hơn.</p>
+            </div>
+
+            <form class="register-form">
+              <div class="register-grid">
+                <div class="register-group">
+                  <label>Họ và tên</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-person"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Email</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Số điện thoại</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-telephone"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+
+                <div class="register-group register-full">
+                  <label>Xác nhận mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- LAW-->
+              <div class="register-agree">
+                <label>
+                  <input type="checkbox" id="agreeTerms" />
+
+                  Tôi đồng ý với
+                  <a href="#">Điều khoản sử dụng</a>
+                  và
+                  <a href="#">Chính sách bảo mật</a>.
+                </label>
+              </div>
+
+              <!-- Nút đăng ký -->
+              <button type="submit" class="register-btn">
+                <i class="bi bi-person-plus"></i>
+                Đăng ký
+              </button>
+            </form>
+
+            <div class="login-footer">
+              Đã có tài khoản?
+
+              <a href="#" id="loginBtnBack"> Đăng nhập </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- ================= HERO ================= -->
@@ -202,7 +358,12 @@
           <!-- Slider -->
 
           <div class="col-lg-8">
-            <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+            <div
+              id="heroSlider"
+              class="carousel slide"
+              data-bs-ride="carousel"
+              data-bs-interval="3000"
+            >
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
@@ -341,200 +502,6 @@
             </div>
           </div>
         </div>
-
-        <!-- <div class="row g-4">
-     
-         <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="product-card">
-              <span class="badge-sale"> -15% </span>
-
-              <button class="wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-
-              <div class="product-image">
-                <img src="assets/images/products/pia1.png" />
-              </div>
-
-              <div class="product-body">
-                <span class="product-category"> Bánh Pía </span>
-
-                <h5>Bánh Pía Kim Sa Trứng Muối</h5>
-
-                <div class="rating">
-                  ★★★★★
-
-                  <span>(4.9)</span>
-                </div>
-
-                <div class="price">
-                  <span class="new-price"> 220.000đ </span>
-
-                  <span class="old-price"> 260.000đ </span>
-                </div>
-
-                <button class="btn-cart">
-                  <i class="bi bi-cart-plus"></i>
-
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="product-card">
-              <span class="badge-sale"> -15% </span>
-
-              <button class="wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-
-              <div class="product-image">
-                <img src="assets/images/products/pia1.png" />
-              </div>
-
-              <div class="product-body">
-                <span class="product-category"> Bánh Pía </span>
-
-                <h5>Bánh Pía Kim Sa Trứng Muối</h5>
-
-                <div class="rating">
-                  ★★★★★
-
-                  <span>(4.9)</span>
-                </div>
-
-                <div class="price">
-                  <span class="new-price"> 220.000đ </span>
-
-                  <span class="old-price"> 260.000đ </span>
-                </div>
-
-                <button class="btn-cart">
-                  <i class="bi bi-cart-plus"></i>
-
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-   
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="product-card">
-              <span class="badge-sale"> -15% </span>
-
-              <button class="wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-
-              <div class="product-image">
-                <img src="assets/images/products/pia1.png" />
-              </div>
-
-              <div class="product-body">
-                <span class="product-category"> Bánh Pía </span>
-
-                <h5>Bánh Pía Kim Sa Trứng Muối</h5>
-
-                <div class="rating">
-                  ★★★★★
-
-                  <span>(4.9)</span>
-                </div>
-
-                <div class="price">
-                  <span class="new-price"> 220.000đ </span>
-
-                  <span class="old-price"> 260.000đ </span>
-                </div>
-
-                <button class="btn-cart">
-                  <i class="bi bi-cart-plus"></i>
-
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-        
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="product-card">
-              <span class="badge-sale"> -15% </span>
-
-              <button class="wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-
-              <div class="product-image">
-                <img src="assets/images/products/pia1.png" />
-              </div>
-
-              <div class="product-body">
-                <span class="product-category"> Bánh Pía </span>
-
-                <h5>Bánh Pía Kim Sa Trứng Muối</h5>
-
-                <div class="rating">
-                  ★★★★★
-
-                  <span>(4.9)</span>
-                </div>
-
-                <div class="price">
-                  <span class="new-price"> 220.000đ </span>
-
-                  <span class="old-price"> 260.000đ </span>
-                </div>
-
-                <button class="btn-cart">
-                  <i class="bi bi-cart-plus"></i>
-
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-
-    
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="product-card">
-              <span class="badge-sale"> -15% </span>
-
-              <button class="wishlist">
-                <i class="bi bi-heart"></i>
-              </button>
-
-              <div class="product-image">
-                <img src="assets/images/products/pia1.png" />
-              </div>
-
-              <div class="product-body">
-                <span class="product-category"> Bánh Pía </span>
-
-                <h5>Bánh Pía Kim Sa Trứng Muối</h5>
-
-                <div class="rating">
-                  ★★★★★
-
-                  <span>(4.9)</span>
-                </div>
-
-                <div class="price">
-                  <span class="new-price"> 220.000đ </span>
-
-                  <span class="old-price"> 260.000đ </span>
-                </div>
-
-                <button class="btn-cart">
-                  <i class="bi bi-cart-plus"></i>
-
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
         <!-- Best seller New-->
         <div class="swiper bestSellerSwiper">
@@ -821,6 +788,8 @@
         </div>
       </div>
     </section>
+
+    <!--NEW ARRIVALL-->
     <section class="new-arrival section-padding">
       <div class="container">
         <div class="section-header">
@@ -989,7 +958,501 @@
         </div>
       </div>
     </section>
+
+    <!--ABOUT SHOP-->
+    <section class="why-us">
+      <div class="container">
+        <div class="section-title text-center">
+          <span>TÂN HUÊ VIÊN</span>
+
+          <h2 class="title-with-lines">
+            Vì sao khách hàng lựa chọn chúng tôi?
+          </h2>
+
+          <p>Mang hương vị bánh Pía Sóc Trăng chính gốc đến mọi gia đình.</p>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="why-card">
+              <div class="icon">
+                <i class="bi bi-patch-check-fill"></i>
+              </div>
+
+              <h4>100% Chính hãng</h4>
+
+              <p>Cam kết sản phẩm từ nhà sản xuất Tân Huê Viên.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="why-card">
+              <div class="icon">
+                <i class="bi bi-truck"></i>
+              </div>
+
+              <h4>Giao hàng toàn quốc</h4>
+
+              <p>Giao nhanh từ 1-3 ngày.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="why-card">
+              <div class="icon">
+                <i class="bi bi-award-fill"></i>
+              </div>
+
+              <h4>Hơn 40 năm</h4>
+
+              <p>Thương hiệu đặc sản Sóc Trăng.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="why-card">
+              <div class="icon">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+
+              <h4>Đổi trả dễ dàng</h4>
+
+              <p>Hỗ trợ đổi sản phẩm lỗi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTER-->
+
+    <section class="counter-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-6">
+            <div class="counter-box">
+              <h2 class="counter" data-target="40">0</h2>
+
+              <p>Năm phát triển</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="counter-box">
+              <h2 class="counter" data-target="500">0</h2>
+
+              <p>Đại lý</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="counter-box">
+              <h2 class="counter" data-target="50000">0</h2>
+
+              <p>Khách hàng</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="counter-box">
+              <h2>4.9★</h2>
+
+              <p>Đánh giá trung bình</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT OF CUSTOMER-->
+
+    <!-- <section class="testimonial section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <span>TÂN HUÊ VIÊN</span>
+
+            <h2 class="title-with-lines">Khách hàng nói gì?</h2>
+
+            <<p>Hơn 50.000 khách hàng đã lựa chọn Bánh Pía Tân Huê Viên. </p> 
+            <div class="review-summary">
+              <div class="summary-score">
+                ★★★★★
+                <span>4.9/5</span>
+              </div>
+
+              <p>
+                Được đánh giá từ
+                <strong>50.000+</strong>
+                khách hàng trên toàn quốc
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper testimonialSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+       
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                  "Bánh rất thơm, nhân nhiều, đóng gói đẹp. Gia đình mình rất
+                  thích."
+                </p>
+
+                <div class="testimonial-user">
+                  <img src="assets/images/avatar/avatar1.png" alt="" />
+
+                  <div>
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!--New ABOUT OF CUSTOMER-->
+    <section class="customer-review">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <span>TÂN HUÊ VIÊN</span>
+
+            <h2 class="title-with-lines">Khách hàng nói gì?</h2>
+
+            <!-- <p>Hơn 50.000 khách hàng đã lựa chọn Bánh Pía Tân Huê Viên. </p>  -->
+            <div class="review-summary">
+              <div class="summary-score">
+                ★★★★★
+                <span>4.9/5</span>
+              </div>
+
+              <p>
+                Được đánh giá từ
+                <strong>50.000+</strong>
+                khách hàng trên toàn quốc
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper reviewSwiper">
+          <div class="swiper-wrapper">
+            <!--Review 1-->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <div class="review-image">
+                  <img src="assets/images/reviews/avatar1.png" />
+                </div>
+
+                <div class="review-content">
+                  <div class="review-stars">★★★★★</div>
+
+                  <p>
+                    "Bánh rất thơm, nhân nhiều, đóng gói cực kỳ đẹp. Gia đình
+                    mình ai cũng thích."
+                  </p>
+
+                  <div class="verified">
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Đã mua hàng
+                  </div>
+
+                  <div class="review-user">
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Review 2-->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <div class="review-image">
+                  <img src="assets/images/review/review1.jpg" />
+                </div>
+
+                <div class="review-content">
+                  <div class="review-stars">★★★★★</div>
+
+                  <p>
+                    "Bánh rất thơm, nhân nhiều, đóng gói cực kỳ đẹp. Gia đình
+                    mình ai cũng thích."
+                  </p>
+
+                  <div class="verified">
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Đã mua hàng
+                  </div>
+
+                  <div class="review-user">
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Review 3-->
+            <div class="swiper-slide">
+              <div class="review-card">
+                <div class="review-image">
+                  <img src="assets/images/review/review1.jpg" />
+                </div>
+
+                <div class="review-content">
+                  <div class="review-stars">★★★★★</div>
+
+                  <p>
+                    "Bánh rất thơm, nhân nhiều, đóng gói cực kỳ đẹp. Gia đình
+                    mình ai cũng thích."
+                  </p>
+
+                  <div class="verified">
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Đã mua hàng
+                  </div>
+
+                  <div class="review-user">
+                    <h5>Nguyễn Minh Anh</h5>
+
+                    <span>TP. Hồ Chí Minh</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="review-platform">
+          <div>
+            <i class="bi bi-google"></i>
+
+            Google <strong>4.9</strong>
+          </div>
+
+          <div>
+            <i class="bi bi-shop"></i>
+
+            Shopee <strong>4.8</strong>
+          </div>
+
+          <div>
+            <i class="bi bi-facebook"></i>
+
+            Facebook <strong>4.9</strong>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- JS -->
+
+    <!-- FOOTER-->
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo -->
+          <div class="footer-col">
+            <img src="assets/images/logo/logo.png" class="footer-logo" />
+
+            <p>
+              Tân Huê Viên - Đặc sản Sóc Trăng với hơn 70 năm gìn giữ hương vị
+              bánh pía truyền thống.
+            </p>
+
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook facebook"></i></a>
+              <a href="#"><i class="bi bi-youtube ytb"></i></a>
+              <a href="#"><i class="bi bi-tiktok tiktok"></i></a>
+              <a href="#"><i class="bi bi-instagram insta"></i></a>
+            </div>
+          </div>
+
+          <!-- Sản phẩm -->
+
+          <div class="footer-col">
+            <h4>Sản phẩm</h4>
+
+            <ul>
+              <li><a href="#">Bánh Pía</a></li>
+
+              <li><a href="#">Bánh Chay</a></li>
+
+              <li><a href="#">Combo Quà Tặng</a></li>
+
+              <li><a href="#">Khuyến mãi</a></li>
+            </ul>
+          </div>
+
+          <!-- Hỗ trợ -->
+
+          <div class="footer-col">
+            <h4>Hỗ trợ</h4>
+
+            <ul>
+              <li><a href="#">Chính sách đổi trả</a></li>
+
+              <li><a href="#">Thanh toán</a></li>
+
+              <li><a href="#">Vận chuyển</a></li>
+
+              <li><a href="#">Điều khoản</a></li>
+            </ul>
+          </div>
+
+          <!-- Liên hệ -->
+
+          <div class="footer-col">
+            <h4>Liên hệ</h4>
+
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+
+                1900 1234
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+
+                info@tanhuevien.vn
+              </li>
+
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                Sóc Trăng
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 Tan Hue Vien. All rights reserved.
+        </div>
+      </div>
+    </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
@@ -1001,5 +1464,6 @@
     <script src="assets/js/cart.js"></script>
 
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/auth.js"></script>
   </body>
 </html>

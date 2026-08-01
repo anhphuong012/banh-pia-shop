@@ -37,6 +37,52 @@ const bestSellerSwiper = new Swiper(".bestSellerSwiper", {
     },
   },
 });
+
+// const testimonialSwiper = new Swiper(".testimonialSwiper", {
+//   slidesPerView: 3,
+
+//   spaceBetween: 25,
+
+//   loop: true,
+
+//   autoplay: {
+//     delay: 3500,
+//   },
+
+//   navigation: {
+//     nextEl: ".testimonial .swiper-button-next",
+
+//     prevEl: ".testimonial .swiper-button-prev",
+//   },
+
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     },
+
+//     768: {
+//       slidesPerView: 2,
+//     },
+
+//     1200: {
+//       slidesPerView: 3,
+//     },
+//   },
+// });
+
+const reviewSwiper = new Swiper(".reviewSwiper", {
+  loop: true,
+
+  autoplay: {
+    delay: 5000,
+  },
+
+  pagination: {
+    el: ".reviewSwiper .swiper-pagination",
+
+    clickable: true,
+  },
+});
 class Slider {
   constructor() {}
 }

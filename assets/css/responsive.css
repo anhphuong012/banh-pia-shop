@@ -51,11 +51,256 @@
   .arrival-feature {
     flex-direction: column;
   }
+  .review-card {
+    flex-direction: column;
+  }
+
+  .review-image {
+    width: 100%;
+
+    flex: none;
+
+    height: 300px;
+  }
+  /*Footer*/
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+  .footer-about {
+    grid-column: span 1;
+  }
+
+  /*MODAL LOGIN*/
+  .login-modal {
+    max-width: 480px !important;
+    padding: 24px !important;
+  }
+
+  .login-header img {
+    width: 52px !important;
+  }
+
+  .login-header h2 {
+    font-size: 26px !important;
+    margin-top: -3px !important;
+  }
+  .login-header p {
+    font-size: 14px !important ;
+  }
+
+  .login-group label {
+    font-size: 15px !important;
+  }
+  .login-input {
+    height: 50px !important;
+    font-size: 15px !important;
+  }
+  .login-btn {
+    height: 50px !important;
+  }
+  .login-social {
+    height: 50px !important;
+  }
+  .login-footer {
+    margin-top: 25px !important;
+  }
+
+  /*Register*/
+  .register-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .register-full {
+    grid-column: auto !important;
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
+  /* Reponsive for Reivew*/
+
+  .customer-review {
+    padding: 70px 0;
+  }
+
+  .review-title h2 {
+    font-size: 36px;
+  }
+
+  .review-title p {
+    font-size: 16px;
+  }
+
+  .review-card {
+    border-radius: 20px;
+  }
+
+  .review-image {
+    height: 240px;
+  }
+
+  .review-content {
+    padding: 25px;
+  }
+
+  .review-stars {
+    font-size: 24px;
+  }
+
+  .review-content p {
+    font-size: 18px;
+
+    line-height: 1.7;
+  }
+
+  .review-user h5 {
+    font-size: 22px;
+  }
+
+  /*Review flat*/
+  .review-platform {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .review-platform div {
+    width: 260px;
+
+    justify-content: center;
+  }
+  /*Footer*/
+  /* .footer-top {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  } */
+
+  /* MODAL LOGIN*/
+  .login-modal-overlay {
+    padding: 18px;
+
+    align-items: center;
+  }
+
+  .login-modal {
+    width: 85% !important;
+
+    max-width: 450px !important;
+
+    /* max-height: 91vh !important; */
+
+    overflow-y: auto !important;
+
+    border-radius: 20px !important;
+
+    padding: 15px 20px !important;
+  }
+
+  .login-close {
+    width: 38px !important  ;
+
+    height: 38px !important;
+
+    top: 8px !important;
+
+    right: 16px !important;
+  }
+
+  .login-header {
+    margin-bottom: 15px !important;
+  }
+
+  .login-header img {
+    width: 48px !important;
+
+    margin-bottom: 10px;
+  }
+
+  .login-header h2 {
+    font-size: 24px !important;
+    margin-top: -3px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .login-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .login-group {
+    margin-bottom: 16px;
+  }
+
+  .login-group label {
+    font-size: 14px;
+  }
+
+  .login-input {
+    height: 46px !important;
+  }
+
+  .login-input input {
+    font-size: 15px !important;
+  }
+
+  .login-option {
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    font-size: 14px !important;
+
+    margin-bottom: 17px !important;
+  }
+
+  .login-btn {
+    height: 48px !important;
+
+    font-size: 16px !important;
+  }
+
+  .login-divider {
+    margin: 10px 0;
+  }
+
+  .login-social {
+    display: grid !important;
+
+    gap: 12px !important;
+  }
+
+  .login-social button {
+    height: 46px !important;
+
+    font-size: 15px !important;
+  }
+  .login-footer {
+    margin-top: 25px !important;
+  }
+  /*Reigster Modal*/
+  .register-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .register-full {
+    grid-column: auto !important;
+  }
 }
 
 /* Small Mobile */
@@ -81,5 +326,132 @@
   }
   .arrival-list {
     grid-template-columns: 1fr;
+  }
+
+  /*Counter*/
+  .counter-box h2 {
+    font-size: 40px;
+  }
+  /*Reponsive for Reivew*/
+
+  .review-title h2 {
+    font-size: 30px;
+  }
+
+  .overall-rating {
+    font-size: 24px;
+  }
+
+  .review-image {
+    height: 210px;
+  }
+
+  .review-content {
+    padding: 20px;
+  }
+
+  .review-content p {
+    font-size: 16px;
+  }
+
+  .review-user {
+    display: flex;
+
+    align-items: center;
+  }
+
+  .review-user img {
+    width: 55px;
+
+    height: 55px;
+  }
+
+  .review-user h5 {
+    font-size: 18px;
+  }
+
+  .review-user span {
+    font-size: 14px;
+  }
+
+  /*MODAL LOGIN*/
+
+  .login-modal-overlay {
+    padding: 16px !important;
+  }
+
+  .login-modal {
+    width: 100% !important;
+
+    max-width: 360px !important;
+    /* max-height: 86vh; */
+
+    padding: 22px !important;
+
+    border-radius: 18px !important;
+  }
+
+  .login-header {
+    margin-bottom: 10px !important;
+  }
+
+  .login-header img {
+    width: 40px !important;
+  }
+
+  .login-header h2 {
+    font-size: 24px !important;
+  }
+
+  .login-header p {
+    font-size: 12px !important;
+  }
+
+  .login-input {
+    height: 44px !important;
+  }
+
+  .login-btn {
+    height: 44px !important;
+
+    font-size: 15px !important;
+  }
+
+  .login-social {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .login-social button {
+    font-size: 13px !important;
+    height: 43px !important;
+  }
+
+  .login-option {
+    /* flex-direction: column !important; */
+
+    align-items: flex-start !important;
+
+    gap: 10px !important;
+    margin-bottom: 15px !important;
+  }
+  .login-option .login-group label {
+    font-size: 13px;
+  }
+  .login-option label,
+  a {
+    font-size: 13px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+
+    opacity: 1;
   }
 }
