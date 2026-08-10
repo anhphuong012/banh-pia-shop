@@ -3257,7 +3257,7 @@
 
   .customer-commitment__content h2 {
     font-size: 42px;
-    letter-spacing: -2px;
+    /* letter-spacing: -2px; */
   }
 
   .customer-commitment__description {
@@ -3493,8 +3493,8 @@
 
   .customer-commitment__content h2 {
     font-size: 36px;
-    /* line-height: 1.06;
-    letter-spacing: -1.5px; */
+    /* line-height: 1.06;*/
+    letter-spacing: 0px;
   }
 
   .customer-commitment__line {
@@ -4108,7 +4108,7 @@
   .brand-values-new__header h2 {
     font-size: 40px;
 
-    letter-spacing: -2px;
+    letter-spacing: 0px;
   }
 
   .brand-value-new {
@@ -4150,7 +4150,7 @@
 
     line-height: 1.25;
 
-    letter-spacing: -1.8px;
+    /* letter-spacing: -1.8px; */
   }
 
   .brand-values-new__header p {
@@ -4218,8 +4218,8 @@
 
   .brand-values-new__header h2 {
     font-size: 36px;
-
-    letter-spacing: -1.3px;
+    /* 
+    letter-spacing: -1.3px; */
   }
 
   .brand-values-new__header p {
@@ -4333,7 +4333,7 @@
 
     line-height: 1.08;
 
-    letter-spacing: -1px;
+    /* letter-spacing: -1px; */
   }
 
   .brand-values-new__header h2 strong {
