@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/page-loader.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/nouislider.min.css" />
@@ -40,6 +41,20 @@
 
   <body>
     <header>
+      <!--Page load-->
+      <div id="page-loader">
+        <div class="page-loader__content">
+          <div class="page-loader__logo">
+            <img src="assets/images/logo/logo.png" alt="Tân Huê Viên" />
+          </div>
+
+          <div class="page-loader__line">
+            <span></span>
+          </div>
+
+          <p class="page-loader__text">Đang chuẩn bị hương vị...</p>
+        </div>
+      </div>
       <!-- Top Bar -->
 
       <!--==================== TOP HEADER ====================-->
@@ -1112,6 +1127,7 @@ SHOP PAGE
       </div>
     </footer>
 
+    <script src="assets/js/page-loader.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
 

@@ -1,0 +1,203 @@
+/* =========================================
+   GLOBAL PAGE LOADER
+========================================= */
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 238, 234, 0.96),
+    #fffdfb 68%
+  );
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+/* LOADED */
+
+#page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* =========================================
+   LOADER CONTENT
+========================================= */
+
+.page-loader__content {
+  width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.page-loader__logo {
+  width: 145px;
+
+  margin-bottom: 28px;
+
+  animation: pageLoaderLogo 1.8s ease-in-out infinite;
+}
+
+.page-loader__logo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================================
+   LOADING LINE
+========================================= */
+
+.page-loader__line {
+  position: relative;
+
+  width: 150px;
+  height: 3px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: #f1d8d3;
+}
+
+.page-loader__line span {
+  position: absolute;
+
+  top: 0;
+  left: -40%;
+
+  width: 40%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #df2728;
+
+  animation: pageLoaderLine 1.2s ease-in-out infinite;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.page-loader__text {
+  margin: 17px 0 0;
+
+  color: #8a7773;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes pageLoaderLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+@keyframes pageLoaderLine {
+  0% {
+    left: -40%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* =========================================
+   WEBSITE CONTENT
+========================================= */
+
+#website-content {
+  opacity: 0;
+
+  transition: opacity 0.7s ease;
+}
+
+body.page-ready #website-content {
+  opacity: 1;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .page-loader__content {
+    width: 220px;
+  }
+
+  .page-loader__logo {
+    width: 125px;
+    margin-bottom: 24px;
+  }
+
+  .page-loader__line {
+    width: 130px;
+  }
+
+  .page-loader__text {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-loader__content {
+    width: 190px;
+  }
+
+  .page-loader__logo {
+    width: 110px;
+    margin-bottom: 22px;
+  }
+
+  .page-loader__line {
+    width: 115px;
+  }
+
+  .page-loader__text {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}

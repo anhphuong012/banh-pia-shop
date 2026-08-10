@@ -1514,3 +1514,8 @@ body.cart-open .cart-action.is-floating {
   cursor: default;
   pointer-events: none;
 }
+@media (max-width: 992px) {
+  .navbar .nav-link.active {
+    border-radius: none;
+  }
+}
