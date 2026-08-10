@@ -2013,3 +2013,101 @@
     left: 100%;
   }
 }
+
+/* =========================================================
+   RESPONSIVE - ORDER SUCCESS
+========================================================= */
+
+@media (max-width: 768px) {
+  .order-success-modal {
+    max-width: 390px;
+
+    padding: 34px 28px 30px;
+
+    border-radius: 18px;
+  }
+
+  .order-success-icon {
+    width: 62px;
+    height: 62px;
+
+    font-size: 27px;
+  }
+
+  .order-success-modal h2 {
+    font-size: 23px;
+  }
+
+  .order-success-message {
+    font-size: 10px;
+  }
+
+  .order-success-code {
+    padding: 13px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-success-overlay {
+    padding: 14px;
+  }
+
+  .order-success-modal {
+    width: 100%;
+
+    max-width: 350px;
+
+    padding: 28px 20px 24px;
+
+    border-radius: 16px;
+  }
+
+  .order-success-icon {
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: 18px;
+
+    font-size: 24px;
+  }
+
+  .order-success-label {
+    font-size: 7px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .order-success-modal h2 {
+    font-size: 21px;
+  }
+
+  .order-success-message {
+    margin-top: 11px;
+
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    line-height: 1.65;
+  }
+
+  .order-success-code {
+    padding: 12px 14px;
+  }
+
+  .order-success-code span {
+    font-size: 6.5px;
+  }
+
+  .order-success-code strong {
+    font-size: 11px;
+
+    word-break: break-word;
+  }
+
+  .order-success-loading {
+    margin-top: 18px;
+
+    font-size: 7.5px;
+  }
+}
