@@ -21,6 +21,7 @@ const backLoginBtn = document.getElementById("loginBtnBack");
 ============================ */
 
 function showLoginPanel() {
+  console.log("Mo panel");
   registerPanel.classList.remove("active");
   loginPanel.classList.add("active");
 }

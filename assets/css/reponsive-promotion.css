@@ -1,0 +1,823 @@
+@media (max-width: 1200px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .promotion-badge {
+    margin-bottom: 28px;
+  }
+  .section-tag {
+    font-size: 18px !important;
+    /* margin-bottom: 12px; */
+  }
+}
+/* =======================
+   TABLET
+======================= */
+
+@media (max-width: 992px) {
+  .promotion-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    padding: 60px 45px;
+
+    text-align: center;
+
+    border-radius: 32px;
+  }
+
+  .promotion-left {
+    order: 2;
+    align-items: center;
+  }
+
+  .promotion-right {
+    order: 1;
+
+    min-height: 320px;
+  }
+
+  .promotion-left h1 {
+    font-size: 54px;
+    line-height: 1.1;
+  }
+
+  .promotion-left p {
+    max-width: 620px;
+    margin: auto;
+  }
+
+  .promotion-highlight {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .promotion-buttons {
+    justify-content: center;
+  }
+
+  .promotion-main-image {
+    max-width: 430px;
+  }
+
+  /*Featured*/
+
+  .promotion-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+  }
+
+  .promo-large {
+    grid-row: auto;
+
+    height: 320px;
+  }
+
+  .promo-card {
+    height: 260px;
+  }
+  /*Promotion Large*/
+
+  .promo-content {
+    left: 35px;
+
+    max-width: 360px;
+  }
+
+  .promo-content h3 {
+    font-size: 34px;
+  }
+
+  /*Promotion card rigth*/
+  .promo-section-grid,
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .promo-card.small-card {
+    min-height: auto !important;
+    padding: 16px 20px !important;
+  }
+
+  /* Tăng nhẹ cỡ chữ để dễ đọc trên tablet */
+  .promo-card.small-card h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .promo-desc,
+  .benefit-item {
+    font-size: 0.85rem !important;
+  }
+  /*Large */
+
+  .promo-large {
+    min-height: 480px;
+
+    border-radius: 24px;
+  }
+
+  .promo-image {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .promo-content {
+    padding: 32px;
+  }
+
+  .promo-content h3 {
+    font-size: 29px !important;
+
+    line-height: 1.25;
+  }
+
+  .promo-content p {
+    font-size: 16px;
+
+    width: 90%;
+  }
+
+  .promo-btn {
+    padding: 14px 26px;
+  }
+
+  /*All Gift*/
+
+  .promotion-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*Step*/
+
+  /*Sterm*/
+  .terms-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /*CTA*/
+
+  .promotion-cta-wrapper {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 50px 35px;
+  }
+
+  .cta-content p {
+    margin: auto;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .cta-image {
+    margin-top: 20px;
+  }
+
+  .section-tag {
+    font-size: 16px !important;
+  }
+
+  /*Promotion higlight*/
+  .promotion-header h2 {
+    font-size: 32px;
+  }
+  .promotion-filter {
+    margin-top: 50px;
+  }
+
+  /* .wrap .section-tag {
+    font-size: 15px;
+  } */
+}
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width: 768px) {
+  .promotion-page {
+    padding: 20px 0 40px;
+  }
+
+  .promotion-hero {
+    padding: 30px 22px;
+
+    border-radius: 28px;
+
+    gap: 28px;
+
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #c8102e, #df2039, #d91f32);
+  }
+
+  .promotion-page .container {
+    padding-left: 14px;
+
+    padding-right: 14px;
+  }
+
+  .promotion-right {
+    min-height: auto;
+  }
+
+  .promotion-main-image {
+    width: 100%;
+
+    max-width: 280px;
+
+    margin: auto;
+
+    display: block;
+  }
+
+  .promotion-left {
+    text-align: center;
+  }
+
+  .promotion-left h1 {
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin: 18px 0;
+  }
+
+  .promotion-left p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+  }
+
+  .promotion-highlight {
+    justify-content: center;
+
+    gap: 10px;
+  }
+
+  .highlight-item {
+    padding: 10px 16px;
+
+    font-size: 14px;
+  }
+
+  .promotion-buttons {
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .btn-promotion,
+  .btn-outline-promotion {
+    width: 100%;
+  }
+
+  /*badge*/
+  .badge-new {
+    top: 40%;
+  }
+
+  /*Reponsive for large*/
+  .promo-large {
+    min-height: 420px;
+
+    border-radius: 20px;
+  }
+
+  .promo-content {
+    padding: 26px;
+  }
+
+  .promo-tag {
+    font-size: 13px;
+
+    padding: 7px 14px;
+  }
+
+  .promo-content h3 {
+    font-size: 28px;
+
+    line-height: 1.3;
+  }
+
+  .promo-content p {
+    font-size: 15px;
+
+    width: 100%;
+  }
+
+  .promo-time {
+    font-size: 14px;
+  }
+
+  .promo-countdown {
+    /* margin-top: 12px; */
+    flex: 1;
+
+    font-size: 12px;
+
+    padding: 7px 14px;
+  }
+
+  .promo-btn {
+    width: 100%;
+
+    justify-content: center;
+
+    /* margin-top: 18px; */
+    flex: 1;
+  }
+
+  /*All Gift*/
+
+  /* .promotion-list {
+    padding: 70px 0;
+  } */
+
+  .promotion-section-header h2 {
+    font-size: 34px;
+  }
+
+  .promotion-list-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .promotion-item {
+    min-height: auto;
+
+    padding: 24px;
+  }
+
+  .promotion-item h3 {
+    font-size: 24px;
+  }
+
+  .promotion-item-icon {
+    width: 64px;
+
+    height: 64px;
+
+    font-size: 28px;
+  }
+
+  /*Step*/
+  /* 
+  promotion-benefits {
+    padding: 70px 0;
+  } */
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .benefit-card {
+    padding: 35px 25px;
+  }
+
+  .benefit-icon {
+    width: 80px;
+
+    height: 80px;
+
+    font-size: 34px;
+  }
+
+  .benefit-card h3 {
+    font-size: 22px;
+  }
+
+  .benefit-card::after {
+    font-size: 60px;
+  }
+
+  /*Sterm*/
+  /* .promotion-terms {
+    padding: 70px 0;
+  } */
+
+  .term-item {
+    padding: 22px;
+  }
+
+  .term-icon {
+    width: 58px;
+
+    height: 58px;
+
+    font-size: 24px;
+  }
+
+  .term-content h4 {
+    font-size: 20px;
+  }
+
+  .term-content p {
+    font-size: 15px;
+  }
+
+  /*FAQ*/
+
+  .faq-question {
+    font-size: 16px;
+
+    padding: 20px;
+  }
+
+  .faq-answer {
+    font-size: 15px;
+  }
+
+  /*promotion title*/
+  /* .wrap-content-gift {
+    flex-direction: column;
+  } */
+  .section-tag {
+    font-size: 14px !important;
+  }
+
+  .promotion-header h2 {
+    font-size: 27px;
+  }
+  .promo-view-all {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  .section-tag {
+    font-size: 13px;
+  }
+
+  .promotion-filter {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .promotion-hero {
+    padding: 26px 18px;
+
+    border-radius: 24px;
+  }
+
+  .promotion-badge {
+    font-size: 12px;
+
+    padding: 8px 16px;
+  }
+
+  .promotion-left h1 {
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    margin: 16px 0;
+  }
+
+  .promotion-left p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .promotion-main-image {
+    max-width: 230px;
+  }
+
+  .highlight-item {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .btn-promotion {
+    height: 52px;
+
+    font-size: 16px;
+  }
+
+  .btn-outline-promotion {
+    height: 52px;
+
+    font-size: 16px;
+  }
+
+  .badge-new {
+    top: 82%;
+    right: 19px;
+  }
+  .badge-sale {
+    bottom: -2px;
+    left: 12%;
+  }
+  .badge-hot {
+    top: 35px;
+    left: 15%;
+  }
+
+  /*Futured*/
+
+  .promotion-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .promo-card {
+    height: 220px;
+  }
+
+  /*Promotion large*/
+
+  .promo-large {
+    height: 300px;
+  }
+
+  .promo-content {
+    left: 22px;
+    right: 22px;
+
+    max-width: unset;
+  }
+
+  .promo-content h3 {
+    font-size: 28px;
+  }
+
+  .promo-content p {
+    font-size: 15px;
+  }
+
+  /*Small card*/
+  .small-card {
+    padding: 28px;
+  }
+
+  .small-card h3 {
+    font-size: 24px;
+  }
+
+  .small-icon {
+    width: 60px;
+
+    height: 60px;
+  }
+
+  .small-icon i {
+    font-size: 28px;
+  }
+
+  /*Promotion Card Rigth*/
+  .promo-card.small-card {
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Rút gọn bớt icon cho gọn gàng */
+  .small-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1rem !important;
+  }
+
+  .promo-status {
+    font-size: 0.65rem !important;
+    padding: 2px 8px !important;
+  }
+
+  .promo-type {
+    font-size: 0.6rem !important;
+  }
+
+  .promo-card.small-card h3 {
+    font-size: 16px !important;
+  }
+
+  .promo-desc {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .benefit-item {
+    font-size: 12px !important;
+  }
+
+  .promo-footer {
+    padding-top: 8px !important;
+  }
+
+  .promo-date,
+  .promo-btn {
+    font-size: 0.75rem !important;
+  }
+
+  .promo-large {
+    min-height: 380px;
+
+    border-radius: 18px;
+  }
+
+  .promo-content {
+    padding: 20px;
+  }
+
+  .promo-ribbon {
+    top: 18px;
+
+    right: -65px;
+
+    width: 170px;
+
+    font-size: 12px;
+
+    padding: 8px 0;
+  }
+
+  .promo-tag {
+    font-size: 12px;
+
+    padding: 6px 12px;
+  }
+
+  .promo-content h3 {
+    font-size: 22px;
+
+    line-height: 1.35;
+
+    margin: 12px 0;
+  }
+
+  .promo-content p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .promo-time {
+    font-size: 13px;
+
+    margin-top: 12px;
+  }
+
+  .promo-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 16px;
+
+    justify-content: center;
+
+    font-size: 15px;
+  }
+
+  .promo-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 18px;
+  }
+
+  .promo-countdown {
+    flex: 1;
+
+    justify-content: center;
+
+    padding: 10px 12px;
+
+    font-size: 9px;
+    margin-top: 0px;
+  }
+
+  .promo-btn {
+    flex: 1;
+
+    width: auto;
+
+    margin-top: 0;
+
+    padding: 10px 14px;
+
+    font-size: 14px;
+  }
+
+  .promo-btn span {
+    display: none;
+  }
+
+  /*CTA*/
+
+  .promotion-cta {
+    padding: 70px 0;
+  }
+
+  .promotion-cta-wrapper {
+    padding: 40px 22px;
+
+    border-radius: 28px;
+  }
+
+  .cta-content h2 {
+    font-size: 26px;
+  }
+
+  .cta-content p {
+    font-size: 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-cta-main,
+  .btn-cta-outline {
+    justify-content: center;
+  }
+
+  .promo-benefits {
+    gap: 8px !important;
+  }
+
+  .section-tag {
+    font-size: 13px !important;
+    gap: 8px !important;
+  }
+  /*Promotion title*/
+
+  .wrap-content-gift {
+    margin-top: 5px;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .promotion-header h2 {
+    font-size: 25px;
+  }
+
+  .promo-view-all {
+    margin-top: 5px;
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  /*Section deferent*/
+  .promotion-section-header h2 {
+    font-size: 25px;
+  }
+
+  .promotion-section-header p {
+    font-size: 14px;
+  }
+
+  .promotion-filter button {
+    font-size: 14px;
+  }
+
+  .promotion-item h3 {
+    font-size: 22px;
+  }
+
+  .promotion-item p {
+    font-size: 14px;
+  }
+  .benefit-card p {
+    font-size: 14px;
+  }
+  .promotion-filter {
+    margin-top: 20px;
+  }
+  .benefits-grid {
+    margin-top: 20px;
+  }
+
+  .terms-wrapper {
+    margin-top: 30px;
+  }
+  .cta-content h2 {
+    font-size: 22px;
+  }
+  .cta-content p {
+    font-size: 14px;
+  }
+  .cta-badge {
+    font-size: 15px;
+  }
+}

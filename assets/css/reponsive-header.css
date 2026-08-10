@@ -1,0 +1,246 @@
+/*=====================================
+TABLET
+=====================================*/
+
+@media (max-width: 1024px) {
+  .cart-drawer {
+    width: 380px;
+    height: 90vh;
+  }
+
+  .cart-header {
+    padding: 18px;
+    margin-top: 0px !important;
+  }
+
+  .cart-item {
+    gap: 14px;
+
+    padding: 16px;
+  }
+
+  .cart-thumb {
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 16px;
+  }
+
+  .cart-thumb img {
+    width: 60px;
+  }
+
+  .cart-content h4 {
+    font-size: 17px;
+  }
+
+  .cart-content p {
+    font-size: 13px;
+  }
+
+  .cart-quantity {
+    gap: 8px;
+  }
+
+  .cart-quantity button {
+    width: 32px;
+
+    height: 32px;
+  }
+
+  .cart-remove {
+    width: 38px;
+
+    height: 38px;
+  }
+
+  /*Toaat css*/
+
+  .toast-container {
+    top: 18px;
+
+    right: 18px;
+  }
+
+  .toast {
+    width: 340px;
+  }
+}
+/*=====================================
+MOBILE
+=====================================*/
+
+/*=====================================
+MOBILE
+=====================================*/
+
+@media (max-width: 768px) {
+  .cart-drawer {
+    width: 360px;
+
+    max-width: 100%;
+
+    right: -360px;
+  }
+
+  .cart-quantity button {
+    width: 30px;
+    height: 30px;
+  }
+  .cart-header {
+    padding: 16px;
+    margin-top: 0px !important;
+  }
+
+  .cart-body {
+    padding: 16px;
+  }
+
+  .cart-footer {
+    padding: 16px;
+  }
+
+  /*Toast css*/
+  .toast-container {
+    width: 300px;
+    top: 16px;
+
+    right: 16px;
+
+    left: 5%;
+
+    align-items: center;
+  }
+
+  .toast {
+    width: 100%;
+
+    max-width: 420px;
+
+    padding: 16px;
+  }
+
+  .toast-icon {
+    width: 44px;
+
+    height: 44px;
+  }
+
+  .toast-icon i {
+    font-size: 22px;
+  }
+
+  .toast-title {
+    font-size: 15px;
+  }
+
+  .toast-message {
+    font-size: 13px;
+  }
+}
+@media (max-width: 576px) {
+  .cart-drawer {
+    width: 100vw;
+    height: 90%;
+    max-width: 100vw;
+
+    right: -100vw;
+
+    border-radius: 0;
+  }
+  .cart-action .action-badge {
+    right: -8px !important;
+  }
+  .cart-item {
+    padding: 14px;
+
+    gap: 12px;
+  }
+
+  .cart-thumb {
+    width: 72px;
+
+    height: 72px;
+  }
+
+  .cart-thumb img {
+    width: 60px;
+  }
+
+  .cart-content h4 {
+    font-size: 16px;
+  }
+
+  .cart-price {
+    font-size: 15px;
+  }
+  .cart-icon {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  .cart-icon i {
+    font-size: 18px;
+  }
+
+  .cart-header h2 {
+    font-size: 20px;
+  }
+  .cart-header {
+    padding: 10px !important;
+  }
+  .cart-count {
+    font-size: 12px;
+  }
+  .quick-view-shop {
+    font-size: 10px !important;
+  }
+  /*Toast*/
+  .toast-container {
+    bottom: 12px !important;
+
+    left: 12px !important;
+
+    right: 12px !important;
+    top: 10%;
+    width: 280px !important;
+  }
+
+  .toast {
+    width: 100%;
+    max-width: none;
+    min-width: unset;
+
+    padding: 14px;
+
+    gap: 12px;
+
+    border-radius: 18px;
+  }
+
+  .toast-icon {
+    width: 40px;
+
+    height: 40px;
+  }
+
+  .toast-icon i {
+    font-size: 20px;
+  }
+
+  .toast-title {
+    font-size: 14px;
+  }
+
+  .toast-message {
+    font-size: 12px;
+
+    line-height: 1.4;
+  }
+
+  .toast-progress {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,68 @@
+/*=====================================
+PAGINATION
+=====================================*/
+
+.shop-pagination {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 60px;
+}
+.page-btn,
+.page-number {
+  width: 46px;
+
+  height: 46px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+.page-btn:hover,
+.page-number:hover {
+  transform: translateY(-3px);
+
+  background: #fff3f3;
+
+  color: var(--primary-color);
+}
+.page-btn:hover,
+.page-number:hover {
+  transform: translateY(-3px);
+
+  background: #fff3f3;
+
+  color: var(--primary-color);
+}
+.page-btn i {
+  font-size: 16px;
+}
+.page-btn:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+.page-number.active {
+  background: var(--primary-color);
+
+  color: #fff;
+
+  box-shadow: 0 12px 28px rgba(215, 0, 24, 0.25);
+}

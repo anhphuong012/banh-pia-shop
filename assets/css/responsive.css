@@ -48,9 +48,6 @@
     grid-template-columns: 1fr;
   }
 
-  .arrival-feature {
-    flex-direction: column;
-  }
   .review-card {
     flex-direction: column;
   }
@@ -76,6 +73,7 @@
   .login-modal {
     max-width: 480px !important;
     padding: 24px !important;
+    overflow-y: auto !important;
   }
 
   .login-header img {
@@ -211,7 +209,7 @@
 
     max-width: 450px !important;
 
-    /* max-height: 91vh !important; */
+    max-height: 91vh !important;
 
     overflow-y: auto !important;
 
@@ -328,6 +326,8 @@
   .mobile-auth span {
     margin-right: 8% !important;
   }
+
+  /*Index*/
 }
 
 /* Small Mobile */
@@ -341,13 +341,33 @@
     height: 220px;
   }
 
+  .section-title {
+    margin-bottom: 40px;
+  }
+
   .section-title h2 {
-    font-size: 32px;
+    font-size: 26px;
+  }
+  .section-title span {
+    font-size: 16px;
+    letter-spacing: 0px;
   }
 
   .category-big h3 {
-    font-size: 30px;
+    font-size: 26px;
   }
+
+  .category-big p {
+    font-size: 17px;
+  }
+  .category-item:not(.category-big) h3 {
+    font-size: 26px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
   .section-header .sub-section-seller {
     display: block;
   }
@@ -355,6 +375,38 @@
     grid-template-columns: 1fr;
   }
 
+  .arrival-content h3 {
+    font-size: 26px;
+  }
+  .arrival-content p {
+    font-size: 15px;
+  }
+
+  .new-arrival {
+    padding: 50px 0;
+  }
+
+  .why-card .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .section-title p {
+    font-size: 15px;
+  }
+
+  .review-stars {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .review-header .category {
+    font-size: 11px;
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+  .verified {
+    margin-top: 25px;
+  }
   /*Counter*/
   .counter-box h2 {
     font-size: 40px;
@@ -385,6 +437,7 @@
     display: flex;
 
     align-items: center;
+    justify-content: space-between;
   }
 
   .review-user img {
@@ -394,7 +447,7 @@
   }
 
   .review-user h5 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .review-user span {
@@ -411,11 +464,12 @@
     width: 100% !important;
 
     max-width: 360px !important;
-    /* max-height: 86vh; */
+    max-height: 86vh;
 
     padding: 22px !important;
 
     border-radius: 18px !important;
+    overflow-y: auto !important;
   }
 
   .login-header {
@@ -467,6 +521,14 @@
   a {
     font-size: 13px;
   }
+
+  .footer-social {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  /* .footer-logo {
+    width: 80px;
+  } */
 }
 
 @keyframes slideUp {

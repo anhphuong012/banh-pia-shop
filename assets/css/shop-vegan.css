@@ -1,0 +1,60 @@
+.shop-hero-content {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../images/products/banner-vegan.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.shop-subtitle {
+  margin-bottom: 18px !important;
+}
+
+.banner-features {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 24px;
+
+  flex-wrap: wrap;
+}
+
+.banner-features span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 999px;
+
+  color: #fff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+}
+
+.banner-features span:hover {
+  background: rgba(255, 255, 255, 0.2);
+
+  transform: translateY(-2px);
+}
+
+.banner-features i {
+  color: #ffe082;
+
+  font-size: 15px;
+}

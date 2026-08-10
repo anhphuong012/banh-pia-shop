@@ -1,0 +1,1522 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bánh pía Tân Huê Viên</title>
+
+    <link rel="SHORTCUT ICON" href="assets/images/logo/logo.png" />
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/instructions.css" />
+
+    <link rel="stylesheet" href="assets/css/variables.css" />
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/reponsive-instructions.css" />
+
+    <link rel="stylesheet" href="assets/css/reponsive-header.css" />
+    <link rel="stylesheet" href="assets/css/pagingion.css" />
+
+    <link rel="stylesheet" href="assets/css/modal-auth.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Top Bar -->
+
+      <!--==================== TOP HEADER ====================-->
+
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-left">
+            <div class="top-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Hotline: <strong>1900 1234</strong></span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-truck"></i>
+              <span>Miễn phí giao hàng từ <strong>500.000đ</strong></span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>Chính hãng 100%</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <strong><span>Sóc Trăng</span></strong>
+            </div>
+          </div>
+
+          <div class="top-right">
+            <a href="#">
+              <i class="bi bi-facebook facebook"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-messenger facebook"></i>
+            </a>
+
+            <a href="#" id="openLogin">
+              <strong>Đăng nhập</strong>
+            </a>
+
+            <a href="#" id="openRegister">
+              <strong>Đăng ký</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Header -->
+
+      <div class="main-header">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="assets/images/logo/logo.png" />
+          </a>
+
+          <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm bánh pía..." />
+
+            <button>
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+
+          <!-- Mobile -->
+          <div class="mobile-auth">
+            <a href="#" id="openLoginMobile">Đăng nhập</a>
+
+            <span>|</span>
+
+            <a href="#" id="openRegisterMobile">Đăng ký</a>
+          </div>
+
+          <div class="header-action">
+            <a href="#" class="action-item">
+              <i class="bi bi-heart"></i>
+
+              <small>Yêu thích</small>
+            </a>
+
+            <button class="action-item cart-action">
+              <i class="bi bi-cart3"></i>
+
+              <span class="action-badge">0</span>
+
+              <small>Giỏ hàng</small>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <i class="bi bi-list text-white fs-3"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Bánh Pía</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="shop-vegan.html">Bánh chay</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="instructions.html"
+                  >HDSD và Bảo quản</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about-new.html">Giới thiệu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MODAL LOGIN-->
+
+      <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal">
+          <!-- Close -->
+
+          <button class="login-close" id="closeLogin">
+            <i class="bi bi-x-lg"></i>
+          </button>
+
+          <!-- LOGIN PANEL -->
+
+          <div class="auth-panel active" id="loginPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2>Đăng nhập</h2>
+
+              <p>Chào mừng bạn quay trở lại.</p>
+            </div>
+
+            <form class="login-form">
+              <div class="login-group">
+                <label>Email</label>
+
+                <div class="login-input">
+                  <i class="bi bi-envelope"></i>
+
+                  <input type="email" placeholder="Nhập email" />
+                </div>
+              </div>
+
+              <div class="login-group">
+                <label>Mật khẩu</label>
+
+                <div class="login-input">
+                  <i class="bi bi-lock"></i>
+
+                  <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Nhập mật khẩu"
+                  />
+
+                  <button type="button" class="toggle-password">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="login-option">
+                <label>
+                  <input type="checkbox" />
+
+                  Ghi nhớ đăng nhập
+                </label>
+
+                <a href="#" id="forgotBtn"> Quên mật khẩu? </a>
+              </div>
+
+              <button class="login-btn">Đăng nhập</button>
+            </form>
+
+            <div class="login-divider">
+              <span>Hoặc</span>
+            </div>
+
+            <div class="login-social">
+              <button>
+                <i class="bi bi-google"></i>
+
+                Google
+              </button>
+
+              <button>
+                <i class="bi bi-facebook"></i>
+
+                Facebook
+              </button>
+            </div>
+
+            <div class="login-footer">
+              Chưa có tài khoản?
+
+              <a href="#" id="registerBtn"> Đăng ký ngay </a>
+            </div>
+          </div>
+
+          <!-- REGISTER PANEL -->
+
+          <div class="auth-panel" id="registerPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2 style="margin-top: -6%">Đăng ký</h2>
+
+              <p>Tạo tài khoản để mua sắm nhanh hơn.</p>
+            </div>
+
+            <form class="register-form">
+              <div class="register-grid">
+                <div class="register-group">
+                  <label>Họ và tên</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-person"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Email</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Số điện thoại</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-telephone"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+
+                <div class="register-group register-full">
+                  <label>Xác nhận mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- LAW-->
+              <div class="register-agree">
+                <label>
+                  <input type="checkbox" id="agreeTerms" />
+
+                  Tôi đồng ý với
+                  <a href="#">Điều khoản sử dụng</a>
+                  và
+                  <a href="#">Chính sách bảo mật</a>.
+                </label>
+              </div>
+
+              <!-- Nút đăng ký -->
+              <button type="submit" class="register-btn">
+                <i class="bi bi-person-plus"></i>
+                Đăng ký
+              </button>
+            </form>
+
+            <div class="login-footer">
+              Đã có tài khoản?
+
+              <a href="#" id="loginBtnBack"> Đăng nhập </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CART DRAWER-->
+
+      <div class="cart-overlay"></div>
+
+      <aside class="cart-drawer">
+        <!-- <div class="cart-header">
+          <h2>
+            <i class="bi bi-cart3"></i>
+
+            Giỏ hàng
+          </h2>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div> -->
+        <!-- <div class="cart-header">
+          <div class="cart-header-left">
+            <div class="cart-icon">
+              <i class="bi bi-cart3"></i>
+            </div>
+
+            <div>
+              <h2>Giỏ hàng</h2>
+
+              <span class="cart-count"> 0 sản phẩm </span>
+            </div>
+          </div>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div> -->
+        <div class="cart-header">
+          <div class="cart-header-left">
+            <div class="cart-icon">
+              <i class="bi bi-cart3"></i>
+            </div>
+
+            <div>
+              <h2>Giỏ hàng</h2>
+
+              <p class="cart-count"><span id="cartCount">0</span> sản phẩm</p>
+            </div>
+          </div>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <!--Cart body-->
+        <div class="cart-body">
+          <!-- Item 1 -->
+          <!-- <div class="cart-item">
+            <div class="cart-image">
+              <img src="assets/images/products/pia1.png" alt="" />
+            </div>
+
+            <div class="cart-info">
+              <h4>Bánh Pía Kim Sa</h4>
+
+              <p>Hộp 6 bánh • 480g</p>
+
+              <div class="cart-price">180.000đ</div>
+
+              <div class="cart-quantity">
+                <button class="qty-minus">
+                  <i class="bi bi-dash"></i>
+                </button>
+
+                <span>1</span>
+
+                <button class="qty-plus">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <button class="cart-remove">
+              <i class="bi bi-trash3"></i>
+            </button>
+          </div> -->
+        </div>
+        <!--Cart footer-->
+
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Tạm tính</span>
+
+              <strong id="cartSubtotal"> 180.000đ </strong>
+            </div>
+
+            <!-- <div class="summary-row">
+              <span>Phí vận chuyển</span>
+
+              <span class="free-ship"> Miễn phí </span>
+            </div> -->
+            <div class="shipping-progress">
+              <div class="shipping-text">
+                <i class="bi bi-truck"></i>
+
+                <span id="shippingMessage">
+                  Mua thêm 300.000đ để được miễn phí vận chuyển
+                </span>
+              </div>
+
+              <div class="shipping-bar">
+                <div class="shipping-fill" id="shippingFill"></div>
+              </div>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row total">
+              <span>Tổng cộng</span>
+
+              <strong id="cartTotal"> 180.000đ </strong>
+            </div>
+          </div>
+
+          <div class="cart-actions">
+            <button class="checkout-btn">Thanh toán</button>
+          </div>
+        </div>
+      </aside>
+
+      <!--Toast-->
+
+      <div id="toastContainer" class="toast-container"></div>
+    </header>
+
+    <section class="shop-breadcrumb">
+      <div class="container">
+        <a href="index.html">Trang chủ</a>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>HDSD và bảo quản</span>
+      </div>
+    </section>
+
+    <!--HERO-->
+    <section class="guide-hero">
+      <div class="container">
+        <!-- <svg
+          class="guide-wave"
+          viewBox="0 0 1200 600"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,220
+        C240,120
+        450,360
+        700,220
+
+        C920,110
+        1050,260
+        1200,180
+
+        L1200,600
+        L0,600
+        Z"
+          ></path>
+        </svg> -->
+
+        <div class="guide-decoration decoration-1"></div>
+
+        <div class="guide-decoration decoration-2"></div>
+
+        <div class="guide-decoration decoration-3"></div>
+
+        <div class="guide-blur blur-left"></div>
+
+        <div class="guide-blur blur-right"></div>
+
+        <div class="guide-dots"></div>
+
+        <div class="sparkle sparkle-1">
+          <i class="bi bi-stars"></i>
+        </div>
+
+        <div class="sparkle sparkle-2">
+          <i class="bi bi-stars"></i>
+        </div>
+
+        <div class="sparkle sparkle-3">
+          <i class="bi bi-stars"></i>
+        </div>
+        <div class="guide-wrapper">
+          <!-- LEFT -->
+
+          <div class="guide-left">
+            <div class="guide-badge">
+              <i class="bi bi-book-fill"></i>
+
+              <span>HƯỚNG DẪN</span>
+            </div>
+
+            <h1>
+              Hướng dẫn sử dụng
+              <br />
+
+              & bảo quản
+
+              <span>bánh pía</span>
+            </h1>
+
+            <div class="guide-title-line"></div>
+
+            <p>
+              Giữ trọn hương vị truyền thống của bánh pía Tân Huê Viên với những
+              hướng dẫn sử dụng và bảo quản đúng cách.
+            </p>
+
+            <div class="guide-features">
+              <div class="guide-feature">
+                <div class="feature-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+
+                <div>
+                  <h4>75 ngày</h4>
+
+                  <span>Hạn sử dụng</span>
+                </div>
+              </div>
+
+              <div class="guide-feature">
+                <div class="feature-icon">
+                  <i class="bi bi-thermometer-half"></i>
+                </div>
+
+                <div>
+                  <h4>15°C - 30°C</h4>
+
+                  <span>Nhiệt độ lý tưởng</span>
+                </div>
+              </div>
+
+              <div class="guide-feature">
+                <div class="feature-icon">
+                  <i class="bi bi-snow"></i>
+                </div>
+
+                <div>
+                  <h4>Dễ bảo quản</h4>
+
+                  <span>Trong mọi điều kiện</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- <button class="guide-btn">
+              <span>Xem hướng dẫn</span>
+
+              <div class="guide-btn-icon">
+                <i class="bi bi-arrow-down"></i>
+              </div>
+            </button> -->
+
+            <div class="wrap-btn-guide">
+              <button class="guide-btn">Xem hướng dẫn</button>
+              <button class="guide-btn">
+                <i class="bi bi-arrow-down"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="guide-right">
+            <div class="guide-bg-circle"></div>
+
+            <div class="guide-ring guide-ring-1"></div>
+
+            <div class="guide-ring guide-ring-2"></div>
+
+            <div class="guide-ring guide-ring-3"></div>
+
+            <div class="guide-particles">
+              <span class="particle p1"></span>
+              <span class="particle p2"></span>
+              <span class="particle p3"></span>
+              <span class="particle p4"></span>
+              <span class="particle p5"></span>
+              <span class="particle p6"></span>
+            </div>
+
+            <div class="guide-leaf leaf1">🍃</div>
+
+            <div class="guide-leaf leaf2">🍃</div>
+
+            <div class="guide-soft-blur blur1"></div>
+
+            <div class="guide-soft-blur blur2"></div>
+            <div class="guide-arc"></div>
+
+            <img
+              src="assets/images/banners/instructions.png"
+              class="guide-image"
+              alt="Guide Hero"
+            />
+
+            <div class="guide-floating floating-top">
+              <i class="bi bi-award"></i>
+
+              <div>
+                <strong>75 ngày</strong>
+
+                <span>Hạn sử dụng</span>
+              </div>
+            </div>
+
+            <div class="guide-floating floating-right">
+              <i class="bi bi-thermometer-half"></i>
+
+              <div>
+                <strong>15°C - 30°C</strong>
+
+                <span>Nhiệt độ lý tưởng</span>
+              </div>
+            </div>
+
+            <div class="guide-floating floating-bottom">
+              <i class="bi bi-snow"></i>
+
+              <div>
+                <strong>Dễ bảo quản</strong>
+
+                <span>Trong mọi điều kiện</span>
+              </div>
+            </div>
+
+            <div class="guide-leaf leaf-1"></div>
+            <div class="guide-leaf leaf-2"></div>
+
+            <div class="guide-petal petal-1"></div>
+            <div class="guide-petal petal-2"></div>
+
+            <div class="guide-sparkle sparkle-1"></div>
+            <div class="guide-sparkle sparkle-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-principles">
+      <div class="container">
+        <div class="section-title">
+          <span>NGUYÊN TẮC BẢO QUẢN</span>
+
+          <h2>3 nguyên tắc vàng</h2>
+
+          <p>
+            Chỉ cần ghi nhớ ba nguyên tắc dưới đây để bánh luôn giữ được hương
+            vị thơm ngon như lúc mới sản xuất.
+          </p>
+        </div>
+
+        <div class="principle-grid">
+          <!-- Card 1 -->
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+
+            <h3>Nhiệt độ phù hợp</h3>
+
+            <p>
+              Bảo quản bánh ở nơi khô ráo, thoáng mát từ
+              <strong>15°C – 30°C.</strong>
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="bi bi-brightness-high"></i>
+            </div>
+
+            <h3>Tránh ánh nắng</h3>
+
+            <p>Không đặt bánh dưới ánh nắng trực tiếp hoặc gần nguồn nhiệt.</p>
+          </div>
+
+          <!-- Card 3 -->
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="bi bi-snow"></i>
+            </div>
+
+            <h3>Ngăn mát</h3>
+
+            <p>
+              Nếu chưa sử dụng ngay, hãy bảo quản trong ngăn mát để kéo dài thời
+              gian sử dụng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-storage">
+      <div class="container">
+        <div class="storage-header">
+          <span>HƯỚNG DẪN CHI TIẾT</span>
+
+          <h2>
+            Bảo quản đúng cách,
+            <br />
+            giữ trọn vị ngon
+          </h2>
+
+          <p>
+            Tùy vào thời gian sử dụng, bạn có thể lựa chọn phương pháp bảo quản
+            phù hợp để bánh luôn giữ được độ thơm ngon và chất lượng tốt nhất.
+          </p>
+        </div>
+
+        <div class="storage-content">
+          <div class="storage-visual">
+            <div class="storage-glow"></div>
+
+            <div class="storage-circle"></div>
+
+            <img
+              src="assets/images/banners/storage-guide.png"
+              alt="Hướng dẫn bảo quản bánh pía"
+              class="storage-image"
+            />
+
+            <div class="storage-badge">
+              <i class="bi bi-shield-check"></i>
+
+              <div>
+                <strong>Bảo quản đúng cách</strong>
+
+                <span>Giữ trọn hương vị</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="storage-info">
+            <!-- 01 -->
+            <article class="storage-item active">
+              <div class="storage-number">01</div>
+
+              <div class="storage-item-content">
+                <div class="storage-icon">
+                  <i class="bi bi-house-heart-fill"></i>
+                </div>
+
+                <div class="storage-text">
+                  <span class="storage-label"> NHIỆT ĐỘ PHÒNG </span>
+
+                  <h3>Bảo quản nơi khô ráo, thoáng mát</h3>
+
+                  <p>
+                    Đặt bánh ở nơi sạch sẽ, khô ráo, tránh ánh nắng trực tiếp và
+                    nguồn nhiệt.
+                  </p>
+
+                  <div class="storage-note">
+                    <i class="bi bi-thermometer-half"></i>
+
+                    <span>
+                      Nhiệt độ lý tưởng:
+                      <strong>15°C – 30°C</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="storage-item">
+              <div class="storage-number">02</div>
+
+              <div class="storage-item-content">
+                <div class="storage-icon">
+                  <i class="bi bi-snow2"></i>
+                </div>
+
+                <div class="storage-text">
+                  <span class="storage-label"> NGĂN MÁT </span>
+
+                  <h3>Bảo quản trong ngăn mát tủ lạnh</h3>
+
+                  <p>
+                    Phù hợp khi chưa có nhu cầu sử dụng bánh trong thời gian
+                    ngắn.
+                  </p>
+
+                  <div class="storage-note">
+                    <i class="bi bi-calendar3"></i>
+
+                    <span>
+                      Thời gian:
+                      <strong>3 – 4 tháng</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="storage-item">
+              <div class="storage-number">03</div>
+
+              <div class="storage-item-content">
+                <div class="storage-icon">
+                  <i class="bi bi-snow"></i>
+                </div>
+
+                <div class="storage-text">
+                  <span class="storage-label"> NGĂN ĐÔNG </span>
+
+                  <h3>Bảo quản trong ngăn đông tủ lạnh</h3>
+
+                  <p>
+                    Lựa chọn phù hợp nếu muốn bảo quản bánh trong thời gian dài
+                    hơn.
+                  </p>
+
+                  <div class="storage-note">
+                    <i class="bi bi-clock-history"></i>
+
+                    <span>
+                      Có thể bảo quản:
+                      <strong>lên đến 1 năm</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Servce-->
+
+    <section class="guide-serving">
+      <div class="container">
+        <!-- HEADER -->
+        <div class="serving-header">
+          <span class="section-eyebrow"> HƯỚNG DẪN THƯỞNG THỨC </span>
+
+          <h2>
+            Thưởng thức theo cách
+            <br />
+            bạn yêu thích
+          </h2>
+
+          <p>
+            Sau khi mở bao bì, bạn có thể thưởng thức bánh ngay hoặc hâm nóng để
+            cảm nhận rõ hơn độ mềm thơm và hương vị đặc trưng của bánh.
+          </p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="serving-layout">
+          <div class="serving-visual">
+            <div class="serving-glow"></div>
+
+            <div class="serving-circle"></div>
+
+            <img
+              src="assets/images/banners/guide.png"
+              alt="Hướng dẫn thưởng thức bánh pía"
+              class="serving-image"
+            />
+
+            <div class="serving-badge">
+              <i class="bi bi-stars"></i>
+
+              <div>
+                <span>GỢI Ý</span>
+
+                <strong> Ngon hơn khi dùng ấm </strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="serving-content">
+            <div class="serving-start">
+              <div class="serving-start-icon">
+                <i class="bi bi-dropbox"></i>
+              </div>
+
+              <div>
+                <span> BƯỚC ĐẦU TIÊN </span>
+
+                <h3>Mở bao bì</h3>
+
+                <p>
+                  Sau khi mở bao bì, bạn có thể lựa chọn một trong hai cách
+                  thưởng thức dưới đây.
+                </p>
+              </div>
+            </div>
+
+            <div class="serving-choices">
+              <article class="serving-choice">
+                <div class="choice-number">01</div>
+
+                <div class="choice-icon">
+                  <i class="bi bi-emoji-heart-eyes-fill"></i>
+                </div>
+
+                <div class="choice-content">
+                  <span> CÁCH 01 </span>
+
+                  <h3>Thưởng thức ngay</h3>
+
+                  <p>
+                    Bạn có thể dùng bánh trực tiếp ngay sau khi mở bao bì để
+                    thưởng thức trọn vẹn hương vị truyền thống.
+                  </p>
+
+                  <div class="choice-check">
+                    <span class="check-icon">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6" />
+                      </svg>
+                    </span>
+
+                    <span> Không cần hâm nóng </span>
+                  </div>
+                </div>
+              </article>
+
+              <div class="serving-or">
+                <span>HOẶC</span>
+              </div>
+
+              <article class="serving-choice featured">
+                <div class="choice-number">02</div>
+
+                <div class="choice-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+
+                    <rect x="6" y="8" width="9" height="8" rx="1" />
+
+                    <circle
+                      cx="18"
+                      cy="9"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    <circle
+                      cx="18"
+                      cy="12"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    <path d="M8 11c1-1 1-2 0-3" />
+                    <path d="M11 13c1-1 1-2 0-3" />
+                  </svg>
+                </div>
+
+                <div class="choice-content">
+                  <span> CÁCH 02 </span>
+
+                  <h3>Hâm nóng bằng lò vi sóng</h3>
+
+                  <p>
+                    Nếu muốn bánh mềm và thơm hơn, bạn có thể hâm nóng bánh bằng
+                    lò vi sóng trước khi dùng.
+                  </p>
+
+                  <div class="heating-spec">
+                    <div>
+                      <i class="bi bi-lightning-charge-fill"></i>
+
+                      <span>Công suất</span>
+
+                      <strong>400W</strong>
+                    </div>
+
+                    <div>
+                      <i class="bi bi-stopwatch-fill"></i>
+
+                      <span>Thời gian</span>
+
+                      <strong>15–20 giây</strong>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="serving-footer-note">
+              <i class="bi bi-info-circle-fill"></i>
+
+              <p>
+                Lựa chọn cách thưởng thức phù hợp với sở thích của bạn để tận
+                hưởng bánh pía theo cách ngon nhất.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <section class="guide-serving" id="guide-serving">
+          <div class="serving-container"> 
+           
+            <div class="serving-visual">
+              <div class="serving-orbit orbit-1"></div>
+              <div class="serving-orbit orbit-2"></div>
+
+              <div class="serving-product-glow"></div>
+
+              <img
+                src="assets/images/banners/storage-guide.png"
+                alt="Bánh pía Tân Huê Viên"
+                class="serving-product"
+              />
+
+
+              <div class="serving-tip">
+                <div class="serving-tip-icon">
+           
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2l1.45 5.55L19 9l-5.55 1.45L12 16l-1.45-5.55L5 9l5.55-1.45L12 2Z"
+                    />
+                    <path
+                      d="m19 14 .7 2.3L22 17l-2.3.7L19 20l-.7-2.3L16 17l2.3-.7L19 14Z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <span>GỢI Ý</span>
+                  <strong>Ngon hơn khi dùng ấm</strong>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="serving-content">
+  
+              <div class="serving-open-card">
+                <div class="serving-open-icon">
+   
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 8.5 12 4l8 4.5v9L12 22l-8-4.5v-9Z" />
+                    <path d="M12 22V13" />
+                    <path d="m4.2 8.5 7.8 4.4 7.8-4.4" />
+                    <path d="M8 6.2 16 11" />
+                    <path d="M12 4v5" />
+                  </svg>
+                </div>
+
+                <div class="serving-open-text">
+                  <span class="serving-label"> BƯỚC ĐẦU TIÊN </span>
+
+                  <h3>Mở bao bì</h3>
+
+                  <p>
+                    Sau khi mở bao bì, bạn có thể lựa chọn một trong hai cách
+                    thưởng thức dưới đây.
+                  </p>
+                </div>
+              </div>
+
+      
+              <article class="serving-choice serving-choice-normal">
+                <div class="choice-number">01</div>
+
+                <div class="choice-icon">
+     
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle
+                      cx="9"
+                      cy="10"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                    <circle
+                      cx="15"
+                      cy="10"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                    <path d="M8 14c1.1 2 2.4 3 4 3s2.9-1 4-3" />
+                  </svg>
+                </div>
+
+                <div class="choice-body">
+                  <span class="choice-label"> CÁCH 01 </span>
+
+                  <h3>Thưởng thức ngay</h3>
+
+                  <p>
+                    Bạn có thể dùng bánh trực tiếp ngay sau khi mở bao bì để
+                    thưởng thức trọn vẹn hương vị truyền thống.
+                  </p>
+
+                  <div class="choice-check">
+                    <span class="check-icon">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6" />
+                      </svg>
+                    </span>
+
+                    <span> Không cần hâm nóng </span>
+                  </div>
+                </div>
+              </article>
+
+   
+              <div class="serving-or">
+                <span>HOẶC</span>
+              </div>
+
+   
+              <article class="serving-choice serving-choice-hot">
+                <div class="choice-number">02</div>
+
+                <div class="choice-icon">
+
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+
+                    <rect x="6" y="8" width="9" height="8" rx="1" />
+
+                    <circle
+                      cx="18"
+                      cy="9"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    <circle
+                      cx="18"
+                      cy="12"
+                      r="1"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    <path d="M8 11c1-1 1-2 0-3" />
+                    <path d="M11 13c1-1 1-2 0-3" />
+                  </svg>
+                </div>
+
+                <div class="choice-body">
+                  <span class="choice-label"> CÁCH 02 </span>
+
+                  <h3>Hâm nóng bằng lò vi sóng</h3>
+
+                  <p>
+                    Nếu muốn bánh mềm và thơm hơn, bạn có thể hâm nóng bánh bằng
+                    lò vi sóng trước khi dùng.
+                  </p>
+
+
+                  <div class="heating-spec">
+
+                    <div class="heating-item">
+                      <div class="heating-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M13 2 5 13h6l-1 9 8-12h-6l1-8Z" />
+                        </svg>
+                      </div>
+
+                      <div>
+                        <span>Công suất</span>
+                        <strong>400W</strong>
+                      </div>
+                    </div>
+
+
+                    <div class="heating-item">
+                      <div class="heating-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <circle cx="12" cy="13" r="7" />
+                          <path d="M12 13V9" />
+                          <path d="M12 13l3 2" />
+                          <path d="M9 3h6" />
+                          <path d="M12 3v3" />
+                        </svg>
+                      </div>
+
+                      <div>
+                        <span>Thời gian</span>
+                        <strong>15–20 giây</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+
+              <div class="serving-final-note">
+                <div class="final-note-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 10v6" />
+                    <circle
+                      cx="12"
+                      cy="7"
+                      r=".7"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </div>
+
+                <p>
+                  Lựa chọn cách thưởng thức phù hợp với sở thích của bạn để tận
+                  hưởng bánh pía theo cách ngon nhất.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section> -->
+      </div>
+    </section>
+
+    <!-- =====================================================
+     SECTION 5 - LƯU Ý SAU KHI MỞ BAO BÌ
+===================================================== -->
+
+    <section class="guide-after-open" id="after-open">
+      <div class="guide-after-open__container">
+        <div class="guide-after-open__hero">
+          <div class="guide-after-open__hero-text">
+            <span class="guide-section-label">
+              <i class="bi bi-shield-check"></i>
+              LƯU Ý QUAN TRỌNG
+            </span>
+
+            <h2>
+              Sau khi mở bao bì,<br />
+              hãy dùng bánh <span>đúng cách</span>
+            </h2>
+
+            <p>
+              Một vài lưu ý nhỏ sẽ giúp bánh pía giữ được hương vị thơm ngon và
+              đảm bảo chất lượng tốt nhất.
+            </p>
+          </div>
+
+          <div class="guide-after-open__visual">
+            <div class="guide-after-open__visual-ring"></div>
+
+            <img
+              src="assets/images/banners/pia-after-open.png"
+              alt="Bánh pía Tân Huê Viên"
+            />
+
+            <span class="guide-sparkle sparkle-1">
+              <i class="bi bi-stars"></i>
+            </span>
+
+            <span class="guide-sparkle sparkle-2">
+              <i class="bi bi-stars"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="guide-after-open__grid">
+          <article class="after-open-card after-open-card--main">
+            <div class="after-open-card__decor"></div>
+
+            <div class="after-open-card__icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+
+            <div class="after-open-card__content">
+              <span class="after-open-card__number"> 01 </span>
+
+              <h3>
+                Sử dụng trong vòng
+                <span>24 giờ</span>
+              </h3>
+
+              <p>
+                Sau khi mở bao bì, nên sử dụng bánh trong vòng 24 giờ để đảm bảo
+                hương vị và chất lượng tốt nhất.
+              </p>
+
+              <div class="after-open-card__badge">
+                <i class="bi bi-check-circle-fill"></i>
+                Khuyến nghị sử dụng sớm
+              </div>
+            </div>
+          </article>
+
+          <article class="after-open-card">
+            <div class="after-open-card__icon">
+              <i class="bi bi-brightness-high"></i>
+            </div>
+
+            <div class="after-open-card__content">
+              <span class="after-open-card__number"> 02 </span>
+
+              <h3>Tránh ánh nắng trực tiếp</h3>
+
+              <p>
+                Không để bánh dưới ánh nắng trực tiếp hoặc tại nơi có nhiệt độ
+                quá cao trong thời gian dài.
+              </p>
+            </div>
+          </article>
+
+          <article class="after-open-card">
+            <div class="after-open-card__icon">
+              <i class="bi bi-thermometer-high"></i>
+            </div>
+
+            <div class="after-open-card__content">
+              <span class="after-open-card__number"> 03 </span>
+
+              <h3>Tránh để lâu nơi quá nóng</h3>
+
+              <p>
+                Nhiệt độ cao có thể ảnh hưởng đến chất lượng bánh, đặc biệt
+                trong quá trình vận chuyển hoặc bảo quản.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="guide-warning">
+          <div class="guide-warning__icon">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+          </div>
+
+          <div class="guide-warning__content">
+            <strong> Kiểm tra bánh trước khi sử dụng </strong>
+
+            <p>
+              Nếu bánh xuất hiện dấu hiệu bất thường như mốc, có mùi lạ hoặc bao
+              bì bị hư hỏng, không nên tiếp tục sử dụng.
+            </p>
+          </div>
+
+          <div class="guide-warning__deco">
+            <i class="bi bi-box-seam"></i>
+            <i class="bi bi-search"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo -->
+          <div class="footer-col">
+            <img src="assets/images/logo/logo.png" class="footer-logo" />
+
+            <p>
+              Tân Huê Viên - Đặc sản Sóc Trăng với hơn 70 năm gìn giữ hương vị
+              bánh pía truyền thống.
+            </p>
+
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook facebook"></i></a>
+              <a href="#"><i class="bi bi-youtube ytb"></i></a>
+              <a href="#"><i class="bi bi-tiktok tiktok"></i></a>
+              <a href="#"><i class="bi bi-instagram insta"></i></a>
+            </div>
+          </div>
+
+          <!-- Sản phẩm -->
+
+          <div class="footer-col">
+            <h4>Sản phẩm</h4>
+
+            <ul>
+              <li><a href="#">Bánh Pía</a></li>
+
+              <li><a href="#">Bánh Chay</a></li>
+
+              <li><a href="#">Combo Quà Tặng</a></li>
+
+              <li><a href="#">Khuyến mãi</a></li>
+            </ul>
+          </div>
+
+          <!-- Hỗ trợ -->
+
+          <div class="footer-col">
+            <h4>Hỗ trợ</h4>
+
+            <ul>
+              <li><a href="#">Chính sách đổi trả</a></li>
+
+              <li><a href="#">Thanh toán</a></li>
+
+              <li><a href="#">Vận chuyển</a></li>
+
+              <li><a href="#">Điều khoản</a></li>
+            </ul>
+          </div>
+
+          <!-- Liên hệ -->
+
+          <div class="footer-col">
+            <h4>Liên hệ</h4>
+
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+
+                1900 1234
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+
+                info@tanhuevien.vn
+              </li>
+
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                Sóc Trăng
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 Tan Hue Vien. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/instructions.js"></script>
+
+    <script src="assets/js/cart.js"></script>
+
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

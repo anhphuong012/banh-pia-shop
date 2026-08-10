@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bánh pía Tân Huê Viên</title>
+
+    <link rel="SHORTCUT ICON" href="assets/images/logo/logo.png" />
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/shop.css" />
+    <link rel="stylesheet" href="assets/css/shop-vegan.css" />
+
+    <link rel="stylesheet" href="assets/css/variables.css" />
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/reponsive-header.css" />
+    <link rel="stylesheet" href="assets/css/pagingion.css" />
+    <link rel="stylesheet" href="assets/css/shop-reponsive.css" />
+
+    <link rel="stylesheet" href="assets/css/modal-auth.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Top Bar -->
+
+      <!--==================== TOP HEADER ====================-->
+
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-left">
+            <div class="top-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Hotline: <strong>1900 1234</strong></span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-truck"></i>
+              <span>Miễn phí giao hàng từ <strong>500.000đ</strong></span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>Chính hãng 100%</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="top-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <strong><span>Sóc Trăng</span></strong>
+            </div>
+          </div>
+
+          <div class="top-right">
+            <a href="#">
+              <i class="bi bi-facebook facebook"></i>
+            </a>
+
+            <a href="#">
+              <i class="bi bi-messenger facebook"></i>
+            </a>
+
+            <a href="#" id="openLogin">
+              <strong>Đăng nhập</strong>
+            </a>
+
+            <a href="#" id="openRegister">
+              <strong>Đăng ký</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Header -->
+
+      <div class="main-header">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="assets/images/logo/logo.png" />
+          </a>
+
+          <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm bánh pía..." />
+
+            <button>
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+
+          <!-- Mobile -->
+          <div class="mobile-auth">
+            <a href="#" id="openLoginMobile">Đăng nhập</a>
+
+            <span>|</span>
+
+            <a href="#" id="openRegisterMobile">Đăng ký</a>
+          </div>
+
+          <div class="header-action">
+            <a href="#" class="action-item">
+              <i class="bi bi-heart"></i>
+
+              <small>Yêu thích</small>
+            </a>
+
+            <button class="action-item cart-action">
+              <i class="bi bi-cart3"></i>
+
+              <span class="action-badge">0</span>
+
+              <small>Giỏ hàng</small>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <i class="bi bi-list text-white fs-3"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Trang chủ</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Bánh Pía</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="shop-vegan.html">Bánh chay</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="promotion.html">Khuyến mãi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="instructions.html"
+                  >HDSD và Bảo quản</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="about-new.html">Giới thiệu</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MODAL LOGIN-->
+
+      <div class="login-modal-overlay" id="loginModal">
+        <div class="login-modal">
+          <!-- Close -->
+
+          <button class="login-close" id="closeLogin">
+            <i class="bi bi-x-lg"></i>
+          </button>
+
+          <!-- LOGIN PANEL -->
+
+          <div class="auth-panel active" id="loginPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2>Đăng nhập</h2>
+
+              <p>Chào mừng bạn quay trở lại.</p>
+            </div>
+
+            <form class="login-form">
+              <div class="login-group">
+                <label>Email</label>
+
+                <div class="login-input">
+                  <i class="bi bi-envelope"></i>
+
+                  <input type="email" placeholder="Nhập email" />
+                </div>
+              </div>
+
+              <div class="login-group">
+                <label>Mật khẩu</label>
+
+                <div class="login-input">
+                  <i class="bi bi-lock"></i>
+
+                  <input
+                    id="loginPassword"
+                    type="password"
+                    placeholder="Nhập mật khẩu"
+                  />
+
+                  <button type="button" class="toggle-password">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="login-option">
+                <label>
+                  <input type="checkbox" />
+
+                  Ghi nhớ đăng nhập
+                </label>
+
+                <a href="#" id="forgotBtn"> Quên mật khẩu? </a>
+              </div>
+
+              <button class="login-btn">Đăng nhập</button>
+            </form>
+
+            <div class="login-divider">
+              <span>Hoặc</span>
+            </div>
+
+            <div class="login-social">
+              <button>
+                <i class="bi bi-google"></i>
+
+                Google
+              </button>
+
+              <button>
+                <i class="bi bi-facebook"></i>
+
+                Facebook
+              </button>
+            </div>
+
+            <div class="login-footer">
+              Chưa có tài khoản?
+
+              <a href="#" id="registerBtn"> Đăng ký ngay </a>
+            </div>
+          </div>
+
+          <!-- REGISTER PANEL -->
+
+          <div class="auth-panel" id="registerPanel">
+            <div class="login-header">
+              <img src="assets/images/logo/logo.png" />
+
+              <h2 style="margin-top: -6%">Đăng ký</h2>
+
+              <p>Tạo tài khoản để mua sắm nhanh hơn.</p>
+            </div>
+
+            <form class="register-form">
+              <div class="register-grid">
+                <div class="register-group">
+                  <label>Họ và tên</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-person"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Email</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Số điện thoại</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-telephone"></i>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="register-group">
+                  <label>Mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+
+                <div class="register-group register-full">
+                  <label>Xác nhận mật khẩu</label>
+
+                  <div class="register-input">
+                    <i class="bi bi-lock-fill"></i>
+                    <input type="password" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- LAW-->
+              <div class="register-agree">
+                <label>
+                  <input type="checkbox" id="agreeTerms" />
+
+                  Tôi đồng ý với
+                  <a href="#">Điều khoản sử dụng</a>
+                  và
+                  <a href="#">Chính sách bảo mật</a>.
+                </label>
+              </div>
+
+              <!-- Nút đăng ký -->
+              <button type="submit" class="register-btn">
+                <i class="bi bi-person-plus"></i>
+                Đăng ký
+              </button>
+            </form>
+
+            <div class="login-footer">
+              Đã có tài khoản?
+
+              <a href="#" id="loginBtnBack"> Đăng nhập </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CART DRAWER-->
+
+      <div class="cart-overlay"></div>
+
+      <aside class="cart-drawer">
+        <!-- <div class="cart-header">
+          <h2>
+            <i class="bi bi-cart3"></i>
+
+            Giỏ hàng
+          </h2>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div> -->
+        <!-- <div class="cart-header">
+          <div class="cart-header-left">
+            <div class="cart-icon">
+              <i class="bi bi-cart3"></i>
+            </div>
+
+            <div>
+              <h2>Giỏ hàng</h2>
+
+              <span class="cart-count"> 0 sản phẩm </span>
+            </div>
+          </div>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div> -->
+        <div class="cart-header">
+          <div class="cart-header-left">
+            <div class="cart-icon">
+              <i class="bi bi-cart3"></i>
+            </div>
+
+            <div>
+              <h2>Giỏ hàng</h2>
+
+              <p class="cart-count"><span id="cartCount">0</span> sản phẩm</p>
+            </div>
+          </div>
+
+          <button class="close-cart">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <!--Cart body-->
+        <div class="cart-body">
+          <!-- Item 1 -->
+          <!-- <div class="cart-item">
+            <div class="cart-image">
+              <img src="assets/images/products/pia1.png" alt="" />
+            </div>
+
+            <div class="cart-info">
+              <h4>Bánh Pía Kim Sa</h4>
+
+              <p>Hộp 6 bánh • 480g</p>
+
+              <div class="cart-price">180.000đ</div>
+
+              <div class="cart-quantity">
+                <button class="qty-minus">
+                  <i class="bi bi-dash"></i>
+                </button>
+
+                <span>1</span>
+
+                <button class="qty-plus">
+                  <i class="bi bi-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <button class="cart-remove">
+              <i class="bi bi-trash3"></i>
+            </button>
+          </div> -->
+        </div>
+        <!--Cart footer-->
+
+        <div class="cart-footer">
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Tạm tính</span>
+
+              <strong id="cartSubtotal"> 180.000đ </strong>
+            </div>
+
+            <!-- <div class="summary-row">
+              <span>Phí vận chuyển</span>
+
+              <span class="free-ship"> Miễn phí </span>
+            </div> -->
+            <div class="shipping-progress">
+              <div class="shipping-text">
+                <i class="bi bi-truck"></i>
+
+                <span id="shippingMessage">
+                  Mua thêm 300.000đ để được miễn phí vận chuyển
+                </span>
+              </div>
+
+              <div class="shipping-bar">
+                <div class="shipping-fill" id="shippingFill"></div>
+              </div>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row total">
+              <span>Tổng cộng</span>
+
+              <strong id="cartTotal"> 180.000đ </strong>
+            </div>
+          </div>
+
+          <div class="cart-actions">
+            <button class="checkout-btn">Thanh toán</button>
+          </div>
+        </div>
+      </aside>
+
+      <!--Toast-->
+
+      <div id="toastContainer" class="toast-container"></div>
+    </header>
+    <!-- ==========================================
+SHOP BREADCRUMB
+========================================== -->
+
+    <section class="shop-breadcrumb">
+      <div class="container">
+        <a href="index.html">Trang chủ</a>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>Bánh Pía Chay</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+SHOP HERO
+========================================== -->
+
+    <section class="shop-hero">
+      <div class="container">
+        <div class="shop-hero-content">
+          <span class="shop-subtitle"> Đặc sản Sóc Trăng </span>
+
+          <h1>Bánh Chay</h1>
+
+          <p>Thanh đạm – Ít đường – Dành cho người ăn chay.</p>
+          <div class="banner-features">
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Nguyên liệu chọn lọc
+            </span>
+
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Hương vị thanh đạm
+            </span>
+
+            <span>
+              <i class="bi bi-check-circle-fill"></i>
+              Đặc sản Sóc Trăng
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP TOOLBAR -->
+
+    <section class="shop-toolbar">
+      <div class="container">
+        <div class="toolbar-left">
+          <p>
+            Hiển thị
+            <strong>1 - 12</strong>
+            trên
+            <strong>58</strong>
+            sản phẩm
+          </p>
+        </div>
+
+        <div class="toolbar-right">
+          <!-- Mobile Filter -->
+
+          <!-- <button class="filter-btn">
+            <i class="bi bi-sliders"></i>
+
+            Bộ lọc
+          </button> -->
+          <div class="shop-mobile-filter">
+            <button type="button" class="filter-btn" id="openFilter">
+              <i class="bi bi-sliders"></i>
+              Bộ lọc
+            </button>
+          </div>
+
+          <!-- Sort -->
+
+          <div class="sort-box">
+            <div class="custom-select" id="sortSelect">
+              <div class="select-selected">
+                <span>Sắp xếp mặc định</span>
+
+                <i class="bi bi-chevron-down"></i>
+              </div>
+
+              <ul class="select-options">
+                <li class="active">Sắp xếp mặc định</li>
+                <li class="">Mới nhất</li>
+
+                <li>Bán chạy</li>
+
+                <li>Giá tăng dần</li>
+
+                <li>Giá giảm dần</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--End sort-->
+        </div>
+      </div>
+    </section>
+
+    <!--End SHOP TOOLBAR-->
+
+    <!-- ==========================================
+SHOP PAGE
+========================================== -->
+
+    <div class="shop-sidebar-overlay" id="shopSidebarOverlay"></div>
+    <section class="shop-page">
+      <div class="container">
+        <div class="shop-layout">
+          <aside class="shop-sidebar" id="shopSidebar">
+            <div class="sidebar-mobile-header">
+              <h2>Bộ lọc</h2>
+
+              <button id="closeSidebar" class="close-sidebar">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+
+            <div class="filter-header">
+              <h2>Bộ lọc</h2>
+
+              <button class="clear-filter">
+                <i class="bi bi-arrow-counterclockwise"></i>Đặt lại
+              </button>
+            </div>
+
+            <div class="filter-item active">
+              <button class="filter-title">
+                <span>Nhân bánh</span>
+
+                <i class="bi bi-chevron-down"></i>
+              </button>
+
+              <div class="filter-body">
+                <label class="custom-check">
+                  <input type="checkbox" />
+
+                  <span></span>
+
+                  Mè đên
+                </label>
+
+                <label class="custom-check">
+                  <input type="checkbox" />
+
+                  <span></span>
+
+                  Đậu xanh
+                </label>
+
+                <label class="custom-check">
+                  <input type="checkbox" />
+                  <span></span>
+                  Hạt sen
+                </label>
+
+                <label class="custom-check">
+                  <input type="checkbox" />
+                  <span></span>
+                  Khoai môn
+                </label>
+              </div>
+            </div>
+
+            <!--New range-->
+            <div class="filter-item active">
+              <button class="filter-title">
+                <span>Khoảng giá</span>
+
+                <i class="bi bi-chevron-up"></i>
+              </button>
+
+              <div class="filter-body">
+                <div id="priceSlider"></div>
+
+                <div class="price-inputs">
+                  <div class="price-group">
+                    <small>Từ</small>
+
+                    <div class="price-tag">
+                      <input id="minPrice" type="text" readonly />
+                    </div>
+                  </div>
+
+                  <div class="price-group">
+                    <small>Đến</small>
+
+                    <div class="price-tag">
+                      <input id="maxPrice" type="text" readonly />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End new range-->
+            <div class="filter-item active">
+              <button class="filter-title">
+                <span>Đánh giá</span>
+
+                <i class="bi bi-chevron-down"></i>
+              </button>
+
+              <div class="filter-body">
+                <label class="rating-item">
+                  <input type="radio" name="rating" />
+
+                  <div class="rating-box">
+                    <div class="stars">★★★★★</div>
+
+                    <span>(125)</span>
+                  </div>
+                </label>
+
+                <label class="rating-item">
+                  <input type="radio" name="rating" />
+
+                  <div class="rating-box">
+                    <div class="stars">★★★★☆</div>
+
+                    <span>Trở lên</span>
+                  </div>
+                </label>
+
+                <label class="rating-item">
+                  <input type="radio" name="rating" />
+
+                  <div class="rating-box">
+                    <div class="stars">★★★☆☆</div>
+
+                    <span>Trở lên</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <button class="filter-apply">
+              <i class="bi bi-funnel-fill"></i>
+              Áp dụng bộ lọc
+            </button>
+          </aside>
+
+          <!--Product-->
+
+          <main class="shop-content">
+            <div class="shop-products" id="shopProducts">
+              <!--Product 1-->
+              <article
+                class="product-card"
+                data-id="1"
+                data-name="Bánh Pía Kim Sa"
+                data-price="180000"
+                data-image="assets/images/products/pia1.png"
+              >
+                <div class="product-image">
+                  <span class="product-badge"> -15% </span>
+
+                  <button class="product-favorite">
+                    <i class="bi bi-heart"></i>
+                  </button>
+
+                  <img
+                    src="assets/images/products/pia1.png"
+                    alt="Bánh Pía Kim Sa"
+                  />
+
+                  <button class="quick-view-shop">
+                    <i class="bi bi-eye"></i>
+
+                    Xem nhanh
+                  </button>
+                </div>
+
+                <div class="product-info">
+                  <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+
+                    <span>(120)</span>
+                  </div>
+
+                  <a href="#">
+                    <h3 class="product-name">
+                      Bánh Pía Kim Sa Đặc biệt thơm ngon, mời bạn ăn nha
+                    </h3></a
+                  >
+
+                  <p class="product-desc">Hộp 6 bánh • 480g</p>
+
+                  <div class="product-price">
+                    <span class="price-current"> 1.800.000đ </span>
+
+                    <span class="price-old"> 220.000đ </span>
+                  </div>
+
+                  <div class="product-saving">Tiết kiệm 40.000đ</div>
+
+                  <div class="product-meta">
+                    <span>
+                      <i class="bi bi-truck"></i>
+                      Miễn phí ship
+                    </span>
+
+                    <span>
+                      <i class="bi bi-fire"></i>
+                      Đã bán 520
+                    </span>
+                  </div>
+
+                  <button class="product-cart">
+                    <i class="bi bi-cart-plus"></i>
+
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </article>
+              <!--Product 2-->
+              <article
+                class="product-card"
+                data-id="2"
+                data-name="Bánh Pía Sầu Riêng"
+                data-price="220000"
+                data-image="assets/images/products/pia1.png"
+              >
+                <div class="product-image">
+                  <!-- Badge giảm giá -->
+                  <span class="product-badge"> -15% </span>
+
+                  <!-- Wishlist -->
+                  <button class="product-favorite">
+                    <i class="bi bi-heart"></i>
+                  </button>
+
+                  <!-- Ảnh -->
+                  <img
+                    src="assets/images/products/pia1.png"
+                    alt="Bánh Pía Kim Sa"
+                  />
+                  <!--Quick view-->
+
+                  <button class="quick-view-shop">
+                    <i class="bi bi-eye"></i>
+
+                    Xem nhanh
+                  </button>
+                </div>
+
+                <div class="product-info">
+                  <!-- Rating -->
+                  <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+
+                    <span>(120)</span>
+                  </div>
+
+                  <!-- Product Name -->
+                  <a href="#">
+                    <h3 class="product-name">Bánh Pía Sầu Riêng</h3></a
+                  >
+
+                  <!-- Description -->
+                  <p class="product-desc">Hộp 6 bánh • 480g</p>
+                  <!-- Product Price -->
+                  <div class="product-price">
+                    <span class="price-current"> 180.000đ </span>
+
+                    <span class="price-old"> 220.000đ </span>
+                  </div>
+
+                  <div class="product-saving">Tiết kiệm 40.000đ</div>
+                  <!-- Product Meta -->
+                  <div class="product-meta">
+                    <span>
+                      <i class="bi bi-truck"></i>
+                      Miễn phí ship
+                    </span>
+
+                    <span>
+                      <i class="bi bi-fire"></i>
+                      Đã bán 520
+                    </span>
+                  </div>
+
+                  <!-- Button -->
+                  <button class="product-cart">
+                    <i class="bi bi-cart-plus"></i>
+
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </article>
+              <!--Product 3-->
+              <article class="product-card">
+                <div class="product-image">
+                  <!-- Badge giảm giá -->
+                  <span class="product-badge"> -15% </span>
+
+                  <!-- Wishlist -->
+                  <button class="product-favorite">
+                    <i class="bi bi-heart"></i>
+                  </button>
+
+                  <!-- Ảnh -->
+                  <img
+                    src="assets/images/products/pia1.png"
+                    alt="Bánh Pía Kim Sa"
+                  />
+                  <!--Quick view-->
+
+                  <button class="quick-view-shop">
+                    <i class="bi bi-eye"></i>
+
+                    Xem nhanh
+                  </button>
+                </div>
+
+                <div class="product-info">
+                  <!-- Rating -->
+                  <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+
+                    <span>(120)</span>
+                  </div>
+
+                  <!-- Product Name -->
+                  <a href="#"> <h3 class="product-name">Bánh Pía Kim Sa</h3></a>
+
+                  <!-- Description -->
+                  <p class="product-desc">Hộp 6 bánh • 480g</p>
+                  <!-- Product Price -->
+                  <div class="product-price">
+                    <span class="price-current"> 180.000đ </span>
+
+                    <span class="price-old"> 220.000đ </span>
+                  </div>
+
+                  <div class="product-saving">Tiết kiệm 40.000đ</div>
+                  <!-- Product Meta -->
+                  <div class="product-meta">
+                    <span>
+                      <i class="bi bi-truck"></i>
+                      Miễn phí ship
+                    </span>
+
+                    <span>
+                      <i class="bi bi-fire"></i>
+                      Đã bán 520
+                    </span>
+                  </div>
+
+                  <!-- Button -->
+                  <button class="product-cart">
+                    <i class="bi bi-cart-plus"></i>
+
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </article>
+              <!--Product 4-->
+              <article class="product-card">
+                <div class="product-image">
+                  <!-- Badge giảm giá -->
+                  <span class="product-badge"> -15% </span>
+
+                  <!-- Wishlist -->
+                  <button class="product-favorite">
+                    <i class="bi bi-heart"></i>
+                  </button>
+
+                  <!-- Ảnh -->
+                  <img
+                    src="assets/images/products/pia1.png"
+                    alt="Bánh Pía Kim Sa"
+                  />
+                  <!--Quick view-->
+
+                  <button class="quick-view-shop">
+                    <i class="bi bi-eye"></i>
+
+                    Xem nhanh
+                  </button>
+                </div>
+
+                <div class="product-info">
+                  <!-- Rating -->
+                  <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+
+                    <span>(120)</span>
+                  </div>
+
+                  <!-- Product Name -->
+                  <a href="#"> <h3 class="product-name">Bánh Pía Kim Sa</h3></a>
+
+                  <!-- Description -->
+                  <p class="product-desc">Hộp 6 bánh • 480g</p>
+                  <!-- Product Price -->
+                  <div class="product-price">
+                    <span class="price-current"> 180.000đ </span>
+
+                    <span class="price-old"> 220.000đ </span>
+                  </div>
+
+                  <div class="product-saving">Tiết kiệm 40.000đ</div>
+                  <!-- Product Meta -->
+                  <div class="product-meta">
+                    <span>
+                      <i class="bi bi-truck"></i>
+                      Miễn phí ship
+                    </span>
+
+                    <span>
+                      <i class="bi bi-fire"></i>
+                      Đã bán 520
+                    </span>
+                  </div>
+
+                  <!-- Button -->
+                  <button class="product-cart">
+                    <i class="bi bi-cart-plus"></i>
+
+                    Thêm vào giỏ
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="shop-pagination">
+              <button class="page-btn prev">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+
+              <button class="page-number active">1</button>
+
+              <button class="page-number">2</button>
+
+              <button class="page-number">3</button>
+
+              <button class="page-number">4</button>
+
+              <button class="page-number">5</button>
+
+              <button class="page-btn next">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </nav>
+          </main>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER-->
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Logo -->
+          <div class="footer-col">
+            <img src="assets/images/logo/logo.png" class="footer-logo" />
+
+            <p>
+              Tân Huê Viên - Đặc sản Sóc Trăng với hơn 70 năm gìn giữ hương vị
+              bánh pía truyền thống.
+            </p>
+
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook facebook"></i></a>
+              <a href="#"><i class="bi bi-youtube ytb"></i></a>
+              <a href="#"><i class="bi bi-tiktok tiktok"></i></a>
+              <a href="#"><i class="bi bi-instagram insta"></i></a>
+            </div>
+          </div>
+
+          <!-- Sản phẩm -->
+
+          <div class="footer-col">
+            <h4>Sản phẩm</h4>
+
+            <ul>
+              <li><a href="#">Bánh Pía</a></li>
+
+              <li><a href="#">Bánh Chay</a></li>
+
+              <li><a href="#">Combo Quà Tặng</a></li>
+
+              <li><a href="#">Khuyến mãi</a></li>
+            </ul>
+          </div>
+
+          <!-- Hỗ trợ -->
+
+          <div class="footer-col">
+            <h4>Hỗ trợ</h4>
+
+            <ul>
+              <li><a href="#">Chính sách đổi trả</a></li>
+
+              <li><a href="#">Thanh toán</a></li>
+
+              <li><a href="#">Vận chuyển</a></li>
+
+              <li><a href="#">Điều khoản</a></li>
+            </ul>
+          </div>
+
+          <!-- Liên hệ -->
+
+          <div class="footer-col">
+            <h4>Liên hệ</h4>
+
+            <ul>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+
+                1900 1234
+              </li>
+
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+
+                info@tanhuevien.vn
+              </li>
+
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+
+                Sóc Trăng
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 Tan Hue Vien. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+
+    <script src="assets/js/shop.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/shop-cart-event.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

@@ -2,6 +2,18 @@
 =            Website Variables         =
 ======================================*/
 
+/*Font*/
+
+@font-face {
+  font-family: "Playfair Display"; /* Đặt tên riêng để không đụng hàng */
+  src: url("../fonts/PlayfairDisplay-Regular.ttf ") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body h1,
+h2 {
+  font-family: "Playfair Displayr", serif;
+}
 :root {
   /* Primary Color */
   --primary-color: #d70018;

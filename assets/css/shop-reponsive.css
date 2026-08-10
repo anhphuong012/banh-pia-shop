@@ -1,0 +1,504 @@
+/*=====================================
+RESPONSIVE TOOLBAR
+=====================================*/
+@media (max-width: 1200px) {
+  .shop-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-info .product-price .price-current {
+    font-size: 23px !important;
+  }
+  .product-info .product-price .price-old {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .shop-toolbar .container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+  /*banner*/
+
+  .shop-hero h1 {
+    font-size: 45px;
+  }
+  .shop-hero p {
+    font-size: 18px;
+  }
+
+  .toolbar-right {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .filter-btn {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  /*Shop layout*/
+
+  .shop-layout {
+    display: block !important;
+  }
+  .shop-products {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /*Slider bar draw*/
+  .shop-sidebar {
+    position: fixed;
+
+    top: 0;
+
+    left: -110%;
+
+    width: 330px;
+
+    max-width: 90%;
+
+    height: 100vh;
+
+    background: #fff;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+
+    padding: 28px;
+
+    transition: 0.35s ease;
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.18);
+    border-radius: 0px !important;
+  }
+  .shop-sidebar.show {
+    left: 0;
+  }
+
+  /*Product Info*/
+  .product-info .product-name {
+    font-size: 22px !important;
+    margin-bottom: 7px !important;
+  }
+  .product-info .product-desc {
+    font-size: 15px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .product-info .product-price {
+    margin-top: 18px !important;
+  }
+
+  .product-info .product-price .price-current {
+    font-size: 23px !important;
+  }
+
+  .product-info .product-price .price-old {
+    font-size: 13px !important;
+  }
+
+  .product-meta {
+    margin: 16px 0px !important;
+  }
+
+  .product-meta span {
+    font-size: 16px !important;
+  }
+
+  .product-saving {
+    font-size: 13px !important;
+    margin-left: -3% !important;
+  }
+
+  /*Sub menu*/
+  .banner-features {
+    gap: 10px !important;
+  }
+  .banner-features span {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-hero-content {
+    height: 220px;
+
+    padding: 30px;
+  }
+
+  .shop-hero h1 {
+    font-size: 30px;
+  }
+
+  .shop-hero p {
+    font-size: 15px;
+  }
+
+  /*Sort box*/
+
+  .select-options li {
+    padding: 12px 18px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+  }
+
+  .select-options li:hover {
+    background: #f8f8f8;
+
+    color: #d70018;
+  }
+
+  .select-options li.active {
+    background: #d70018;
+
+    color: #fff;
+  }
+
+  /*Price range*/
+
+  .price-inputs input:focus {
+    outline: none;
+
+    border-color: #d70018;
+
+    box-shadow: 0 0 0 4px rgba(215, 0, 24, 0.08);
+  }
+
+  /*Filter*/
+  /* .shop-filter-overlay,
+  .shop-filter-drawer {
+    display: none;
+  } */
+
+  /*NEw shop page slidebar*/
+
+  /* Sidebar trở thành Drawer */
+
+  /* Header Drawer */
+
+  .sidebar-mobile-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    /* margin-bottom: 28px; */
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar-mobile-header h2 {
+    font-size: 22px !important;
+
+    font-weight: 700;
+  }
+
+  /* Ẩn tiêu đề desktop */
+
+  .filter-header {
+    display: none;
+  }
+
+  /*Product info*/
+
+  .product-card .product-info {
+    padding-top: 10px !important;
+  }
+  .product-info .product-name {
+    font-size: 19px !important;
+    margin-bottom: 5px !important;
+  }
+  .product-info .product-desc {
+    font-size: 14px !important;
+    margin-bottom: 0px !important;
+  }
+  .product-info .product-desc span {
+    font-size: 11px !important;
+  }
+
+  .product-info .product-price {
+    margin-top: 13px !important;
+  }
+
+  .product-info .product-price .price-current {
+    font-size: 18px !important;
+  }
+
+  .product-info .product-price .price-old {
+    font-size: 13px !important;
+  }
+
+  .product-meta {
+    margin: 13px 0px !important;
+  }
+  .product-meta span {
+    font-size: 13px !important;
+  }
+
+  .product-saving {
+    font-size: 12px !important;
+    margin-left: -3% !important;
+    padding: 6px 10px !important;
+  }
+
+  /*sub banner*/
+
+  .banner-features {
+    gap: 10px;
+
+    margin-top: 18px;
+  }
+
+  .banner-features span {
+    font-size: 9px;
+
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-breadcrumb {
+    padding: 10px 0 !important;
+  }
+
+  .shop-breadcrumb .container {
+    font-size: 13px !important;
+  }
+
+  .shop-hero {
+    margin: 20px 0 !important;
+  }
+
+  .shop-hero-content {
+    height: 180px !important;
+
+    border-radius: 20px !important;
+
+    padding: 22px !important;
+  }
+
+  .shop-subtitle {
+    font-size: 12px !important;
+
+    padding: 6px 14px !important;
+
+    margin-bottom: 12px !important;
+  }
+
+  .shop-hero h1 {
+    font-size: 23px !important;
+
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .shop-hero p {
+    margin-top: 8px !important;
+
+    font-size: 13px !important;
+  }
+
+  /*Tool bar css*/
+  .shop-toolbar .container {
+    padding: 18px !important;
+  }
+
+  .toolbar-left {
+    width: 100% !important;
+  }
+
+  .toolbar-left p {
+    font-size: 14px !important;
+  }
+
+  .toolbar-right {
+    flex-direction: column !important;
+
+    gap: 12px !important;
+
+    width: 100% !important;
+  }
+
+  .filter-btn {
+    width: 100% !important;
+
+    justify-content: left !important;
+  }
+
+  .sort-box {
+    width: 100% !important;
+
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+  }
+
+  .sort-box label {
+    font-size: 14px;
+  }
+
+  .sort-box select {
+    width: 100%;
+  }
+  /**/
+  .shop-page {
+    margin: 25px 0 60px;
+  }
+  /*Shop filter*/
+  .shop-mobile-filter {
+    width: 100%;
+  }
+  .sidebar-mobile-header h2 {
+    font-size: 20px !important;
+    margin-bottom: 0px !important;
+  }
+  .filter-item .filter-title span {
+    font-size: 18px !important;
+  }
+  .filter-body label {
+    font-size: 15px !important;
+  }
+
+  /*Shop product*/
+
+  .product-card {
+    width: 90% !important;
+    margin: 0px auto !important;
+  }
+  .shop-products {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 20px 0px !important;
+  }
+  .product-card .product-image {
+    height: 190px !important;
+  }
+
+  .product-image .product-badge {
+    font-size: 11px !important;
+    top: 10px !important;
+    left: 6px !important;
+  }
+
+  .product-image .product-favorite {
+    width: 35px !important;
+    height: 35px !important;
+    top: 10px !important;
+    right: 6px !important;
+  }
+
+  /*Product Infor */
+  .product-info {
+    padding-top: 0px !important;
+  }
+  .product-info .product-name {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+  }
+  .product-info .product-desc {
+    font-size: 10px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .product-info .product-desc span {
+    padding: 5px 2px !important;
+    font-size: 10px !important;
+    gap: 1px !important;
+  }
+
+  .product-price {
+    margin-top: 12px !important;
+  }
+  .product-info .product-price .price-current {
+    font-size: 12px !important;
+  }
+  .product-info .product-price .price-old {
+    font-size: 10px !important;
+  }
+  .product-meta {
+    margin: 10px 0px !important;
+  }
+  .product-meta span {
+    font-size: 10px !important;
+  }
+  .product-saving {
+    font-size: 10px !important;
+    margin-top: 12px !important;
+    /* margin-left: -5% !important; */
+    padding: 5px 8px !important;
+  }
+  .product-info .product-cart {
+    font-size: 12px !important;
+    height: 40px !important;
+  }
+
+  .product-rating span {
+    font-size: 12px !important;
+  }
+
+  /*Paggingtion*/
+
+  .shop-pagination {
+    gap: 8px;
+
+    flex-wrap: wrap;
+  }
+
+  .page-btn,
+  .page-number {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  /*sub banner*/
+  .banner-features {
+    display: none;
+  }
+}
+
+/*=========================================
+RESPONSIVE - DESKTOP
+=========================================*/
+
+@media (min-width: 992px) {
+  /* Ẩn nút Bộ lọc */
+
+  .shop-mobile-filter {
+    display: none;
+  }
+
+  /* Sidebar bình thường */
+
+  .shop-sidebar {
+    position: sticky;
+
+    top: 20px;
+  }
+
+  /* Ẩn Header Mobile */
+
+  .sidebar-mobile-header {
+    display: none;
+  }
+
+  /* Overlay không dùng */
+
+  .shop-sidebar-overlay {
+    display: none;
+  }
+}

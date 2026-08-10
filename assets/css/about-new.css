@@ -1,0 +1,5507 @@
+/*Breadrum*/
+
+.shop-breadcrumb {
+  background: #fafafa;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.shop-breadcrumb .container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+}
+
+.shop-breadcrumb a {
+  color: #666;
+
+  text-decoration: none;
+}
+
+.shop-breadcrumb span {
+  color: #d70018;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   ABOUT INTRO
+========================================================= */
+
+.about-intro {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 60px 0 70px;
+
+  background:
+    radial-gradient(
+      circle at 88% 40%,
+      rgba(229, 48, 41, 0.075),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(235, 117, 87, 0.045),
+      transparent 26%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #fffaf7 100%);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-intro__container {
+  width: min(1240px, calc(100% - 64px));
+
+  min-height: 610px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(480px, 1.05fr);
+
+  /* align-items: center; */
+
+  gap: 65px;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-intro__content {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 650px;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.about-intro__label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  border-radius: 999px;
+
+  background: #fff0ee;
+
+  color: #df2728;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.9px;
+}
+
+.about-intro__label i {
+  font-size: 12px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-intro__content h1 {
+  text-transform: uppercase;
+  margin: 26px 0 22px;
+
+  font-size: 44px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  /* letter-spacing: -2.5px; */
+
+  color: #181818;
+
+  text-align: justify;
+
+  color: #8b0e0e;
+}
+
+.about-intro__content h1 span {
+  display: block;
+
+  color: #df2728;
+}
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.about-intro__line {
+  width: 65px;
+
+  height: 2px;
+
+  margin: 25px 0;
+
+  border-radius: 999px;
+
+  background: linear-gradient(90deg, #df2728, rgba(223, 39, 40, 0.08));
+}
+
+/* =========================================================
+   LEAD
+========================================================= */
+
+.about-intro__lead {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: #676767;
+
+  font-size: 16px;
+
+  line-height: 2;
+  text-align: justify;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.about-intro__meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 38px;
+}
+
+.about-intro__meta-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.about-intro__meta-item strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 58px;
+
+  line-height: 0.8;
+
+  color: #df2728;
+}
+
+.about-intro__meta-item i {
+  font-size: 25px;
+
+  color: #df2728;
+}
+
+.about-intro__meta-item span {
+  color: #777;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  line-height: 1.55;
+
+  letter-spacing: 1.5px;
+}
+
+.about-intro__meta-divider {
+  width: 1px;
+
+  height: 42px;
+
+  background: rgba(40, 40, 40, 0.12);
+}
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.about-intro__visual {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.about-intro__glow {
+  position: absolute;
+
+  width: 500px;
+
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 71, 55, 0.15),
+    rgba(238, 71, 55, 0.045) 55%,
+    transparent 72%
+  );
+}
+
+/* =========================================================
+   RING
+========================================================= */
+
+.about-intro__ring {
+  position: absolute;
+
+  width: 430px;
+
+  height: 430px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(223, 39, 40, 0.15);
+
+  box-shadow:
+    0 0 0 25px rgba(223, 39, 40, 0.018),
+    0 0 0 55px rgba(223, 39, 40, 0.012);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-intro__image {
+  position: relative;
+
+  z-index: 3;
+
+  width: 500px;
+
+  height: 390px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  animation: aboutIntroFloat 5s ease-in-out infinite;
+}
+
+.about-intro__image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 28px 30px rgba(67, 34, 25, 0.17));
+}
+
+@keyframes aboutIntroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   CAPTION
+========================================================= */
+
+.about-intro__caption {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 35px;
+
+  bottom: 70px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding: 15px 19px;
+
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.93);
+
+  border: 1px solid rgba(35, 35, 35, 0.06);
+
+  box-shadow: 0 16px 38px rgba(45, 24, 20, 0.1);
+
+  transform: rotate(-3deg);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.about-intro__caption:hover {
+  transform: translateY(-4px) rotate(0deg);
+
+  box-shadow: 0 22px 45px rgba(45, 24, 20, 0.14);
+}
+
+.about-intro__caption span {
+  margin-bottom: 3px;
+
+  color: #df2728;
+
+  font-size: 8px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.about-intro__caption strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  color: #222;
+}
+
+/* =========================================================
+   SPARKLES
+========================================================= */
+
+.about-intro__sparkle {
+  position: absolute;
+
+  z-index: 6;
+
+  color: #e83731;
+
+  animation: aboutIntroSparkle 2.7s ease-in-out infinite;
+}
+
+.about-intro__sparkle--1 {
+  top: 65px;
+
+  right: 70px;
+
+  font-size: 23px;
+}
+
+.about-intro__sparkle--2 {
+  bottom: 85px;
+
+  left: 45px;
+
+  font-size: 14px;
+
+  animation-delay: 0.8s;
+}
+
+@keyframes aboutIntroSparkle {
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.15);
+  }
+}
+
+/*Section 2*/
+/* =========================================
+   BRAND STORY
+========================================= */
+
+.brand-story {
+  position: relative;
+  padding: 70px 42px 50px;
+  background: #fffdfb;
+  overflow: hidden;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.brand-story-main {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+  gap: 40px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.brand-story-content {
+  position: relative;
+  z-index: 3;
+  padding-right: 20px;
+}
+
+/* Label */
+
+.brand-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  background: #fff0ee;
+  border-radius: 30px;
+
+  color: #e52a2a;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.brand-label i {
+  font-size: 11px;
+}
+
+/* Small heading */
+
+.brand-heading-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 34px;
+  margin-bottom: 15px;
+
+  color: #e52a2a;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.brand-heading-label span {
+  width: 24px;
+  height: 2px;
+
+  background: #e52a2a;
+}
+
+/* Main heading */
+
+.brand-story-content h1 {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #8b0e0e;
+
+  font-size: 44px;
+  line-height: 1.25;
+  /* letter-spacing: -2px; */
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+.brand-story-content h1 strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #e52a2a;
+}
+
+/* Red line */
+
+.brand-heading-line {
+  width: 58px;
+  height: 3px;
+
+  margin: 27px 0 28px;
+
+  background: #e52a2a;
+}
+
+/* Paragraph */
+
+.brand-story-content p {
+  max-width: 600px;
+
+  margin: 0 0 20px;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Signature */
+
+.brand-signature {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 28px;
+}
+
+.signature-line {
+  width: 3px;
+  height: 45px;
+
+  background: #e52a2a;
+}
+
+.brand-signature strong {
+  display: block;
+
+  color: #222;
+
+  font-size: 15px;
+}
+
+.brand-signature span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.brand-story-visual {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Large circular background */
+
+.factory-circle {
+  position: absolute;
+
+  width: 560px;
+  height: 560px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 230, 226, 0.95) 0%,
+    rgba(255, 240, 237, 0.55) 45%,
+    rgba(255, 250, 248, 0) 72%
+  );
+
+  right: -10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+/* Dashed circle */
+
+.factory-circle::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 65px;
+
+  border: 1px dashed rgba(229, 42, 42, 0.3);
+
+  border-radius: 50%;
+}
+
+/* Factory image */
+
+.factory-image {
+  position: relative;
+
+  width: 600px;
+  height: 420px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  z-index: 2;
+
+  box-shadow: 0 25px 55px rgba(100, 50, 30, 0.12);
+  margin-right: 30px;
+}
+
+.factory-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+/* nhẹ thôi, không làm ảnh bay quá */
+
+.factory-image:hover img {
+  transform: scale(1.025);
+}
+
+/* =========================================
+   40+ BADGE
+========================================= */
+
+.years-badge {
+  position: absolute;
+
+  z-index: 5;
+
+  left: 18px;
+  top: 48px;
+
+  width: 190px;
+  height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+
+  border: 1px solid rgba(229, 42, 42, 0.3);
+
+  border-radius: 50%;
+
+  box-shadow: 0 18px 45px rgba(180, 40, 40, 0.12);
+}
+
+.years-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4px;
+
+  color: white;
+
+  background: #e52a2a;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+}
+
+.years-badge strong {
+  color: #e52a2a;
+
+  font-size: 58px;
+  line-height: 0.95;
+}
+
+.years-badge span {
+  margin-top: 7px;
+
+  color: #222;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.years-badge small {
+  margin-top: 5px;
+
+  color: #777;
+
+  font-size: 11px;
+  line-height: 1.35;
+
+  text-align: center;
+}
+
+/* =========================================
+   FACTORY INFO
+========================================= */
+
+.factory-info {
+  position: absolute;
+
+  right: 10px;
+  bottom: 5px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 23px;
+
+  background: #fff;
+
+  border-radius: 40px;
+
+  box-shadow: 0 12px 30px rgba(80, 40, 20, 0.12);
+}
+
+.factory-info-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #e52a2a;
+
+  background: #fff0ee;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.factory-info strong {
+  display: block;
+
+  color: #333;
+
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.factory-info span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   DECORATIVE DOTS
+========================================= */
+
+.factory-dots {
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  right: 5px;
+  top: 30px;
+
+  opacity: 0.55;
+
+  background-image: radial-gradient(#e52a2a 1.5px, transparent 1.5px);
+
+  background-size: 10px 10px;
+}
+
+/* =========================================
+   BRAND VALUES
+========================================= */
+/* =========================================================
+   BRAND VALUES
+========================================================= */
+
+.brand-values {
+  position: relative;
+  z-index: 5;
+
+  width: min(100%, 1180px);
+  margin: 45px auto 0;
+  padding: 34px 38px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 20px;
+
+  background:
+    radial-gradient(
+      circle at 8% 50%,
+      rgba(229, 42, 42, 0.045),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 50%,
+      rgba(229, 42, 42, 0.04),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #fffdfc 0%, #fff8f6 50%, #fffdfc 100%);
+
+  border: 1px solid rgba(229, 42, 42, 0.14);
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 60px rgba(80, 35, 25, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+========================================================= */
+
+.brand-values::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 100px;
+
+  left: -70px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(229, 42, 42, 0.08);
+
+  transform: rotate(-8deg);
+
+  pointer-events: none;
+}
+
+.brand-values::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  right: 28px;
+  top: 20px;
+
+  opacity: 0.45;
+
+  background-image: radial-gradient(#e52a2a 1.2px, transparent 1.2px);
+
+  background-size: 9px 9px;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   VALUE ITEM
+========================================================= */
+
+.brand-value {
+  position: relative;
+  z-index: 2;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 8px 10px;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.brand-value:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.value-icon {
+  position: relative;
+
+  width: 86px;
+  height: 86px;
+
+  flex: 0 0 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e52a2a;
+
+  background: radial-gradient(circle at 35% 30%, #fff8f6, #ffebe7 72%);
+
+  border: 1px solid rgba(229, 42, 42, 0.08);
+
+  border-radius: 50%;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 12px 30px rgba(229, 42, 42, 0.08),
+    inset 0 0 0 8px rgba(255, 255, 255, 0.35);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.value-icon::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border: 1px solid rgba(229, 42, 42, 0.14);
+
+  border-radius: 50%;
+}
+
+.brand-value:hover .value-icon {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 16px 35px rgba(229, 42, 42, 0.13),
+    inset 0 0 0 8px rgba(255, 255, 255, 0.45);
+}
+
+.value-icon i {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.value-content {
+  min-width: 0;
+}
+
+.value-content h3 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: 1.1px;
+
+  line-height: 1.3;
+}
+
+.value-line {
+  width: 30px;
+  height: 2px;
+
+  margin: 10px 0 9px;
+
+  background: #e52a2a;
+
+  border-radius: 999px;
+
+  transition: width 0.35s ease;
+}
+
+.brand-value:hover .value-line {
+  width: 46px;
+}
+
+.value-content p {
+  max-width: 190px;
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   + / =
+========================================================= */
+
+.value-symbol {
+  position: relative;
+  z-index: 3;
+
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e52a2a;
+
+  background: #fff;
+
+  border: 1px solid rgba(229, 42, 42, 0.08);
+
+  border-radius: 50%;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 22px rgba(60, 30, 20, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.value-symbol::before {
+  content: "";
+
+  position: absolute;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px dashed rgba(229, 42, 42, 0.13);
+
+  border-radius: 50%;
+}
+
+.value-symbol:hover {
+  transform: scale(1.08);
+
+  box-shadow: 0 12px 28px rgba(60, 30, 20, 0.12);
+}
+/*Badge*/
+
+/* =========================================================
+   40+ BADGE
+========================================================= */
+
+.about-intro__badge {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 42px;
+  right: 48px;
+
+  width: 145px;
+  height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(223, 39, 40, 0.25);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 20px 45px rgba(130, 45, 35, 0.13),
+    0 5px 15px rgba(130, 45, 35, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* vòng ngoài nhẹ */
+
+.about-intro__badge::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -9px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(223, 39, 40, 0.12);
+
+  pointer-events: none;
+}
+
+/* icon */
+
+.about-intro__badge-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  color: #ffffff;
+
+  background: #df2728;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+/* 40+ */
+
+.about-intro__badge strong {
+  display: block;
+
+  margin: 0;
+
+  color: #df2728;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  line-height: 0.95;
+
+  letter-spacing: -1.5px;
+}
+
+/* NĂM GẮN BÓ */
+
+.about-intro__badge span {
+  margin-top: 6px;
+
+  color: #222222;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: 1.2px;
+}
+
+/* Sóc Trăng */
+
+.about-intro__badge small {
+  margin-top: 5px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  line-height: 1.35;
+}
+
+/* hover */
+
+.about-intro__badge:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 28px 55px rgba(130, 45, 35, 0.18),
+    0 8px 20px rgba(130, 45, 35, 0.08);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+/* =========================================================
+   <= 992px
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 992px) {
+  /* -------------------------------------------------------
+     SECTION
+  ------------------------------------------------------- */
+
+  .brand-story {
+    padding: 60px 30px 35px;
+  }
+
+  /* -------------------------------------------------------
+     MAIN
+  ------------------------------------------------------- */
+
+  .brand-story-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 30px;
+
+    align-items: center;
+  }
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .brand-story-content {
+    padding-right: 5px;
+  }
+
+  .brand-label {
+    padding: 9px 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .brand-heading-label {
+    margin-top: 27px;
+
+    margin-bottom: 13px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+    gap: 9px;
+  }
+
+  .brand-heading-label span {
+    width: 20px;
+
+    height: 2px;
+  }
+
+  .brand-story-content h1 {
+    max-width: 100%;
+
+    font-size: 40px;
+
+    text-align: left;
+  }
+
+  .brand-story-content h1 strong {
+    margin-top: 3px;
+  }
+
+  .brand-heading-line {
+    width: 50px;
+
+    height: 2px;
+
+    margin: 21px 0 22px;
+  }
+
+  .brand-story-content p {
+    max-width: 100%;
+
+    margin-bottom: 16px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    text-align: left;
+  }
+
+  .brand-signature {
+    gap: 13px;
+
+    margin-top: 24px;
+  }
+
+  .signature-line {
+    width: 2px;
+
+    height: 40px;
+  }
+
+  .brand-signature strong {
+    font-size: 14px;
+  }
+
+  .brand-signature span {
+    font-size: 11px;
+  }
+
+  /* -------------------------------------------------------
+     VISUAL
+  ------------------------------------------------------- */
+
+  .brand-story-visual {
+    min-height: 480px;
+
+    width: 100%;
+  }
+
+  .factory-circle {
+    width: 450px;
+
+    height: 450px;
+
+    right: -25px;
+  }
+
+  .factory-circle::after {
+    inset: 50px;
+  }
+
+  .factory-image {
+    width: min(100%, 480px);
+
+    height: 340px;
+
+    margin-right: 0;
+
+    border-radius: 17px;
+  }
+
+  /* -------------------------------------------------------
+     40+ BADGE
+  ------------------------------------------------------- */
+
+  .years-badge {
+    left: 0;
+
+    top: 35px;
+
+    width: 155px;
+
+    height: 155px;
+  }
+
+  .years-icon {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 15px;
+  }
+
+  .years-badge strong {
+    font-size: 48px;
+  }
+
+  .years-badge span {
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .years-badge small {
+    margin-top: 4px;
+
+    font-size: 9px;
+  }
+
+  /* -------------------------------------------------------
+     FACTORY INFO
+  ------------------------------------------------------- */
+
+  .factory-info {
+    right: 0;
+
+    bottom: 10px;
+
+    gap: 10px;
+
+    padding: 11px 17px;
+  }
+
+  .factory-info-icon {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 17px;
+  }
+
+  .factory-info strong {
+    font-size: 10px;
+  }
+
+  .factory-info span {
+    font-size: 9px;
+  }
+
+  /* -------------------------------------------------------
+     DOTS
+  ------------------------------------------------------- */
+
+  .factory-dots {
+    width: 65px;
+
+    height: 65px;
+
+    right: 0;
+
+    top: 18px;
+
+    background-size: 9px 9px;
+  }
+
+  /* -------------------------------------------------------
+     VALUES
+  ------------------------------------------------------- */
+
+  .brand-values {
+    width: calc(100% - 40px);
+
+    margin-top: 35px;
+
+    padding: 28px 24px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr)
+      auto
+      minmax(0, 1fr);
+
+    gap: 12px;
+
+    border-radius: 22px;
+  }
+
+  .brand-value {
+    gap: 13px;
+
+    padding: 5px;
+  }
+
+  .value-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-basis: 68px;
+
+    font-size: 24px;
+  }
+
+  .value-icon::after {
+    inset: 6px;
+  }
+
+  .value-content h3 {
+    font-size: 14px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .value-content p {
+    max-width: 145px;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+  .value-line {
+    margin: 8px 0;
+  }
+
+  .value-symbol {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+
+    font-size: 16px;
+  }
+
+  .value-symbol::before {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-values::after {
+    right: 18px;
+    top: 14px;
+
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* =========================================================
+   <= 786px
+   TABLET
+========================================================= */
+
+@media (max-width: 786px) {
+  /* -------------------------------------------------------
+     SECTION
+  ------------------------------------------------------- */
+
+  .brand-story {
+    padding: 55px 24px 30px;
+  }
+
+  /* -------------------------------------------------------
+     MAIN
+     Chuyển sang 1 cột
+  ------------------------------------------------------- */
+
+  .brand-story-main {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+  }
+
+  /* -------------------------------------------------------
+     CONTENT
+     Cho nội dung xuất hiện trước visual
+  ------------------------------------------------------- */
+
+  .brand-story-content {
+    order: 1;
+
+    width: 100%;
+
+    padding-right: 0;
+  }
+
+  /* -------------------------------------------------------
+     VISUAL
+  ------------------------------------------------------- */
+
+  .brand-story-visual {
+    order: 2;
+
+    width: 100%;
+
+    min-height: 460px;
+  }
+
+  /* -------------------------------------------------------
+     LABEL
+  ------------------------------------------------------- */
+
+  .brand-label {
+    padding: 9px 14px;
+
+    font-size: 11px;
+  }
+
+  /* -------------------------------------------------------
+     HEADING LABEL
+  ------------------------------------------------------- */
+
+  .brand-heading-label {
+    margin-top: 25px;
+
+    font-size: 11px;
+  }
+
+  /* -------------------------------------------------------
+     TITLE
+  ------------------------------------------------------- */
+
+  .brand-story-content h1 {
+    /* max-width: 600px; */
+
+    font-size: 38px;
+  }
+
+  .brand-heading-line {
+    margin: 22px 0 23px;
+  }
+
+  /* -------------------------------------------------------
+     PARAGRAPH
+  ------------------------------------------------------- */
+
+  .brand-story-content p {
+    max-width: 650px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    text-align: left;
+  }
+
+  /* -------------------------------------------------------
+     SIGNATURE
+  ------------------------------------------------------- */
+
+  .brand-signature {
+    margin-top: 25px;
+  }
+
+  /* -------------------------------------------------------
+     FACTORY VISUAL
+  ------------------------------------------------------- */
+
+  .factory-circle {
+    width: 460px;
+
+    height: 460px;
+
+    right: 50%;
+
+    top: 50%;
+
+    transform: translate(50%, -50%);
+  }
+
+  .factory-circle::after {
+    inset: 55px;
+  }
+
+  .factory-image {
+    width: min(90%, 570px);
+
+    height: 390px;
+
+    border-radius: 18px;
+  }
+
+  /* -------------------------------------------------------
+     40+ BADGE
+  ------------------------------------------------------- */
+
+  .years-badge {
+    left: 4%;
+
+    top: 30px;
+
+    width: 160px;
+
+    height: 160px;
+  }
+
+  .years-badge strong {
+    font-size: 50px;
+  }
+
+  .years-badge span {
+    font-size: 9px;
+  }
+
+  .years-badge small {
+    font-size: 9px;
+  }
+
+  /* -------------------------------------------------------
+     FACTORY INFO
+  ------------------------------------------------------- */
+
+  .factory-info {
+    right: 4%;
+
+    bottom: 18px;
+
+    padding: 12px 19px;
+  }
+
+  .factory-info-icon {
+    width: 38px;
+
+    height: 38px;
+  }
+
+  .factory-info strong {
+    font-size: 10px;
+  }
+
+  .factory-info span {
+    font-size: 9px;
+  }
+
+  /* -------------------------------------------------------
+     DOTS
+  ------------------------------------------------------- */
+
+  .factory-dots {
+    right: 5%;
+
+    top: 12px;
+
+    width: 65px;
+
+    height: 65px;
+  }
+
+  /* -------------------------------------------------------
+     VALUES
+     
+     Không còn ép 3 cột trên tablet.
+     Chuyển thành 3 hàng ngang.
+  ------------------------------------------------------- */
+
+  .brand-values {
+    width: calc(100% - 32px);
+
+    margin-top: 30px;
+
+    padding: 28px 20px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 10px;
+
+    border-radius: 20px;
+  }
+
+  .brand-value {
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-align: center;
+
+    gap: 12px;
+
+    padding: 10px 8px;
+  }
+
+  .value-icon {
+    width: 72px;
+    height: 72px;
+
+    flex-basis: 72px;
+
+    font-size: 25px;
+  }
+
+  .value-content h3 {
+    font-size: 14px;
+  }
+
+  .value-line {
+    margin: 8px auto;
+  }
+
+  .value-content p {
+    max-width: 145px;
+
+    margin: 0 auto;
+
+    font-size: 12px;
+  }
+
+  /*
+    + và = nằm giữa 2 khối
+  */
+
+  .value-symbol {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 14px;
+  }
+
+  .value-symbol::before {
+    width: 44px;
+    height: 44px;
+  }
+
+  .value-symbol:nth-of-type(2) {
+    left: calc(33.333% - 15px);
+    top: 40px;
+  }
+
+  .value-symbol:nth-of-type(4) {
+    left: calc(66.666% - 15px);
+    top: 40px;
+  }
+
+  .brand-values::before {
+    width: 180px;
+    height: 80px;
+  }
+
+  .brand-values::after {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* =========================================================
+   <= 576px
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  /* -------------------------------------------------------
+     SECTION
+  ------------------------------------------------------- */
+
+  .brand-story {
+    padding: 42px 16px 25px;
+  }
+
+  /* -------------------------------------------------------
+     MAIN
+  ------------------------------------------------------- */
+
+  .brand-story-main {
+    gap: 28px;
+  }
+
+  /* -------------------------------------------------------
+     LABEL
+  ------------------------------------------------------- */
+
+  .brand-label {
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .brand-label i {
+    font-size: 8px;
+  }
+
+  /* -------------------------------------------------------
+     HEADING LABEL
+  ------------------------------------------------------- */
+
+  .brand-heading-label {
+    gap: 8px;
+
+    margin-top: 22px;
+
+    margin-bottom: 11px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .brand-heading-label span {
+    width: 17px;
+
+    height: 2px;
+  }
+
+  /* -------------------------------------------------------
+     TITLE
+  ------------------------------------------------------- */
+
+  .brand-story-content h1 {
+    max-width: 100%;
+
+    font-size: 30px;
+
+    line-height: 1.18;
+
+    letter-spacing: 0;
+  }
+
+  .brand-story-content h1 strong {
+    margin-top: 2px;
+  }
+
+  /* -------------------------------------------------------
+     RED LINE
+  ------------------------------------------------------- */
+
+  .brand-heading-line {
+    width: 42px;
+
+    height: 2px;
+
+    margin: 18px 0 19px;
+  }
+
+  /* -------------------------------------------------------
+     PARAGRAPH
+  ------------------------------------------------------- */
+
+  .brand-story-content p {
+    margin-bottom: 14px;
+
+    font-size: 13px;
+
+    line-height: 1.72;
+
+    text-align: left;
+  }
+
+  /* -------------------------------------------------------
+     SIGNATURE
+  ------------------------------------------------------- */
+
+  .brand-signature {
+    gap: 10px;
+
+    margin-top: 21px;
+  }
+
+  .signature-line {
+    width: 2px;
+
+    height: 34px;
+  }
+
+  .brand-signature strong {
+    font-size: 12px;
+  }
+
+  .brand-signature span {
+    margin-top: 3px;
+
+    font-size: 9px;
+  }
+
+  /* -------------------------------------------------------
+     VISUAL
+  ------------------------------------------------------- */
+
+  .brand-story-visual {
+    min-height: 320px;
+
+    margin-top: 5px;
+  }
+
+  /* -------------------------------------------------------
+     CIRCLE
+  ------------------------------------------------------- */
+
+  .factory-circle {
+    width: 300px;
+
+    height: 300px;
+
+    right: 50%;
+
+    top: 50%;
+
+    transform: translate(50%, -50%);
+  }
+
+  .factory-circle::after {
+    inset: 38px;
+  }
+
+  /* -------------------------------------------------------
+     FACTORY IMAGE
+  ------------------------------------------------------- */
+
+  .factory-image {
+    width: 94%;
+
+    height: 230px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 18px 35px rgba(100, 50, 30, 0.12);
+  }
+
+  .factory-image img {
+    object-position: center;
+  }
+
+  /* -------------------------------------------------------
+     40+ BADGE
+  ------------------------------------------------------- */
+
+  .years-badge {
+    left: 0;
+
+    top: 12px;
+
+    width: 105px;
+
+    height: 105px;
+  }
+
+  .years-icon {
+    width: 25px;
+
+    height: 25px;
+
+    margin-bottom: 2px;
+
+    font-size: 11px;
+  }
+
+  .years-badge strong {
+    font-size: 34px;
+
+    line-height: 0.9;
+  }
+
+  .years-badge span {
+    margin-top: 4px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.8px;
+  }
+
+  .years-badge small {
+    margin-top: 3px;
+
+    font-size: 7px;
+
+    line-height: 1.2;
+  }
+
+  /* -------------------------------------------------------
+     FACTORY INFO
+  ------------------------------------------------------- */
+
+  .factory-info {
+    right: 0;
+
+    bottom: 2px;
+
+    gap: 7px;
+
+    padding: 8px 11px;
+
+    border-radius: 30px;
+
+    max-width: 220px;
+  }
+
+  .factory-info-icon {
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 14px;
+  }
+
+  .factory-info strong {
+    font-size: 7px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .factory-info span {
+    margin-top: 2px;
+
+    font-size: 7px;
+  }
+
+  /* -------------------------------------------------------
+     DOTS
+  ------------------------------------------------------- */
+
+  .factory-dots {
+    width: 45px;
+
+    height: 45px;
+
+    right: 0;
+
+    top: 0;
+
+    opacity: 0.45;
+
+    background-size: 7px 7px;
+  }
+
+  /* -------------------------------------------------------
+     VALUES
+  ------------------------------------------------------- */
+
+  .brand-values {
+    width: calc(100% - 24px);
+
+    margin-top: 25px;
+
+    padding: 25px 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    border-radius: 18px;
+  }
+
+  .brand-value {
+    width: 100%;
+
+    min-height: 110px;
+
+    display: grid;
+
+    grid-template-columns: 64px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 15px 8px;
+
+    text-align: left;
+  }
+
+  .value-icon {
+    width: 64px;
+    height: 64px;
+
+    flex: none;
+
+    font-size: 23px;
+  }
+
+  .value-icon::after {
+    inset: 5px;
+  }
+
+  .value-content h3 {
+    font-size: 14px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .value-line {
+    width: 25px;
+
+    margin: 7px 0;
+  }
+
+  .value-content p {
+    max-width: none;
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+  }
+
+  /* =====================================================
+     MOBILE SYMBOL
+  ===================================================== */
+
+  .value-symbol {
+    position: relative;
+
+    left: auto !important;
+    top: auto !important;
+
+    width: 28px;
+    height: 28px;
+
+    margin: -5px auto;
+
+    flex: none;
+
+    font-size: 13px;
+  }
+
+  .value-symbol::before {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* =====================================================
+     SEPARATOR
+  ===================================================== */
+
+  .brand-values .value-symbol::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 12px;
+
+    background: rgba(229, 42, 42, 0.12);
+
+    top: -13px;
+  }
+
+  .brand-values::before {
+    width: 150px;
+    height: 60px;
+
+    left: -80px;
+    bottom: -30px;
+  }
+
+  .brand-values::after {
+    width: 35px;
+    height: 35px;
+
+    right: 10px;
+    top: 12px;
+
+    background-size: 8px 8px;
+  }
+}
+
+/* =========================================================
+   <= 400px
+   SMALL MOBILE
+========================================================= */
+
+/*Badge section2 */
+/* =========================================================
+   PRODUCT BADGES
+   Chỉ bổ sung vào visual hiện tại
+========================================================= */
+
+.product-badge {
+  position: absolute;
+  z-index: 8;
+
+  width: 92px;
+  height: 92px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(229, 42, 42, 0.22);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 10px 28px rgba(80, 35, 25, 0.11),
+    inset 0 0 0 5px rgba(255, 239, 236, 0.85);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Viền trang trí bên trong */
+
+.product-badge::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 5px;
+
+  border: 1px solid rgba(229, 42, 42, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+/* Icon */
+
+.product-badge__icon {
+  position: relative;
+  z-index: 2;
+
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 5px;
+
+  color: #e52a2a;
+
+  background: #fff0ee;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+}
+
+/* Chữ */
+
+.product-badge span,
+.product-badge strong {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  color: #333;
+
+  font-size: 7px;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.7px;
+}
+
+.product-badge span {
+  font-weight: 600;
+}
+
+.product-badge strong {
+  font-weight: 800;
+}
+
+/* Hover */
+
+.product-badge:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(80, 35, 25, 0.16),
+    inset 0 0 0 5px rgba(255, 231, 227, 0.95);
+}
+
+/* =========================================================
+   VỊ TRÍ 3 BADGE
+========================================================= */
+
+/* Nguyên liệu chọn lọc - phía trên bên phải */
+
+.product-badge--ingredient {
+  top: 55px;
+  left: 35px;
+
+  animation: productBadgeFloat1 4.5s ease-in-out infinite;
+}
+
+/* An toàn vệ sinh - phía dưới bên trái */
+
+.product-badge--safety {
+  left: 20px;
+  bottom: 75px;
+
+  animation: productBadgeFloat2 5s ease-in-out infinite;
+}
+
+.product-badge--recipe {
+  right: 5px;
+  /* bottom: 45px; */
+
+  animation: productBadgeFloat3 4.8s ease-in-out infinite;
+}
+
+/* =========================================================
+   FLOAT
+========================================================= */
+
+@keyframes productBadgeFloat1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes productBadgeFloat2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes productBadgeFloat3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/**/
+.left-0 {
+  left: 0 !important;
+}
+
+/*New sign*/
+/* =========================================================
+   BRAND SIGNATURE
+========================================================= */
+
+.brand-signature {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 32px;
+  padding: 12px 18px 12px 12px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(229, 42, 42, 0.1);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(80, 35, 20, 0.055),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.brand-signature:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(229, 42, 42, 0.2);
+
+  box-shadow:
+    0 16px 38px rgba(80, 35, 20, 0.09),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.brand-signature__mark {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #e52a2a;
+
+  background: #fff0ee;
+
+  border: 1px solid rgba(229, 42, 42, 0.08);
+
+  border-radius: 13px;
+
+  font-size: 15px;
+}
+
+.brand-signature__mark i {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.brand-signature__content {
+  min-width: 145px;
+}
+
+.brand-signature__content strong {
+  display: block;
+
+  margin: 0;
+
+  color: #1d1d1d;
+
+  font-size: 16px;
+
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.2px;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.brand-signature__location {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 6px;
+
+  color: #888;
+
+  font-size: 11px;
+
+  line-height: 1;
+}
+
+.brand-signature__location i {
+  color: #e52a2a;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.brand-signature__line {
+  width: 1px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(229, 42, 42, 0.28),
+    transparent
+  );
+}
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.brand-signature__tag {
+  color: #b16b62;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: 1.4px;
+
+  white-space: nowrap;
+}
+/* =========================================================
+   <= 992px
+========================================================= */
+
+@media (max-width: 992px) {
+  .brand-signature {
+    margin-top: 28px;
+    display: none;
+  }
+
+  .brand-signature__tag {
+    display: none;
+  }
+}
+
+/* =========================================================
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .brand-signature {
+    gap: 13px;
+
+    padding: 11px 16px 11px 11px;
+  }
+
+  .brand-signature__mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-signature__content strong {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   <= 576px
+========================================================= */
+
+@media (max-width: 576px) {
+  .brand-signature {
+    width: fit-content;
+
+    margin-top: 24px;
+
+    gap: 11px;
+
+    padding: 10px 14px 10px 10px;
+
+    border-radius: 14px;
+  }
+
+  .brand-signature__mark {
+    width: 39px;
+    height: 39px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+  }
+
+  .brand-signature__content {
+    min-width: 0;
+  }
+
+  .brand-signature__content strong {
+    font-size: 14px;
+  }
+
+  .brand-signature__location {
+    margin-top: 5px;
+
+    font-size: 10px;
+  }
+
+  .brand-signature__line {
+    height: 25px;
+  }
+}
+
+/*Section 3*/
+/* =========================================================
+   CUSTOMER COMMITMENT
+========================================================= */
+
+.customer-commitment {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 0 50px;
+
+  background:
+    radial-gradient(
+      circle at 90% 50%,
+      rgba(229, 42, 42, 0.065),
+      transparent 30%
+    ),
+    #fffdfb;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.customer-commitment__container {
+  width: min(1240px, calc(100% - 72px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(500px, 0.95fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.customer-commitment__content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 600px;
+}
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.customer-commitment__eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 23px;
+
+  color: #df2929;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.customer-commitment__eyebrow span {
+  width: 38px;
+  height: 2px;
+
+  background: #df2929;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.customer-commitment__content h2 {
+  margin: 0;
+
+  /* max-width: 580px; */
+
+  color: #8b0e0e;
+
+  font-size: 44px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.customer-commitment__content h2 strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #df2929;
+}
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.customer-commitment__line {
+  width: 55px;
+  height: 3px;
+
+  margin: 30px 0;
+
+  background: #df2929;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.customer-commitment__badges {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+.commitment-badge {
+  min-height: 112px;
+
+  padding: 15px 13px;
+
+  background: #fff;
+
+  border: 1px solid rgba(229, 42, 42, 0.1);
+
+  border-radius: 15px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.commitment-badge:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 38px rgba(70, 30, 20, 0.09);
+}
+
+.commitment-badge__icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  color: #df2929;
+
+  background: #fff0ee;
+
+  border-radius: 50%;
+
+  font-size: 16px;
+}
+
+.commitment-badge strong {
+  display: block;
+
+  color: #252525;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+}
+
+.commitment-badge span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.customer-commitment__visual {
+  position: relative;
+
+  min-height: 590px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   CIRCLE BACKGROUND
+========================================================= */
+
+.customer-commitment__circle {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 224, 220, 0.95) 0%,
+    rgba(255, 240, 237, 0.55) 48%,
+    rgba(255, 250, 248, 0) 72%
+  );
+}
+
+/* =========================================================
+   RING
+========================================================= */
+
+.customer-commitment__ring {
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(223, 41, 41, 0.2);
+
+  box-shadow:
+    0 0 0 22px rgba(223, 41, 41, 0.018),
+    0 0 0 48px rgba(223, 41, 41, 0.012);
+
+  animation: commitmentRotate 25s linear infinite;
+}
+
+@keyframes commitmentRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.customer-commitment__image {
+  position: relative;
+
+  z-index: 3;
+
+  width: 450px;
+  height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #f4e7e3;
+
+  border: 8px solid rgba(255, 255, 255, 0.92);
+
+  box-shadow: 0 30px 65px rgba(75, 35, 25, 0.18);
+
+  animation: commitmentFloat 6s ease-in-out infinite;
+}
+
+.customer-commitment__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.customer-commitment__image:hover img {
+  transform: scale(1.045);
+}
+
+@keyframes commitmentFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   FLOATING BADGE
+========================================================= */
+
+.customer-commitment__badge {
+  position: absolute;
+
+  z-index: 7;
+
+  left: 10px;
+  top: 110px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 17px 10px 10px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: 999px;
+
+  box-shadow: 0 16px 38px rgba(60, 30, 20, 0.13);
+
+  border: 1px solid rgba(229, 42, 42, 0.1);
+}
+
+.customer-commitment__badge-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: #df2929;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+.customer-commitment__badge strong {
+  display: block;
+
+  color: #222;
+
+  font-size: 12px;
+}
+
+.customer-commitment__badge span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #999;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.customer-commitment__label {
+  position: absolute;
+
+  z-index: 6;
+
+  right: 20px;
+  bottom: 80px;
+
+  padding: 13px 18px;
+
+  background: #fff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 16px 35px rgba(60, 30, 20, 0.11);
+
+  transform: rotate(3deg);
+}
+
+.customer-commitment__label span {
+  display: block;
+
+  color: #df2929;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.customer-commitment__label strong {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #222;
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.customer-commitment__star {
+  position: absolute;
+
+  z-index: 7;
+
+  color: #df2929;
+
+  animation: commitmentSparkle 2.5s ease-in-out infinite;
+}
+
+.customer-commitment__star--1 {
+  top: 65px;
+  right: 70px;
+
+  font-size: 22px;
+}
+
+.customer-commitment__star--2 {
+  bottom: 95px;
+  left: 55px;
+
+  font-size: 13px;
+
+  animation-delay: 0.7s;
+}
+
+@keyframes commitmentSparkle {
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.15);
+  }
+}
+.customer-commitment__description {
+  max-width: 590px;
+}
+
+.customer-commitment__description p {
+  margin: 0 0 18px;
+
+  color: #6d6d6d;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+.customer-commitment__description p:last-child {
+  margin-bottom: 0;
+}
+
+/*Responsive*/
+/* =========================================================
+   RESPONSIVE - MAX WIDTH 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .customer-commitment {
+    padding: 95px 0 90px;
+  }
+
+  .customer-commitment__container {
+    width: min(1080px, calc(100% - 56px));
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(440px, 0.95fr);
+
+    gap: 55px;
+  }
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .customer-commitment__content {
+    max-width: 530px;
+  }
+
+  .customer-commitment__content h2 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .customer-commitment__description {
+    max-width: 540px;
+  }
+
+  .customer-commitment__description p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  /* =========================
+     BADGES
+  ========================= */
+
+  .customer-commitment__badges {
+    gap: 8px;
+  }
+
+  .commitment-badge {
+    min-height: 108px;
+    padding: 13px 11px;
+  }
+
+  .commitment-badge__icon {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .commitment-badge strong {
+    font-size: 10px;
+  }
+
+  .commitment-badge span {
+    font-size: 8px;
+  }
+
+  /* =========================
+     VISUAL
+  ========================= */
+
+  .customer-commitment__visual {
+    min-height: 510px;
+  }
+
+  .customer-commitment__circle {
+    width: 470px;
+    height: 470px;
+  }
+
+  .customer-commitment__ring {
+    width: 410px;
+    height: 410px;
+  }
+
+  .customer-commitment__image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .customer-commitment__badge {
+    left: calc(50% - 220px);
+    top: 85px;
+  }
+
+  .customer-commitment__label {
+    right: calc(50% - 215px);
+    bottom: 65px;
+  }
+
+  .customer-commitment__star--1 {
+    right: calc(50% - 210px);
+  }
+
+  .customer-commitment__star--2 {
+    left: calc(50% - 205px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MAX WIDTH 992px
+========================================================= */
+
+@media (max-width: 992px) {
+  .customer-commitment {
+    padding: 85px 0 80px;
+  }
+
+  .customer-commitment__container {
+    width: min(760px, calc(100% - 48px));
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+  }
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .customer-commitment__content {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 0;
+  }
+
+  .customer-commitment__content h2 {
+    /* max-width: 650px; */
+
+    font-size: 40px;
+  }
+
+  .customer-commitment__description {
+    max-width: 680px;
+  }
+
+  .customer-commitment__description p {
+    font-size: 14px;
+    line-height: 1.9;
+
+    text-align: justify;
+  }
+
+  /* =========================
+     BADGES
+  ========================= */
+
+  .customer-commitment__badges {
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+    max-width: 700px;
+
+    gap: 10px;
+  }
+
+  .commitment-badge {
+    min-height: 110px;
+
+    padding: 13px 12px;
+  }
+
+  .commitment-badge__icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  /* =========================
+     VISUAL
+  ========================= */
+
+  .customer-commitment__visual {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .customer-commitment__circle {
+    width: 460px;
+    height: 460px;
+  }
+
+  .customer-commitment__ring {
+    width: 400px;
+    height: 400px;
+  }
+
+  .customer-commitment__image {
+    width: 395px;
+    height: 395px;
+  }
+
+  /* Floating badge */
+
+  .customer-commitment__badge {
+    left: calc(50% - 225px);
+    top: 78px;
+  }
+
+  /* Image label */
+
+  .customer-commitment__label {
+    right: calc(50% - 220px);
+    bottom: 60px;
+  }
+
+  /* Stars */
+
+  .customer-commitment__star--1 {
+    top: 48px;
+    right: calc(50% - 220px);
+  }
+
+  .customer-commitment__star--2 {
+    bottom: 70px;
+    left: calc(50% - 215px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MAX WIDTH 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .customer-commitment {
+    padding: 70px 0 70px;
+  }
+
+  .customer-commitment__container {
+    width: calc(100% - 36px);
+
+    gap: 50px;
+  }
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .customer-commitment__eyebrow {
+    margin-bottom: 19px;
+
+    gap: 9px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .customer-commitment__eyebrow span {
+    width: 28px;
+  }
+
+  .customer-commitment__content h2 {
+    font-size: 36px;
+    /* line-height: 1.06;
+    letter-spacing: -1.5px; */
+  }
+
+  .customer-commitment__line {
+    width: 48px;
+
+    height: 2px;
+
+    margin: 24px 0;
+  }
+
+  .customer-commitment__description {
+    max-width: 100%;
+  }
+
+  .customer-commitment__description p {
+    font-size: 14px;
+    line-height: 1.85;
+
+    text-align: left;
+  }
+
+  /* =========================
+     BADGES
+  ========================= */
+
+  .customer-commitment__badges {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 28px;
+  }
+
+  .commitment-badge {
+    min-height: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+  }
+
+  .commitment-badge__icon {
+    width: 38px;
+    height: 38px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+  }
+
+  .commitment-badge strong {
+    font-size: 11px;
+  }
+
+  .commitment-badge span {
+    margin-top: 3px;
+
+    font-size: 9px;
+  }
+
+  /* =========================
+     VISUAL
+  ========================= */
+
+  .customer-commitment__visual {
+    min-height: 440px;
+  }
+
+  .customer-commitment__circle {
+    width: 390px;
+    height: 390px;
+  }
+
+  .customer-commitment__ring {
+    width: 345px;
+    height: 345px;
+  }
+
+  .customer-commitment__image {
+    width: 340px;
+    height: 340px;
+
+    border-width: 7px;
+  }
+
+  /* Badge */
+
+  .customer-commitment__badge {
+    left: calc(50% - 195px);
+    top: 65px;
+
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+
+  /* Label */
+
+  .customer-commitment__label {
+    right: calc(50% - 190px);
+    bottom: 45px;
+
+    transform: rotate(3deg) scale(0.9);
+
+    transform-origin: right bottom;
+  }
+
+  .customer-commitment__star--1 {
+    top: 35px;
+    right: calc(50% - 185px);
+  }
+
+  .customer-commitment__star--2 {
+    bottom: 55px;
+    left: calc(50% - 180px);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MAX WIDTH 576px
+========================================================= */
+
+@media (max-width: 576px) {
+  .customer-commitment {
+    padding: 58px 0 60px;
+  }
+
+  .customer-commitment__container {
+    width: calc(100% - 28px);
+
+    gap: 42px;
+  }
+
+  /* =========================
+     EYEBROW
+  ========================= */
+
+  .customer-commitment__eyebrow {
+    margin-bottom: 17px;
+
+    gap: 8px;
+
+    font-size: 8px;
+    letter-spacing: 1.25px;
+  }
+
+  .customer-commitment__eyebrow span {
+    width: 24px;
+  }
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .customer-commitment__content h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    /* letter-spacing: -1px; */
+  }
+
+  .customer-commitment__content h2 strong {
+    margin-top: 4px;
+  }
+
+  .customer-commitment__line {
+    width: 42px;
+
+    height: 2px;
+
+    margin: 21px 0;
+  }
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+  .customer-commitment__description p {
+    margin-bottom: 14px;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    text-align: left;
+  }
+
+  /* =========================
+     BADGES
+  ========================= */
+
+  .customer-commitment__badges {
+    gap: 8px;
+
+    margin-top: 24px;
+  }
+
+  .commitment-badge {
+    gap: 11px;
+
+    padding: 10px 11px;
+
+    border-radius: 12px;
+  }
+
+  .commitment-badge__icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 13px;
+  }
+
+  .commitment-badge strong {
+    font-size: 10px;
+  }
+
+  .commitment-badge span {
+    font-size: 8px;
+  }
+
+  /* =========================
+     VISUAL
+  ========================= */
+
+  .customer-commitment__visual {
+    min-height: 345px;
+  }
+
+  .customer-commitment__circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .customer-commitment__ring {
+    width: 250px;
+    height: 250px;
+
+    box-shadow:
+      0 0 0 13px rgba(223, 41, 41, 0.018),
+      0 0 0 28px rgba(223, 41, 41, 0.012);
+  }
+
+  .customer-commitment__image {
+    width: 255px;
+    height: 255px;
+
+    border-width: 6px;
+
+    box-shadow: 0 20px 42px rgba(75, 35, 25, 0.15);
+  }
+
+  /* =========================
+     FLOATING BADGE
+  ========================= */
+
+  .customer-commitment__badge {
+    left: 0;
+    top: 43px;
+
+    gap: 7px;
+
+    padding: 6px 10px 6px 6px;
+
+    transform: scale(0.72);
+    transform-origin: left center;
+  }
+
+  .customer-commitment__badge-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 11px;
+  }
+
+  .customer-commitment__badge strong {
+    font-size: 10px;
+  }
+
+  .customer-commitment__badge span {
+    font-size: 7px;
+  }
+
+  /* =========================
+     IMAGE LABEL
+  ========================= */
+
+  .customer-commitment__label {
+    right: 0;
+    bottom: 30px;
+
+    padding: 8px 10px;
+
+    border-radius: 10px;
+
+    transform: rotate(3deg) scale(0.74);
+
+    transform-origin: right bottom;
+  }
+
+  .customer-commitment__label span {
+    font-size: 6px;
+    letter-spacing: 1.1px;
+  }
+
+  .customer-commitment__label strong {
+    font-size: 12px;
+  }
+
+  /* =========================
+     STARS
+  ========================= */
+
+  .customer-commitment__star--1 {
+    top: 20px;
+    right: 18px;
+
+    font-size: 16px;
+  }
+
+  .customer-commitment__star--2 {
+    bottom: 38px;
+    left: 12px;
+
+    font-size: 10px;
+  }
+}
+
+/*New section*/
+/* =========================================================
+   BRAND VALUES NEW
+========================================================= */
+
+.brand-values-new {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 80px 0 60px;
+
+  background: #fff;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.brand-values-new__container {
+  width: min(1180px, calc(100% - 72px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.brand-values-new__header {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  column-gap: 80px;
+
+  align-items: center;
+
+  margin-bottom: 80px;
+}
+
+.brand-values-new__eyebrow {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 24px;
+
+  color: #df2929;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.brand-values-new__eyebrow span {
+  width: 38px;
+
+  height: 2px;
+
+  background: #df2929;
+}
+
+.brand-values-new__header p {
+  max-width: 510px;
+
+  margin: 0 0 4px;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/* =========================================================
+   VALUE LIST
+========================================================= */
+
+.brand-values-new__list {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 0;
+}
+
+/* horizontal connecting line */
+
+.brand-values-new__list::before {
+  content: "";
+
+  position: absolute;
+
+  left: 11%;
+
+  right: 11%;
+
+  top: 45px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(223, 41, 41, 0.18),
+    transparent
+  );
+}
+
+/* =========================================================
+   VALUE ITEM
+========================================================= */
+
+.brand-value-new {
+  position: relative;
+
+  padding: 0 38px;
+
+  text-align: center;
+}
+
+.brand-value-new + .brand-value-new {
+  border-left: 1px solid rgba(40, 40, 40, 0.08);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.brand-value-new__number {
+  position: absolute;
+
+  top: -8px;
+
+  right: 28px;
+
+  color: rgba(223, 41, 41, 0.12);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.brand-value-new__icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 90px;
+
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: 0 auto 30px;
+
+  color: #df2929;
+
+  background: #fff5f2;
+
+  border: 1px solid rgba(223, 41, 41, 0.1);
+
+  border-radius: 50%;
+
+  box-shadow: 0 12px 30px rgba(80, 30, 20, 0.06);
+
+  font-size: 27px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.brand-value-new:hover .brand-value-new__icon {
+  color: #fff;
+
+  background: #df2929;
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 38px rgba(223, 41, 41, 0.2);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.brand-value-new__content > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #df2929;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.brand-value-new__content h3 {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Liberation Sans",
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+
+  max-width: 250px;
+
+  margin: 0 auto;
+
+  color: #222;
+
+  font-size: 15px;
+
+  line-height: 1.3;
+
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.brand-value-new__content h3 strong {
+  color: #df2929;
+}
+
+.brand-value-new__content p {
+  max-width: 255px;
+
+  margin: 15px auto 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+@media (max-width: 1200px) {
+  .brand-values-new {
+    padding: 100px 0 105px;
+  }
+
+  .brand-values-new__container {
+    width: min(1080px, calc(100% - 56px));
+  }
+
+  .brand-values-new__header {
+    column-gap: 55px;
+
+    margin-bottom: 70px;
+  }
+
+  .brand-values-new__header h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .brand-value-new {
+    padding: 0 25px;
+  }
+
+  .brand-value-new__icon {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 25px;
+  }
+
+  .brand-value-new__content h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 992px) {
+  .brand-values-new {
+    padding: 85px 0 90px;
+  }
+
+  .brand-values-new__container {
+    width: min(760px, calc(100% - 48px));
+  }
+
+  .brand-values-new__header {
+    display: block;
+
+    margin-bottom: 60px;
+  }
+
+  .brand-values-new__eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .brand-values-new__header h2 {
+    font-size: 36px;
+
+    line-height: 1.25;
+
+    letter-spacing: -1.8px;
+  }
+
+  .brand-values-new__header p {
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-size: 14px;
+
+    text-align: left;
+  }
+
+  .brand-values-new__list::before {
+    left: 8%;
+    right: 8%;
+
+    top: 40px;
+  }
+
+  .brand-value-new {
+    padding: 0 18px;
+  }
+
+  .brand-value-new__icon {
+    width: 76px;
+    height: 76px;
+
+    margin-bottom: 22px;
+
+    font-size: 23px;
+  }
+
+  .brand-value-new__content h3 {
+    font-size: 16px;
+  }
+
+  .brand-value-new__content p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .brand-values-new {
+    padding: 70px 0 75px;
+  }
+
+  .brand-values-new__container {
+    width: calc(100% - 36px);
+  }
+
+  .brand-values-new__header {
+    margin-bottom: 48px;
+  }
+
+  .brand-values-new__eyebrow {
+    gap: 9px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .brand-values-new__eyebrow span {
+    width: 28px;
+  }
+
+  .brand-values-new__header h2 {
+    font-size: 36px;
+
+    letter-spacing: -1.3px;
+  }
+
+  .brand-values-new__header p {
+    margin-top: 22px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  /* 3 item chuyển thành 1 cột */
+
+  .brand-values-new__list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+  .brand-values-new__list::before {
+    display: none;
+  }
+
+  .brand-value-new {
+    display: grid;
+
+    grid-template-columns: 75px 1fr;
+
+    column-gap: 20px;
+
+    padding: 28px 0;
+
+    text-align: left;
+  }
+
+  .brand-value-new:first-child {
+    padding-top: 0;
+  }
+
+  .brand-value-new + .brand-value-new {
+    border-left: 0;
+
+    border-top: 1px solid rgba(40, 40, 40, 0.08);
+  }
+
+  .brand-value-new__icon {
+    grid-row: span 2;
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0;
+
+    font-size: 22px;
+  }
+
+  .brand-value-new__number {
+    top: 30px;
+
+    right: 5px;
+  }
+
+  .brand-value-new:first-child .brand-value-new__number {
+    top: 3px;
+  }
+
+  .brand-value-new__content h3 {
+    max-width: none;
+
+    margin: 0;
+
+    font-size: 16px;
+  }
+
+  .brand-value-new__content p {
+    max-width: 100%;
+
+    margin: 10px 0 0;
+
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .brand-values-new {
+    padding: 58px 0 62px;
+  }
+
+  .brand-values-new__container {
+    width: calc(100% - 28px);
+  }
+
+  .brand-values-new__header {
+    margin-bottom: 38px;
+  }
+
+  .brand-values-new__eyebrow {
+    margin-bottom: 17px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .brand-values-new__eyebrow span {
+    width: 24px;
+  }
+
+  .brand-values-new__header h2 {
+    font-size: 30px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+  .brand-values-new__header h2 strong {
+    margin-top: 4px;
+  }
+
+  .brand-values-new__header p {
+    margin-top: 20px;
+
+    font-size: 12.5px;
+
+    line-height: 1.8;
+  }
+
+  .brand-value-new {
+    grid-template-columns: 58px 1fr;
+
+    column-gap: 15px;
+
+    padding: 22px 0;
+  }
+
+  .brand-value-new__icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 18px;
+  }
+
+  .brand-value-new__number {
+    top: 23px;
+
+    font-size: 9px;
+  }
+
+  .brand-value-new:first-child .brand-value-new__number {
+    top: 1px;
+  }
+
+  .brand-value-new__content > span {
+    margin-bottom: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .brand-value-new__content h3 {
+    font-size: 14px;
+
+    line-height: 1.3;
+  }
+
+  .brand-value-new__content p {
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   BRAND LOGO
+========================================================= */
+
+.brand-values-new__brand {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 24px;
+
+  margin: 0 auto 70px;
+
+  width: 100%;
+}
+
+/* =========================
+   DECORATIVE LINE
+========================= */
+
+.brand-values-new__brand-line {
+  width: 90px;
+
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, rgba(223, 41, 41, 0.3));
+}
+
+.brand-values-new__brand-line:last-child {
+  background: linear-gradient(90deg, rgba(223, 41, 41, 0.3), transparent);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.brand-values-new__brand-logo {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 9px;
+
+  background: #fff;
+
+  border: 1px solid rgba(223, 41, 41, 0.15);
+
+  border-radius: 50%;
+
+  box-shadow: 0 10px 28px rgba(70, 30, 20, 0.07);
+}
+
+.brand-values-new__brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* =========================
+   LOGO TEXT
+========================= */
+
+.brand-values-new__brand-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.brand-values-new__brand-info span {
+  color: #df2929;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.brand-values-new__brand-info small {
+  color: #999;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+.brand-values-new__brand-logo {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.brand-values-new__brand-logo:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 35px rgba(70, 30, 20, 0.11);
+}
+
+/*Time line*/
+/* =========================================================
+   FLAVOR STORY
+========================================================= */
+
+.flavor-story {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 80px 0 60px;
+
+  background:
+    radial-gradient(
+      circle at 50% 58%,
+      rgba(229, 42, 42, 0.065),
+      transparent 34%
+    ),
+    #fffdfb;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.flavor-story__container {
+  width: min(1240px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.flavor-story__header {
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+.flavor-story__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #df2929;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.flavor-story__eyebrow i {
+  font-size: 13px;
+}
+
+/* .flavor-story__header h2 {
+  margin: 20px 0 0;
+
+  color: #1b1b1b;
+
+  font-size: clamp(43px, 5vw, 68px);
+
+  line-height: 1.03;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+} */
+
+.flavor-story__header h2 span {
+  display: block;
+
+  color: #df2929;
+}
+
+.flavor-story__header p {
+  margin: 22px auto 0;
+
+  color: #777;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.flavor-story__visual {
+  position: relative;
+
+  width: min(980px, 100%);
+
+  height: 650px;
+
+  margin: 35px auto 0;
+}
+
+/* =========================================================
+   ORBIT
+========================================================= */
+
+.flavor-story__orbit {
+  position: absolute;
+
+  width: 570px;
+  height: 570px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px dashed rgba(223, 41, 41, 0.18);
+
+  border-radius: 50%;
+}
+
+.flavor-story__orbit::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 35px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(223, 41, 41, 0.055);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.flavor-story__image {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+  top: 50%;
+
+  width: 455px;
+  height: 455px;
+
+  transform: translate(-50%, -50%);
+
+  padding: 12px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 35px 90px rgba(65, 30, 20, 0.16);
+}
+
+.flavor-story__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  transition: transform 0.8s ease;
+}
+
+.flavor-story__image:hover img {
+  transform: scale(1.045);
+}
+
+/* =========================================================
+   POINT
+========================================================= */
+
+.flavor-story__point {
+  position: absolute;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  color: #222;
+}
+
+.flavor-story__point > div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.flavor-story__point strong {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.flavor-story__point span:not(.flavor-story__point-dot) {
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+.flavor-story__point-dot {
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+
+  flex-shrink: 0;
+
+  border: 3px solid #fff;
+
+  border-radius: 50%;
+
+  background: #df2929;
+
+  box-shadow: 0 0 0 5px rgba(223, 41, 41, 0.1);
+}
+
+/* =========================================================
+   CONNECTING LINES
+========================================================= */
+
+.flavor-story__point::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+
+  height: 1px;
+
+  background: rgba(223, 41, 41, 0.18);
+}
+
+/* LEFT TOP */
+
+.flavor-story__point--left-top {
+  left: 50px;
+  top: 145px;
+}
+
+.flavor-story__point--left-top::after {
+  left: calc(100% + 10px);
+  top: 50%;
+
+  transform-origin: left center;
+
+  transform: rotate(15deg);
+}
+
+/* RIGHT TOP */
+
+.flavor-story__point--right-top {
+  right: 45px;
+  top: 145px;
+}
+
+.flavor-story__point--right-top::after {
+  right: calc(100% + 10px);
+  top: 50%;
+
+  transform-origin: right center;
+
+  transform: rotate(-15deg);
+}
+
+/* LEFT BOTTOM */
+
+.flavor-story__point--left-bottom {
+  left: 45px;
+  bottom: 145px;
+}
+
+.flavor-story__point--left-bottom::after {
+  left: calc(100% + 10px);
+  top: 50%;
+
+  transform-origin: left center;
+
+  transform: rotate(-15deg);
+}
+
+/* RIGHT BOTTOM */
+
+.flavor-story__point--right-bottom {
+  right: 45px;
+  bottom: 145px;
+}
+
+.flavor-story__point--right-bottom::after {
+  right: calc(100% + 10px);
+  top: 50%;
+
+  transform-origin: right center;
+
+  transform: rotate(15deg);
+}
+
+/* =========================================================
+   CENTER BADGE
+========================================================= */
+
+.flavor-story__badge {
+  position: absolute;
+
+  z-index: 7;
+
+  left: 50%;
+  bottom: 55px;
+
+  transform: translateX(-50%);
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 50%;
+
+  background: #df2929;
+
+  color: #fff;
+
+  box-shadow: 0 15px 35px rgba(180, 35, 35, 0.22);
+}
+
+.flavor-story__badge i {
+  font-size: 17px;
+}
+
+.flavor-story__badge span {
+  font-size: 8px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.5px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.flavor-story__footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(30, 30, 30, 0.08);
+}
+
+.flavor-story__footer > span {
+  color: #aaa;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.flavor-story__cta {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 7px 7px 7px 20px;
+
+  color: #222;
+
+  background: #fff;
+
+  border: 1px solid rgba(223, 41, 41, 0.18);
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.flavor-story__cta > span:first-child {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.flavor-story__cta-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #fff;
+
+  background: #df2929;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.flavor-story__cta:hover {
+  color: #fff;
+
+  background: #df2929;
+
+  border-color: #df2929;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(223, 41, 41, 0.2);
+}
+
+.flavor-story__cta:hover .flavor-story__cta-icon {
+  color: #df2929;
+
+  background: #fff;
+
+  transform: rotate(45deg);
+}
+
+.text-center {
+  text-align: center !important;
+  max-width: none !important;
+}
+
+.w-100 {
+  width: 100% !important;
+  max-width: none;
+}
+.content-center {
+  justify-content: center !important;
+}
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+  .flavor-story__container {
+    width: calc(100% - 60px);
+  }
+
+  .flavor-story__visual {
+    height: 610px;
+  }
+
+  .flavor-story__orbit {
+    width: 530px;
+    height: 530px;
+  }
+
+  .flavor-story__image {
+    width: 425px;
+    height: 425px;
+  }
+
+  .flavor-story__point--left-top {
+    left: 25px;
+  }
+
+  .flavor-story__point--left-bottom {
+    left: 20px;
+  }
+
+  .flavor-story__point--right-top {
+    right: 20px;
+  }
+
+  .flavor-story__point--right-bottom {
+    right: 20px;
+  }
+}
+
+/* =========================================================
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+  .flavor-story {
+    padding: 95px 0 100px;
+  }
+
+  .flavor-story__container {
+    width: calc(100% - 45px);
+  }
+
+  .flavor-story__header h2 {
+    font-size: 40px;
+  }
+
+  .flavor-story__visual {
+    height: 590px;
+  }
+
+  .flavor-story__orbit {
+    width: 500px;
+    height: 500px;
+  }
+
+  .flavor-story__image {
+    width: 395px;
+    height: 395px;
+  }
+
+  .flavor-story__point--left-top {
+    left: 0;
+    top: 125px;
+  }
+
+  .flavor-story__point--right-top {
+    right: 0;
+    top: 125px;
+  }
+
+  .flavor-story__point--left-bottom {
+    left: 0;
+    bottom: 120px;
+  }
+
+  .flavor-story__point--right-bottom {
+    right: 0;
+    bottom: 120px;
+  }
+
+  .flavor-story__point strong {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+  /*footer icon*/
+
+  .flavor-story__cta {
+    gap: 10px;
+
+    padding-left: 16px;
+  }
+
+  .flavor-story__cta > span:first-child {
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .flavor-story__cta-icon {
+    width: 35px;
+    height: 35px;
+
+    font-size: 12px;
+  }
+
+  /**/
+
+  .flavor-story {
+    padding: 40px 0 55px;
+  }
+
+  .flavor-story__container {
+    width: calc(100% - 32px);
+  }
+
+  .flavor-story__header h2 {
+    font-size: 36px;
+  }
+
+  .flavor-story__header p {
+    font-size: 14px;
+  }
+
+  .flavor-story__visual {
+    height: 570px;
+
+    margin-top: 20px;
+  }
+
+  .flavor-story__orbit {
+    width: 430px;
+    height: 430px;
+  }
+
+  .flavor-story__image {
+    width: 345px;
+    height: 345px;
+  }
+
+  .flavor-story__point--left-top {
+    left: 5px;
+    top: 115px;
+  }
+
+  .flavor-story__point--right-top {
+    right: 5px;
+    top: 115px;
+  }
+
+  .flavor-story__point--left-bottom {
+    left: 5px;
+    bottom: 105px;
+  }
+
+  .flavor-story__point--right-bottom {
+    right: 5px;
+    bottom: 105px;
+  }
+
+  .flavor-story__point span:not(.flavor-story__point-dot) {
+    font-size: 9px;
+  }
+
+  .flavor-story__point::after {
+    width: 45px;
+  }
+
+  .flavor-story__badge {
+    width: 88px;
+    height: 88px;
+
+    bottom: 48px;
+  }
+
+  .flavor-story__footer {
+    gap: 20px;
+  }
+}
+
+/* =========================================================
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+  /*footer icon*/
+  .flavor-story__cta {
+    gap: 8px;
+
+    padding: 6px 6px 6px 14px;
+  }
+
+  .flavor-story__cta > span:first-child {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .flavor-story__cta-icon {
+    width: 32px;
+    height: 32px;
+
+    font-size: 11px;
+  }
+  /**/
+
+  .flavor-story {
+    padding: 65px 0 70px;
+  }
+
+  .flavor-story__container {
+    width: calc(100% - 28px);
+  }
+
+  .flavor-story__eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .flavor-story__header h2 {
+    margin-top: 16px;
+
+    font-size: 30px;
+
+    letter-spacing: -1px;
+  }
+
+  .flavor-story__header p {
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .flavor-story__visual {
+    height: 520px;
+
+    margin-top: 15px;
+  }
+
+  .flavor-story__orbit {
+    width: 315px;
+    height: 315px;
+  }
+
+  .flavor-story__orbit::before {
+    inset: 22px;
+  }
+
+  .flavor-story__image {
+    width: 275px;
+    height: 275px;
+
+    padding: 8px;
+  }
+
+  /* MOBILE POINTS */
+
+  .flavor-story__point {
+    gap: 7px;
+  }
+
+  .flavor-story__point strong {
+    font-size: 8px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .flavor-story__point span:not(.flavor-story__point-dot) {
+    margin-top: 3px;
+
+    font-size: 8px;
+  }
+
+  .flavor-story__point-dot {
+    width: 8px;
+    height: 8px;
+
+    border-width: 2px;
+
+    box-shadow: 0 0 0 3px rgba(223, 41, 41, 0.1);
+  }
+
+  /* POSITION */
+
+  .flavor-story__point--left-top {
+    left: 0;
+    top: 95px;
+  }
+
+  .flavor-story__point--right-top {
+    right: 0;
+    top: 95px;
+  }
+
+  .flavor-story__point--left-bottom {
+    left: 0;
+    bottom: 95px;
+  }
+
+  .flavor-story__point--right-bottom {
+    right: 0;
+    bottom: 95px;
+  }
+
+  .flavor-story__point::after {
+    display: none;
+  }
+
+  /* BADGE */
+
+  .flavor-story__badge {
+    width: 72px;
+    height: 72px;
+
+    bottom: 43px;
+
+    gap: 3px;
+  }
+
+  .flavor-story__badge i {
+    font-size: 12px;
+  }
+
+  .flavor-story__badge span {
+    font-size: 6px;
+
+    letter-spacing: 1px;
+  }
+
+  /* FOOTER */
+
+  .flavor-story__footer {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding-top: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand-story {
+    padding: 35px 12px 20px;
+  }
+
+  .brand-story-content h1 {
+    font-size: 27px;
+  }
+
+  .brand-story-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .brand-story-visual {
+    min-height: 285px;
+  }
+
+  .factory-circle {
+    width: 270px;
+
+    height: 270px;
+  }
+
+  .factory-circle::after {
+    inset: 33px;
+  }
+
+  .factory-image {
+    width: 94%;
+
+    height: 205px;
+  }
+
+  .years-badge {
+    width: 92px;
+
+    height: 92px;
+
+    left: 0;
+
+    top: 10px;
+  }
+
+  .years-icon {
+    width: 22px;
+
+    height: 22px;
+
+    font-size: 10px;
+  }
+
+  .years-badge strong {
+    font-size: 29px;
+  }
+
+  .years-badge span {
+    font-size: 5.5px;
+  }
+
+  .years-badge small {
+    font-size: 6px;
+  }
+
+  .factory-info {
+    max-width: 195px;
+
+    padding: 7px 9px;
+  }
+
+  .factory-info-icon {
+    width: 26px;
+
+    height: 26px;
+
+    font-size: 12px;
+  }
+
+  .factory-info strong {
+    font-size: 6.5px;
+  }
+
+  .factory-info span {
+    font-size: 6.5px;
+  }
+
+  .brand-values {
+    padding: 10px;
+  }
+
+  .brand-value {
+    padding: 12px 3px;
+  }
+
+  .value-icon {
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 17px;
+  }
+
+  .value-content h3 {
+    font-size: 10px;
+  }
+
+  .value-content p {
+    font-size: 8px;
+  }
+
+  .customer-commitment__content h2 {
+    font-size: 27px !important;
+  }
+}

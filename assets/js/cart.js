@@ -1,5 +1,5 @@
-class Cart {
-  constructor() {}
-}
+// class Cart {
+//   constructor() {}
+// }
 
-const cart = new Cart();
+// const cart = new Cart();

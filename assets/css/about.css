@@ -1,0 +1,570 @@
+/* =========================================================
+   ABOUT STORY
+========================================================= */
+
+.about-story {
+  position: relative;
+  overflow: hidden;
+
+  padding: 110px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(230, 40, 38, 0.055),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #fffdfb 0%, #fff8f5 100%);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-story__container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1240px, calc(100% - 64px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(430px, 0.85fr);
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-story__content {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.about-story__label {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  border-radius: 999px;
+
+  background: #fff0ee;
+
+  color: #df2529;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.about-story__label i {
+  font-size: 14px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-story h1 {
+  margin: 24px 0 25px;
+
+  max-width: 650px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 5vw, 70px);
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+
+  color: #171717;
+}
+
+.about-story h1 span {
+  color: #a91519;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.about-story__text {
+  max-width: 650px;
+}
+
+.about-story__text h2 {
+  margin: 0 0 16px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 28px;
+
+  line-height: 1.15;
+
+  color: #191919;
+}
+
+.about-story__text p {
+  margin: 0 0 15px;
+
+  color: #686868;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+   COMMITMENT
+========================================================= */
+
+.about-story__commitment {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-top: 30px;
+
+  padding: 25px 28px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 244, 241, 0.95),
+    rgba(255, 250, 248, 0.95)
+  );
+
+  border: 1px solid rgba(220, 40, 37, 0.1);
+
+  box-shadow: 0 15px 40px rgba(70, 30, 20, 0.045);
+}
+
+.about-story__commitment-icon {
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #e52227;
+
+  color: #fff;
+
+  font-size: 18px;
+
+  box-shadow: 0 10px 22px rgba(229, 34, 39, 0.18);
+}
+
+.about-story__commitment h3 {
+  margin: 0 0 7px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 24px;
+
+  color: #b31a1d;
+}
+
+.about-story__commitment p {
+  margin: 0 0 7px;
+
+  color: #707070;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.about-story__commitment p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.about-story__visual {
+  position: relative;
+
+  min-height: 600px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   SOFT BACKGROUND
+========================================================= */
+
+.about-story__visual-bg {
+  position: absolute;
+
+  width: 460px;
+  height: 460px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(235, 64, 52, 0.14),
+    rgba(235, 64, 52, 0.045) 58%,
+    transparent 72%
+  );
+}
+
+/* =========================================================
+   MAIN IMAGE
+========================================================= */
+
+.about-story__image-main {
+  position: relative;
+  z-index: 3;
+
+  width: 390px;
+  height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #eee;
+
+  box-shadow: 0 28px 65px rgba(50, 25, 20, 0.14);
+}
+
+.about-story__image-main img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   SMALL IMAGE
+========================================================= */
+
+.about-story__image-small {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 0;
+
+  bottom: 55px;
+
+  width: 190px;
+  height: 150px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #fff;
+
+  border: 8px solid #fff;
+
+  box-shadow: 0 20px 45px rgba(50, 25, 20, 0.13);
+}
+
+.about-story__image-small img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   DECOR
+========================================================= */
+
+.about-story__decor {
+  position: absolute;
+
+  z-index: 6;
+
+  color: #e52227;
+
+  font-size: 20px;
+}
+
+.about-story__decor--1 {
+  top: 80px;
+  right: 45px;
+}
+
+.about-story__decor--2 {
+  top: 120px;
+  right: 15px;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .about-story {
+    padding: 90px 0 100px;
+  }
+
+  .about-story__container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(350px, 0.8fr);
+
+    gap: 55px;
+  }
+
+  .about-story__visual {
+    min-height: 520px;
+  }
+
+  .about-story__image-main {
+    width: 340px;
+    height: 460px;
+  }
+
+  .about-story__visual-bg {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-story__image-small {
+    right: -5px;
+
+    width: 165px;
+    height: 130px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .about-story {
+    padding: 80px 0 90px;
+  }
+
+  .about-story__container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .about-story__content {
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .about-story h1 {
+    font-size: clamp(46px, 7vw, 62px);
+  }
+
+  .about-story__visual {
+    min-height: 540px;
+
+    width: 100%;
+  }
+
+  .about-story__image-main {
+    width: 370px;
+    height: 500px;
+  }
+
+  .about-story__image-small {
+    right: calc(50% - 250px);
+
+    bottom: 30px;
+
+    width: 180px;
+    height: 140px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .about-story {
+    padding: 65px 0 75px;
+  }
+
+  .about-story__container {
+    width: min(100% - 32px, 500px);
+
+    gap: 45px;
+  }
+
+  .about-story__label {
+    padding: 9px 14px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .about-story h1 {
+    margin-top: 20px;
+
+    font-size: clamp(39px, 12vw, 52px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1px;
+  }
+
+  .about-story__text h2 {
+    font-size: 25px;
+  }
+
+  .about-story__text p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .about-story__commitment {
+    gap: 14px;
+
+    padding: 20px;
+
+    border-radius: 19px;
+  }
+
+  .about-story__commitment-icon {
+    flex-basis: 42px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 13px;
+
+    font-size: 16px;
+  }
+
+  .about-story__commitment h3 {
+    font-size: 22px;
+  }
+
+  .about-story__commitment p {
+    font-size: 13px;
+  }
+
+  .about-story__visual {
+    min-height: 430px;
+  }
+
+  .about-story__visual-bg {
+    width: 330px;
+    height: 330px;
+  }
+
+  .about-story__image-main {
+    width: 280px;
+    height: 380px;
+
+    border-radius: 22px;
+  }
+
+  .about-story__image-small {
+    right: calc(50% - 165px);
+
+    bottom: 10px;
+
+    width: 145px;
+    height: 110px;
+
+    border-width: 6px;
+
+    border-radius: 17px;
+  }
+
+  .about-story__decor--1 {
+    top: 40px;
+
+    right: calc(50% - 150px);
+  }
+
+  .about-story__decor--2 {
+    top: 70px;
+
+    right: calc(50% - 175px);
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .about-story {
+    padding-top: 55px;
+  }
+
+  .about-story__container {
+    width: calc(100% - 24px);
+  }
+
+  .about-story h1 {
+    font-size: 38px;
+  }
+
+  .about-story__commitment {
+    flex-direction: column;
+  }
+
+  .about-story__visual {
+    min-height: 390px;
+  }
+
+  .about-story__image-main {
+    width: 250px;
+    height: 340px;
+  }
+
+  .about-story__image-small {
+    right: 8px;
+    bottom: 5px;
+
+    width: 125px;
+    height: 95px;
+  }
+}

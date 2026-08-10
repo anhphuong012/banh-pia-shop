@@ -35,3 +35,11 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 counters.forEach((counter) => observer.observe(counter));
+
+function forwardToShop() {
+  window.location.href = "shop.html";
+}
+
+function forwardToNew() {
+  window.location.href = "shop-new.html";
+}

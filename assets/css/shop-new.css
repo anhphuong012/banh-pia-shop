@@ -1,0 +1,10 @@
+.shop-hero-content {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../images/products/new.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.badge-new {
+  background: linear-gradient(135deg, #ffb300, #f57f17) !important;
+}
