@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Thanh toán | Tân Huê Viên</title>
+
+    <link rel="SHORTCUT ICON" href="assets/images/logo/logo.png" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="assets/css/checkout.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+  </head>
+
+  <body>
+    <!-- =========================================
+         CHECKOUT HEADER
+    ========================================== -->
+
+    <header class="checkout-header">
+      <div class="checkout-header__container">
+        <a href="index.html" class="checkout-logo">
+          <img src="assets/images/logo/logo.png" alt="Tân Huê Viên" />
+        </a>
+
+        <div class="checkout-back-home">
+          <a href="index.html">
+            <i class="bi bi-arrow-left"></i>
+            <span>Quay lại trang chủ</span>
+          </a>
+        </div>
+
+        <div class="checkout-header__title">
+          <i class="bi bi-shield-check"></i>
+
+          <div>
+            <strong>THANH TOÁN</strong>
+
+            <span> Hoàn tất đơn hàng của bạn </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================
+         CHECKOUT MAIN
+    ========================================== -->
+
+    <main class="checkout-page">
+      <div class="checkout-container">
+        <!-- =====================================
+             LEFT
+        ====================================== -->
+
+        <section class="checkout-form">
+          <!-- THÔNG TIN NHẬN HÀNG -->
+
+          <div class="checkout-card">
+            <div class="checkout-card__header">
+              <div class="checkout-card__icon">
+                <i class="bi bi-person"></i>
+              </div>
+
+              <div>
+                <h2>Thông tin nhận hàng</h2>
+
+                <p>Nhập thông tin để chúng tôi giao hàng đến bạn</p>
+              </div>
+            </div>
+
+            <div class="checkout-grid">
+              <!-- HỌ TÊN -->
+
+              <div class="checkout-field checkout-field--full">
+                <label>
+                  Họ và tên
+                  <span>*</span>
+                </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-person"></i>
+
+                  <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Nhập họ và tên"
+                  />
+                </div>
+
+                <small class="checkout-error" id="customerNameError"></small>
+              </div>
+
+              <!-- SỐ ĐIỆN THOẠI -->
+
+              <div class="checkout-field">
+                <label>
+                  Số điện thoại
+                  <span>*</span>
+                </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-telephone"></i>
+
+                  <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Nhập số điện thoại"
+                  />
+                </div>
+
+                <small class="checkout-error" id="customerPhoneError"></small>
+              </div>
+
+              <!-- EMAIL -->
+
+              <div class="checkout-field">
+                <label> Email </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-envelope"></i>
+
+                  <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="example@email.com"
+                  />
+                </div>
+              </div>
+
+              <!-- TỈNH -->
+
+              <div class="checkout-field">
+                <label>
+                  Tỉnh / Thành phố
+                  <span>*</span>
+                </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-geo-alt"></i>
+
+                  <select id="customerProvince">
+                    <option value="">Chọn tỉnh / thành phố</option>
+
+                    <option>Sóc Trăng</option>
+
+                    <option>Thành phố Hồ Chí Minh</option>
+
+                    <option>Hà Nội</option>
+
+                    <option>Cần Thơ</option>
+
+                    <option>Đồng Nai</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- QUẬN -->
+
+              <div class="checkout-field">
+                <label>
+                  Quận / Huyện
+                  <span>*</span>
+                </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-map"></i>
+
+                  <select id="customerDistrict">
+                    <option value="">Chọn quận / huyện</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- ĐỊA CHỈ -->
+
+              <div class="checkout-field checkout-field--full">
+                <label>
+                  Địa chỉ nhận hàng
+                  <span>*</span>
+                </label>
+
+                <div class="checkout-input">
+                  <i class="bi bi-house"></i>
+
+                  <input
+                    type="text"
+                    id="customerAddress"
+                    placeholder="Số nhà, tên đường..."
+                  />
+                </div>
+              </div>
+
+              <!-- GHI CHÚ -->
+
+              <div class="checkout-field checkout-field--full">
+                <label> Ghi chú đơn hàng </label>
+
+                <div class="checkout-input checkout-input--textarea">
+                  <i class="bi bi-chat-left-text"></i>
+
+                  <textarea
+                    id="customerNote"
+                    rows="3"
+                    placeholder="Ghi chú cho người giao hàng..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =====================================
+               PHƯƠNG THỨC GIAO HÀNG
+          ====================================== -->
+
+          <div class="checkout-card">
+            <div class="checkout-card__header">
+              <div class="checkout-card__icon">
+                <i class="bi bi-truck"></i>
+              </div>
+
+              <div>
+                <h2>Phương thức nhận hàng</h2>
+
+                <p>Chọn cách bạn muốn nhận sản phẩm</p>
+              </div>
+            </div>
+
+            <div class="checkout-options">
+              <label class="checkout-option active">
+                <input
+                  type="radio"
+                  name="deliveryMethod"
+                  value="delivery"
+                  checked
+                />
+
+                <div class="checkout-option__radio"></div>
+
+                <div class="checkout-option__icon">
+                  <i class="bi bi-truck"></i>
+                </div>
+
+                <div class="checkout-option__content">
+                  <strong> Giao hàng tận nơi </strong>
+
+                  <span> Nhận hàng tại địa chỉ của bạn </span>
+                </div>
+
+                <i class="bi bi-check-circle-fill checkout-option__check"></i>
+              </label>
+
+              <label class="checkout-option">
+                <input type="radio" name="deliveryMethod" value="store" />
+
+                <div class="checkout-option__radio"></div>
+
+                <div class="checkout-option__icon">
+                  <i class="bi bi-shop"></i>
+                </div>
+
+                <div class="checkout-option__content">
+                  <strong> Nhận tại cửa hàng </strong>
+
+                  <span> Nhận trực tiếp tại Tân Huê Viên </span>
+                </div>
+
+                <i class="bi bi-check-circle-fill checkout-option__check"></i>
+              </label>
+            </div>
+          </div>
+
+          <!-- =====================================
+               PHƯƠNG THỨC THANH TOÁN
+          ====================================== -->
+
+          <div class="checkout-card">
+            <div class="checkout-card__header">
+              <div class="checkout-card__icon">
+                <i class="bi bi-credit-card"></i>
+              </div>
+
+              <div>
+                <h2>Phương thức thanh toán</h2>
+
+                <p>Lựa chọn phương thức thanh toán phù hợp</p>
+              </div>
+            </div>
+
+            <div class="checkout-options">
+              <label class="checkout-option active">
+                <input type="radio" name="paymentMethod" value="cod" checked />
+
+                <div class="checkout-option__radio"></div>
+
+                <div class="checkout-option__icon">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+
+                <div class="checkout-option__content">
+                  <strong> Thanh toán khi nhận hàng </strong>
+
+                  <span> Thanh toán trực tiếp cho nhân viên giao hàng </span>
+                </div>
+
+                <i class="bi bi-check-circle-fill checkout-option__check"></i>
+              </label>
+
+              <label class="checkout-option">
+                <input type="radio" name="paymentMethod" value="banking" />
+
+                <div class="checkout-option__radio"></div>
+
+                <div class="checkout-option__icon">
+                  <i class="bi bi-bank"></i>
+                </div>
+
+                <div class="checkout-option__content">
+                  <strong> Chuyển khoản ngân hàng </strong>
+
+                  <span> Thanh toán bằng hình thức chuyển khoản </span>
+                </div>
+
+                <i class="bi bi-check-circle-fill checkout-option__check"></i>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================
+             RIGHT - ORDER
+        ========================================== -->
+
+        <aside class="checkout-summary">
+          <div class="checkout-summary__card">
+            <div class="checkout-summary__header">
+              <div>
+                <span> ĐƠN HÀNG CỦA BẠN </span>
+
+                <h2>
+                  Chi tiết đơn hàng (
+                  <small id="checkoutItemCount"> 0 SP </small>
+                  )
+                </h2>
+              </div>
+
+              <div class="checkout-summary__cart">
+                <i class="bi bi-bag"></i>
+              </div>
+            </div>
+
+            <!-- PRODUCTS -->
+
+            <div class="checkout-products" id="checkoutProducts">
+              <!-- JavaScript sẽ render sản phẩm -->
+            </div>
+
+            <!-- PRICE -->
+
+            <div class="checkout-price">
+              <div>
+                <span>Tạm tính</span>
+
+                <strong id="checkoutSubtotal"> 0đ </strong>
+              </div>
+
+              <div>
+                <span>Phí vận chuyển</span>
+
+                <strong id="checkoutShipping"> 0đ </strong>
+              </div>
+
+              <div class="checkout-discount" id="checkoutDiscountRow">
+                <span>Giảm giá</span>
+
+                <strong id="checkoutDiscount"> -0đ </strong>
+              </div>
+            </div>
+
+            <!-- TOTAL -->
+
+            <div class="checkout-total">
+              <span> Tổng thanh toán </span>
+
+              <strong id="checkoutTotal"> 0đ </strong>
+            </div>
+
+            <!-- PROMOTION -->
+
+            <div class="checkout-promotion">
+              <i class="bi bi-ticket-perforated"></i>
+
+              <div>
+                <strong> Bạn có mã giảm giá? </strong>
+
+                <span> Nhập mã ở bước tiếp theo </span>
+              </div>
+            </div>
+
+            <!-- SECURITY -->
+
+            <div class="checkout-security">
+              <div>
+                <i class="bi bi-shield-check"></i>
+
+                <span> Thanh toán an toàn </span>
+              </div>
+
+              <div>
+                <i class="bi bi-box-seam"></i>
+
+                <span> Đóng gói cẩn thận </span>
+              </div>
+            </div>
+
+            <!-- ORDER BUTTON -->
+
+            <button type="button" class="checkout-submit" id="checkoutSubmit">
+              <span> ĐẶT HÀNG </span>
+
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <p class="checkout-policy">
+              Bằng việc đặt hàng, bạn đồng ý với
+              <a href="#"> điều khoản mua hàng </a>
+              của Tân Huê Viên.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <div class="order-success-overlay" id="orderSuccessOverlay">
+      <div class="order-success-modal">
+        <div class="order-success-icon">
+          <i class="bi bi-check-lg"></i>
+        </div>
+
+        <span class="order-success-label"> TÂN HUÊ VIÊN </span>
+
+        <h2>Đặt hàng thành công</h2>
+
+        <p class="order-success-message">
+          Cảm ơn bạn đã tin chọn Tân Huê Viên. Đơn hàng của bạn đã được ghi
+          nhận.
+        </p>
+
+        <div class="order-success-code">
+          <span>MÃ ĐƠN HÀNG</span>
+
+          <strong id="orderSuccessId"> — </strong>
+        </div>
+
+        <div class="order-success-loading">
+          <span> Đang chuẩn bị thông tin đơn hàng... </span>
+
+          <div class="order-success-progress">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="assets/js/checkout.js"></script>
+    <!-- <script src="assets/js/header.js"></script> -->
+  </body>
+</html>
