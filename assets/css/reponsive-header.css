@@ -144,9 +144,9 @@ MOBILE
   .cart-drawer {
     width: 100vw;
     /* height: 90%; */
-    max-width: 80vw;
+    max-width: 85vw;
 
-    right: -81vw;
+    right: -86vw;
 
     border-radius: 0;
   }
