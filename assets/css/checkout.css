@@ -727,8 +727,8 @@
 .checkout-product__quantity {
   position: absolute;
 
-  top: -5px;
-  right: -5px;
+  top: 0px;
+  right: 0px;
 
   min-width: 20px;
   height: 20px;

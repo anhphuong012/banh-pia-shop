@@ -345,7 +345,11 @@
   } */
 
   .promotion-section-header h2 {
-    font-size: 34px;
+    font-size: 27px;
+  }
+
+  .promotion-section-header h2 svg {
+    display: none;
   }
 
   .promotion-list-grid {

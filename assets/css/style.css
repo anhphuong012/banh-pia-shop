@@ -650,6 +650,15 @@ NEW FEATURED CATEGORY
   margin-bottom: 22px;
 }
 
+.section-title i {
+  margin-right: 5px;
+}
+
+.section-title h2 > i {
+  font-size: 28px;
+  /* margin: 0px 5px; */
+}
+
 .title-with-lines {
   display: flex;
   align-items: center;
@@ -671,6 +680,10 @@ NEW FEATURED CATEGORY
 }
 
 .section-title h2 {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
   font-size: 44px;
 
   margin: 12px 0;
@@ -1519,11 +1532,11 @@ NEW ARRIVAL
     padding: 60px 0px;
   }
   .section-title h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .section-title span {
-    font-size: 18px;
+    font-size: 16px;
   }
   .section-header h2 {
     font-size: 28px;
@@ -1535,6 +1548,10 @@ NEW ARRIVAL
 
   .category-big p {
     font-size: 17px;
+  }
+
+  .section-title svg {
+    display: none;
   }
 }
 

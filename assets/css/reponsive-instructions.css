@@ -554,6 +554,15 @@
   .wrap-btn-guide {
     gap: 15px;
   }
+
+  .storage-header > span {
+    font-size: 13px;
+    letter-spacing: 0px;
+  }
+  .serving-header .section-eyebrow {
+    font-size: 13px;
+    letter-spacing: 0px;
+  }
 }
 
 @media (max-width: 400px) {

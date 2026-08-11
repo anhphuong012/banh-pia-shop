@@ -967,7 +967,9 @@ SECTION
 
   margin-bottom: 20px;
 }
-
+.section-title span i {
+  margin: 0px 5px;
+}
 .section-title h2 {
   font-size: 44px;
 
@@ -1758,11 +1760,19 @@ TEXT
 
   color: #d62828;
 
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 700;
 
   letter-spacing: 2px;
+}
+
+.serving-header .section-eyebrow i {
+  margin: 0px 5px;
+}
+
+.storage-header i {
+  margin: 0px 5px;
 }
 
 .serving-header h2 {

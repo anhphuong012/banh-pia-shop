@@ -285,6 +285,7 @@ CUSTOM SELECT
   visibility: visible;
 
   transform: translateY(0);
+  z-index: 99999;
 }
 .select-options li {
   padding: 12px 18px;
