@@ -155,7 +155,7 @@ function renderCheckoutProducts() {
             </strong>
 
             <span>
-              ${quantity} sản phẩm
+              ${quantity} sản phẩm x ${formatCurrency(item.price)}
             </span>
 
           </div>
