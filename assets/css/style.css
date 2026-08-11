@@ -265,14 +265,63 @@ CATEGORY
   font-weight: 700;
 }
 
+.arrival-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+}
 .rating {
-  color: #ffb400;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
 
-  margin-bottom: 15px;
+.stars {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.stars-5 {
+  background: linear-gradient(90deg, #f5b301 100%, #ddd 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 4.9 sao */
+.stars-4-9 {
+  background: linear-gradient(90deg, #f5b301 98%, #ddd 98%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 4.6 sao */
+.stars-4-6 {
+  background: linear-gradient(90deg, #f5b301 92%, #ddd 92%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 4.5 sao */
+.stars-4-5 {
+  background: linear-gradient(90deg, #f5b301 90%, #ddd 90%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .rating span {
   color: #777;
+  font-size: 14px;
 }
 
 .price {
@@ -907,13 +956,13 @@ NEW ARRIVAL
 
   box-shadow: 0 8px 20px rgba(215, 25, 32, 0.3);
 }
-.arrival-rating {
+/* .arrival-rating {
   color: #ffb400;
 
   font-size: 14px;
 
   margin: 8px 0;
-}
+} */
 
 .arrival-rating span {
   color: #888;
@@ -1146,13 +1195,13 @@ NEW ARRIVAL
   height: 42px !important;
 }
 
-.arrival-rating {
+/* .arrival-rating {
   color: #ffb400;
 
   margin: 8px 0;
 
   font-size: 14px;
-}
+} */
 
 .arrival-rating span {
   color: #888;

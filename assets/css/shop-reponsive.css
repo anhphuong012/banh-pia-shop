@@ -382,7 +382,7 @@ RESPONSIVE TOOLBAR
   .shop-products {
     grid-template-columns: repeat(2, 1fr) !important;
 
-    gap: 20px 0px !important;
+    gap: 16px 0px !important;
   }
   .product-card .product-image {
     height: 190px !important;
@@ -416,8 +416,8 @@ RESPONSIVE TOOLBAR
 
   .product-info .product-desc span {
     padding: 5px 2px !important;
-    font-size: 10px !important;
-    gap: 1px !important;
+    font-size: 7px !important;
+    gap: 2px !important;
   }
 
   .product-price {
@@ -442,7 +442,7 @@ RESPONSIVE TOOLBAR
     padding: 5px 8px !important;
   }
   .product-info .product-cart {
-    font-size: 12px !important;
+    font-size: 10px !important;
     height: 40px !important;
   }
 

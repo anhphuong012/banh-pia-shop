@@ -44,9 +44,9 @@ function renderProducts() {
                 <div class="product-info">
                   <!-- Rating -->
                   <div class="product-rating">
-                    <div class="stars">★★★★★</div>
+                    <div class="stars"  >  ${renderStars(product.rating)}   </div>
 
-                    <span>(120)</span>
+                    <span>(${product.reviewCount})</span>
                   </div>
 
                   <!-- Product Name -->
@@ -91,7 +91,7 @@ function renderProducts() {
 
                     <span>
                       <i class="bi bi-fire"></i>
-                      Đã bán 520
+                      Đã bán ${product.sold}
                     </span>
                   </div>
 
@@ -236,3 +236,23 @@ function bindProductEvents() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
 });
+
+//Rating
+function renderStars(rating) {
+  const fullStars = Math.floor(rating);
+  const decimal = rating - fullStars;
+
+  let stars = "";
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= fullStars) {
+      stars += `<i class="bi bi-star-fill"></i>`;
+    } else if (i === fullStars + 1 && decimal >= 0.5) {
+      stars += `<i class="bi bi-star-half"></i>`;
+    } else {
+      stars += `<i class="bi bi-star"></i>`;
+    }
+  }
+
+  return stars;
+}

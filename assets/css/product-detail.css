@@ -608,6 +608,8 @@
 }
 
 .rating-divider {
+  margin-left: 5px;
+  margin-right: 5px;
   width: 1px;
   height: 12px;
   background-color: #e0e0e0;
@@ -2282,4 +2284,63 @@
   color: #d62828;
 
   background: #fff7f7;
+}
+
+/*Stars*/
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-stars i {
+  color: #f5b301;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .detail-rating {
+    gap: 7px;
+  }
+
+  .rating-stars {
+    gap: 2px;
+  }
+
+  .rating-stars i {
+    font-size: 12px;
+  }
+
+  .detail-rating > span {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE 576px
+========================================= */
+
+@media (max-width: 576px) {
+  .detail-rating {
+    gap: 6px;
+  }
+
+  .rating-stars {
+    gap: 1px;
+  }
+
+  .rating-stars i {
+    font-size: 11px;
+  }
+
+  .detail-rating > span {
+    font-size: 8px;
+  }
+}
+
+.rating-box span {
+  color: #888;
+
+  font-size: 14px;
 }

@@ -71,11 +71,7 @@ function renderProduct() {
 
     <div class="detail-rating">
       <div class="rating-stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
+        ${renderStars(product.rating)}
       </div>
       <span class="rating-score">${product.rating}</span>
       <span class="rating-divider"></span>
@@ -146,11 +142,7 @@ function renderProduct() {
     <div class="tab-content" id="ingredient">
       <h3>Thành phần</h3>
       <ul class="ingredient-grid">
-        <li>Bột mì</li>
-        <li>Sầu riêng</li>
-        <li>Trứng muối</li>
-        <li>Đường</li>
-        <li>Dầu thực vật</li>
+         ${renderIngredients(product.ingredients)}
       </ul>
     </div>
 
@@ -166,9 +158,9 @@ function renderProduct() {
     <div class="tab-content" id="review">
       <div class="review-overview">
         <div class="review-score">
-          <h2>4.9</h2>
+          <h2>${product.rating}</h2>
           <div class="review-stars">★★★★★</div>
-          <p>128 đánh giá</p>
+          <p> ${product.reviewCount} đánh giá</p>
 
           <div class="review-extra">
             <div class="review-badge">
@@ -177,7 +169,7 @@ function renderProduct() {
             </div>
             <div class="review-badge">
               <i class="bi bi-bag-check-fill"></i>
-              <span>1.2K đã bán</span>
+              <span>${product.sold} đã bán</span>
             </div>
           </div>
         </div>
@@ -876,7 +868,7 @@ const reviews = [
     text: "Bánh rất ngon, thơm mùi sầu riêng, đóng gói đẹp.",
     images: [
       "assets/images/products/pia1.png",
-      "assets/images/products/pia2.png",
+      "assets/images/products/pia1_2.png",
     ],
   },
 
@@ -897,7 +889,7 @@ const reviews = [
     rating: 4,
     date: "Đã mua hàng",
     text: "Bánh ngon, giao nhanh.",
-    images: ["assets/images/products/pia3.png"],
+    images: ["assets/images/products/dua1.png"],
   },
 ];
 
@@ -1582,4 +1574,27 @@ function bindRemovePreview() {
       renderPreviewImages();
     };
   });
+}
+
+function renderStars(rating) {
+  const fullStars = Math.floor(rating);
+  const decimal = rating - fullStars;
+
+  let stars = "";
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= fullStars) {
+      stars += `<i class="bi bi-star-fill"></i>`;
+    } else if (i === fullStars + 1 && decimal >= 0.5) {
+      stars += `<i class="bi bi-star-half"></i>`;
+    } else {
+      stars += `<i class="bi bi-star"></i>`;
+    }
+  }
+
+  return stars;
+}
+
+function renderIngredients(ingredients) {
+  return ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("");
 }

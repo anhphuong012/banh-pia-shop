@@ -988,12 +988,63 @@ PRICE SLIDER
 
   background: #fff0f2;
 }
-.stars {
+/* .stars {
   color: #ffb400;
 
   font-size: 14 px;
 
   letter-spacing: 1px;
+} */
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stars i {
+  color: #f5b301;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .product-rating {
+    gap: 7px;
+  }
+
+  .stars {
+    gap: 2px;
+  }
+
+  .stars i {
+    font-size: 12px;
+  }
+
+  .product-rating > span {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE 576px
+========================================= */
+
+@media (max-width: 576px) {
+  .product-rating {
+    gap: 6px;
+  }
+
+  .stars {
+    gap: 1px;
+  }
+
+  .stars i {
+    font-size: 11px;
+  }
+
+  .product-rating > span {
+    font-size: 8px;
+  }
 }
 
 .rating-box span {

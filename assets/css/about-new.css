@@ -2919,7 +2919,7 @@
 
   color: #252525;
 
-  font-size: 11px;
+  font-size: 15px;
 
   line-height: 1.3;
 }
@@ -2931,7 +2931,7 @@
 
   color: #999;
 
-  font-size: 9px;
+  font-size: 12px;
 
   line-height: 1.45;
 }
@@ -4040,7 +4040,7 @@
 
   color: #df2929;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -4066,7 +4066,7 @@
 
   color: #222;
 
-  font-size: 15px;
+  font-size: 17px;
 
   line-height: 1.3;
 
@@ -4086,7 +4086,7 @@
 
   color: #777;
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.75;
 }
@@ -4483,7 +4483,7 @@
 .brand-values-new__brand-info span {
   color: #df2929;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 800;
 
@@ -4493,7 +4493,7 @@
 .brand-values-new__brand-info small {
   color: #999;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 600;
 
@@ -4716,7 +4716,7 @@
 }
 
 .flavor-story__point strong {
-  font-size: 12px;
+  font-size: 15px;
 
   font-weight: 700;
 
@@ -4728,7 +4728,7 @@
 
   color: #999;
 
-  font-size: 10px;
+  font-size: 12px;
 
   line-height: 1.4;
 }
@@ -4905,7 +4905,7 @@
 .flavor-story__footer > span {
   color: #aaa;
 
-  font-size: 9px;
+  font-size: 12px;
 
   font-weight: 800;
 
@@ -4952,7 +4952,7 @@
 
   z-index: 2;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 700;
 
