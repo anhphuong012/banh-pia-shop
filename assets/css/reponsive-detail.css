@@ -15,9 +15,9 @@
   }
 
   .thumbnail-list {
-    flex-direction: row;
+    flex-direction: row !important;
 
-    justify-content: center;
+    justify-content: center !important;
   }
 
   /*Add cart*/
@@ -117,6 +117,12 @@
   .buy-bar {
     width: 95%;
   }
+
+  /**/
+
+  .main-image-wrapper .main-image {
+    height: 150px;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -124,9 +130,14 @@
   }
 
   .detail-wrapper {
-    grid-template-columns: 1fr 2fr !important;
-    gap: 44px !important;
+    display: flex !important;
+    /* grid-template-columns: 1fr 2fr !important; */
+    gap: 30px !important;
   }
+  .detail-gallery .gallery-card {
+    flex-flow: column !important;
+  }
+
   .main-image-wrapper {
     padding: 10px;
   }
@@ -198,7 +209,10 @@
   /*Add button*/
 
   .action-row {
-    gap: 12px !important;
+    gap: 30px !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 80% !important;
   }
 
   .detail-add-cart {
@@ -342,6 +356,10 @@
 /* ============================= */
 
 @media (max-width: 576px) {
+  .detail-gallery .gallery-card {
+    flex-flow: column-reverse !important;
+  }
+
   .detail-wrapper {
     display: flex !important ;
     flex-direction: column !important;
@@ -557,9 +575,10 @@
   /*Add css*/
 
   .action-row {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 10px;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 15px !important;
+    width: 100% !important;
   }
 
   .quantity-control {

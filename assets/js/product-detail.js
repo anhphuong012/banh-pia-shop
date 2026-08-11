@@ -607,7 +607,7 @@ function flyToCartDetail() {
 
   clone.src = productImage.src;
 
-  clone.className = "fly-product";
+  // clone.className = "fly-product";
 
   clone.classList.add("fly-product");
 
