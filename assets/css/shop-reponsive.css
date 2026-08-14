@@ -65,7 +65,8 @@ RESPONSIVE TOOLBAR
 
     max-width: 90%;
 
-    height: 100vh;
+    /* height: 100vh; */
+    height: 100%;
 
     background: #fff;
 
