@@ -129,7 +129,7 @@
   }
 
   .product-image {
-    height: 240px;
+    height: 250px;
   }
 }
 
@@ -151,7 +151,7 @@
   }
 
   .product-image {
-    height: 230px;
+    height: 240px;
   }
 
   .customer-review {
@@ -367,7 +367,7 @@
     margin-top: 5px;
   }
   .product-image {
-    height: 210px;
+    height: 230px;
   }
   .category-grid .category-big {
     height: 320px;
@@ -427,7 +427,10 @@
     height: 60px;
   }
   .section-title p {
-    font-size: 15px;
+    font-size: 14px;
+  }
+  .section-header p {
+    font-size: 14px;
   }
 
   .review-stars {
