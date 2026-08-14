@@ -261,8 +261,13 @@ CATEGORY
 
   font-size: 18px;
 
-  min-height: 50px;
+  /* min-height: 50px; */
   font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .arrival-rating {
@@ -275,6 +280,7 @@ CATEGORY
   display: flex;
   align-items: center;
   gap: 7px;
+  margin-bottom: 3px;
 }
 
 .stars {
@@ -1556,3 +1562,39 @@ NEW ARRIVAL
 }
 
 /*new */
+
+.product-desc {
+  display: flex;
+
+  gap: 8px;
+
+  /* margin-bottom: 8px; */
+
+  margin: 15px 0px;
+
+  flex-wrap: wrap;
+}
+
+.product-desc span {
+  padding: 6px 10px;
+
+  background: #fafafa;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #666;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.product-desc i {
+  color: #d62828;
+}

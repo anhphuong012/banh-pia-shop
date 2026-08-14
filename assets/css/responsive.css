@@ -127,12 +127,32 @@
   .mobile-auth span {
     margin-right: 8% !important;
   }
+
+  .product-image {
+    height: 240px;
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
   /* Reponsive for Reivew*/
+
+  .new-price {
+    font-size: 20px;
+  }
+
+  .old-price {
+    font-size: 14px;
+  }
+
+  .product-desc span {
+    font-size: 10px;
+  }
+
+  .product-image {
+    height: 230px;
+  }
 
   .customer-review {
     padding: 70px 0;
@@ -333,6 +353,22 @@
 /* Small Mobile */
 
 @media (max-width: 576px) {
+  .old-price {
+    font-size: 13px;
+  }
+
+  .new-price {
+    font-size: 18px;
+  }
+  .rating span {
+    font-size: 12px;
+  }
+  .product-desc {
+    margin-top: 5px;
+  }
+  .product-image {
+    height: 210px;
+  }
   .category-grid .category-big {
     height: 320px;
   }

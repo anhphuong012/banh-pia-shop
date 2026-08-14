@@ -48,11 +48,9 @@
   margin: 24px 0 18px;
 
   color: #171717;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
+  font-weight: 700;
   font-size: 48px;
-  line-height: 1.1;
+  line-height: 1.25;
 }
 
 .brand-video__heading h2 strong {
