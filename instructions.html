@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/instructions.css" />
 
     <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/ai-chat.css" />
 
     <link rel="stylesheet" href="assets/css/reset.css" />
 
@@ -58,6 +59,181 @@
 
     <div id="website-content">
       <header>
+        <section>
+          <!-- AI CHATBOX -->
+          <div class="ai-chatbox">
+            <!-- Nút mở chat -->
+            <button class="ai-chat-button" id="aiChatButton">
+              <span class="ai-icon">🤖</span>
+              <span class="ai-notification">1</span>
+            </button>
+
+            <!-- Khung chat -->
+            <div class="ai-chat-window" id="aiChatWindow">
+              <!-- Header -->
+              <div class="ai-chat-header">
+                <div class="ai-header-info">
+                  <div class="ai-avatar">🤖</div>
+
+                  <div>
+                    <h3>Trợ lý Tân Huê Viên</h3>
+                    <span> <i></i> Đang trực tuyến </span>
+                  </div>
+                </div>
+
+                <button class="ai-close" id="aiClose">×</button>
+              </div>
+
+              <!-- Nội dung chat -->
+              <div class="ai-chat-body" id="aiChatBody">
+                <!-- Tin nhắn AI -->
+                <div class="ai-message bot">
+                  <div class="message-avatar">🤖</div>
+
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      Xin chào 👋<br />
+                      Tôi là trợ lý AI của Tân Huê Viên. Tôi có thể giúp bạn tìm
+                      hiểu về bánh Pía, sản phẩm, giá bán và giao hàng.
+                    </div>
+
+                    <span class="message-time"> Vừa xong </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gợi ý -->
+              <div class="ai-suggestions">
+                <button data-question="Bánh nào ngon?">
+                  🍰 Bánh nào ngon?
+                </button>
+
+                <button data-question="Có những loại nào?">
+                  🥮 Các loại bánh
+                </button>
+
+                <button data-question="Chính sách giao hàng như thế nào?">
+                  🚚 Giao hàng
+                </button>
+
+                <button data-question="Hướng dẫn bảo quản">
+                  📦 Cách bảo quản
+                </button>
+              </div>
+
+              <!-- Input -->
+              <div class="ai-chat-input">
+                <input
+                  type="text"
+                  id="aiMessageInput"
+                  placeholder="Nhập câu hỏi..."
+                  autocomplete="off"
+                />
+
+                <button id="aiSendButton">➤</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- =========================================
+     AI CHAT WINDOW
+========================================= -->
+
+          <div id="aiChatWindow" class="ai-chat-window">
+            <!-- HEADER -->
+
+            <div class="ai-chat-header">
+              <div class="ai-chat-header-left">
+                <div class="ai-avatar">🤖</div>
+
+                <div>
+                  <div class="ai-chat-title">Trợ lý Tân Huê Viên</div>
+
+                  <div class="ai-chat-status">
+                    <span></span>
+                    Đang trực tuyến
+                  </div>
+                </div>
+              </div>
+
+              <button id="aiClose" class="ai-close">×</button>
+            </div>
+
+            <!-- BODY -->
+
+            <div id="aiChatBody" class="ai-chat-body">
+              <!-- Tin nhắn mặc định -->
+
+              <div class="ai-message bot">
+                <div class="message-avatar">🤖</div>
+
+                <div class="message-content">
+                  <div class="message-bubble">
+                    Xin chào bạn 👋
+
+                    <br /><br />
+
+                    Mình là
+                    <b>Trợ lý Tân Huê Viên</b>.
+
+                    <br /><br />
+
+                    Mình có thể giúp bạn:
+
+                    <br /><br />
+
+                    🥮 Tìm bánh phù hợp
+                    <br />
+                    💰 Xem giá sản phẩm
+                    <br />
+                    🆕 Tìm sản phẩm mới
+                    <br />
+                    🎁 Tư vấn mua làm quà
+                    <br />
+                    📦 Tư vấn mua số lượng lớn
+
+                    <br /><br />
+
+                    Bạn muốn tìm gì hôm nay?
+                  </div>
+
+                  <span class="message-time"> Vừa xong </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GỢI Ý -->
+
+            <div id="aiSuggestions" class="ai-suggestions">
+              <button data-question="Bánh nào ngon?">🥮 Bánh nào ngon?</button>
+
+              <button data-question="Các loại bánh">🥮 Các loại bánh</button>
+
+              <button data-question="Sản phẩm mới">🆕 Sản phẩm mới</button>
+
+              <button data-question="Bánh dưới 100k">💰 Dưới 100k</button>
+
+              <button data-question="Tôi muốn mua nhiều">
+                📦 Mua số lượng lớn
+              </button>
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="ai-chat-input-area">
+              <input
+                id="aiMessageInput"
+                type="text"
+                placeholder="Nhập câu hỏi..."
+                autocomplete="off"
+              />
+
+              <button id="aiSendButton" class="ai-send-button" aria-label="Gửi">
+                ➤
+              </button>
+            </div>
+          </div>
+        </section>
         <!-- Top Bar -->
 
         <!--==================== TOP HEADER ====================-->
@@ -1540,6 +1716,7 @@
 
     <script src="assets/js/header.js"></script>
     <script src="assets/js/data.js"></script>
+    <script src="assets/js/ai-chat.js"></script>
     <script src="assets/js/instructions.js"></script>
 
     <script src="assets/js/cart.js"></script>

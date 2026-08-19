@@ -68,6 +68,12 @@ TABLET
     width: 340px;
   }
 }
+
+@media (max-width: 992px) {
+  .navbar-custom .navbar-nav {
+    padding-top: 10px;
+  }
+}
 /*=====================================
 MOBILE
 =====================================*/
@@ -139,8 +145,14 @@ MOBILE
   .toast-message {
     font-size: 13px;
   }
+  .navbar-custom .nav-link {
+    font-size: 14px !important;
+  }
 }
 @media (max-width: 576px) {
+  .navbar-custom .nav-link {
+    font-size: 14px !important;
+  }
   .cart-drawer {
     width: 100vw;
     /* height: 90%; */

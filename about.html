@@ -49,6 +49,238 @@
   </head>
 
   <body>
+    <section class="store-location-section">
+      <div class="location-container">
+        <!-- Cột bên trái: Thẻ thông tin liên hệ -->
+        <div class="location-info-card">
+          <h3 class="location-title">VỊ TRÍ & LIÊN HỆ</h3>
+
+          <div class="info-group">
+            <div class="info-item">
+              <span
+                ><strong>Địa chỉ: </strong> Số 123 Đường Hai Bà Trưng, TP. Sóc
+                Trăng,
+                <br />
+                Tỉnh Sóc Trăng, Việt Nam</span
+              >
+            </div>
+
+            <div class="info-item">
+              <strong>Điện thoại:</strong>
+              <p>1900 xxxx / 0299 3833 833</p>
+            </div>
+
+            <div class="info-item">
+              <strong>Giờ làm việc:</strong>
+              <p>08:00 AM - 09:00 PM (Mỗi ngày)</p>
+            </div>
+          </div>
+
+          <!-- Nút mở Google Maps chỉ đường -->
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-directions"
+          >
+            CHỈ ĐƯỜNG ON GOOGLE MAPS
+          </a>
+        </div>
+
+        <!-- Cột bên phải: Bản đồ Google Maps nhúng -->
+        <div class="location-map-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15730.015671048636!2d105.9602!3d9.6033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a030097c5f87b1%3A0xc3fbfd1d36d3c332!2zU8OzYyBUcsSDbmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- KHỐI VỊ TRÍ & BẢN ĐỒ -->
+    <section class="location-section">
+      <div class="location-container">
+        <!-- Cột 1: Thẻ thông tin (Chiếm 35% chiều rộng) -->
+        <div class="location-info-card">
+          <div>
+            <h3 class="location-title">VỊ TRÍ & LIÊN HỆ</h3>
+
+            <div class="info-group">
+              <div class="info-item">
+                <strong>Địa chỉ:</strong>
+                <span
+                  >Số 123 Đường Hai Bà Trưng, TP. Sóc Trăng, Tỉnh Sóc Trăng,
+                  Việt Nam.</span
+                >
+              </div>
+
+              <div class="info-item">
+                <strong>Điện thoại:</strong>
+                <span>1900 xxxx</span>
+              </div>
+
+              <div class="info-item">
+                <strong>Giờ làm việc:</strong>
+                <span>08:00 AM - 09:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-directions"
+          >
+            CHỈ ĐƯỜNG ON GOOGLE MAPS
+          </a>
+        </div>
+
+        <!-- Cột 2: Bản đồ (Chiếm 65% chiều rộng, kích thước to vượt trội) -->
+        <div class="location-map-card">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31468.650090047686!2d105.92876329135747!3d9.631275686788955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a051e98dcaeef5%3A0x7aa06bbc14bc164c!2zQ8O0bmcgVHkgVMOibiBIdcOqIFZpw6pu!5e0!3m2!1svi!2s!4v1787040604164!5m2!1svi!2s"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS CHI TIẾT -->
+    <style>
+      .location-section {
+        background-color: #f7ede2; /* Nền kem ấm đúng như bản demo */
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .location-container {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        align-items: stretch;
+      }
+
+      /* Thẻ Thông tin bên trái */
+      .location-info-card {
+        flex: 0 0 35%; /* Cố định tỉ lệ 35% cho thẻ thông tin */
+        background: #ffffff;
+        padding: 35px 30px;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+
+      /* Tiêu đề có gạch chân đỏ nhỏ bên dưới */
+      .location-title {
+        color: #8b0000;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .location-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 35px;
+        height: 2px;
+        background-color: #c8102e;
+      }
+
+      .info-group {
+        margin-top: 25px;
+      }
+
+      .info-item {
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #444444;
+      }
+
+      .info-item strong {
+        display: inline !important;
+        color: #111111;
+        font-weight: 700;
+        margin-right: 4px;
+      }
+
+      .info-item span {
+        display: inline !important;
+        color: #555555;
+      }
+
+      /* Nút bấm màu đỏ bo tròn có hiệu ứng đổ bóng */
+      .btn-directions {
+        display: block;
+        text-align: center;
+        background: linear-gradient(180deg, #d31033 0%, #b00826 100%);
+        color: #ffffff !important;
+        padding: 14px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .btn-directions:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(200, 16, 46, 0.5);
+      }
+
+      /* Bản đồ bên phải - Chiếm 65% diện tích */
+      .location-map-card {
+        flex: 0 0 65%; /* Tăng tỉ lệ lên 65% để bản đồ to vượt trội */
+        min-height: 420px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        background-color: #ffffff;
+        border: 4px solid #ffffff; /* Viền trắng bao quanh bản đồ */
+        box-sizing: border-box;
+      }
+
+      /* Tương thích thiết bị di động */
+      @media (max-width: 900px) {
+        .location-container {
+          flex-direction: column;
+        }
+        .location-info-card,
+        .location-map-card {
+          flex: 1 1 100%;
+          width: 100%;
+        }
+        .location-map-card {
+          height: 350px;
+          min-height: 350px;
+        }
+      }
+    </style>
+
     <section class="brand-video">
       <div class="brand-video__container">
         <div class="brand-video__heading">

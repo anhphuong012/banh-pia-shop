@@ -5505,3 +5505,135 @@
     font-size: 27px !important;
   }
 }
+
+/*maps css*/
+
+.location-section {
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(229, 42, 42, 0.07),
+      transparent 30%
+    ),
+    #fffdfb; /* Nền kem ấm đúng như bản demo */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.location-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* Thẻ Thông tin bên trái */
+.location-info-card {
+  flex: 0 0 35%; /* Cố định tỉ lệ 35% cho thẻ thông tin */
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Tiêu đề có gạch chân đỏ nhỏ bên dưới */
+.location-title {
+  color: #8b0e0e;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: "Playfair Displayr", serif;
+  letter-spacing: 1.3px;
+}
+
+.location-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background-color: #c8102e;
+}
+
+.info-group {
+  margin-top: 25px;
+}
+
+.info-item {
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444444;
+}
+
+.info-item strong {
+  display: inline !important;
+  color: #111111;
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.info-item span {
+  display: inline !important;
+  color: #555555;
+}
+
+/* Nút bấm màu đỏ bo tròn có hiệu ứng đổ bóng */
+.btn-directions {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  padding: 14px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-directions:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(215, 0, 24, 0.3) 0px 6px 16px;
+  background: rgb(187, 0, 21);
+}
+
+/* Bản đồ bên phải - Chiếm 65% diện tích */
+.location-map-card {
+  flex: 0 0 65%; /* Tăng tỉ lệ lên 65% để bản đồ to vượt trội */
+  min-height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  border: 4px solid #ffffff; /* Viền trắng bao quanh bản đồ */
+  box-sizing: border-box;
+}
+
+/* Tương thích thiết bị di động */
+@media (max-width: 900px) {
+  .location-container {
+    flex-direction: column;
+  }
+  .location-info-card,
+  .location-map-card {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .location-map-card {
+    height: 350px;
+    min-height: 350px;
+  }
+}

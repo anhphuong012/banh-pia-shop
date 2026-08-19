@@ -1516,6 +1516,7 @@ body.cart-open .cart-action.is-floating {
 }
 @media (max-width: 992px) {
   .navbar .nav-link.active {
-    border-radius: none;
+    border-radius: 0px !important;
+    padding-left: 10px;
   }
 }

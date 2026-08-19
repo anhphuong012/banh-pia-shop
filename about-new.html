@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/nouislider.min.css" />
     <link rel="stylesheet" href="assets/css/about-new.css" />
+    <link rel="stylesheet" href="assets/css/ai-chat.css" />
 
     <link rel="stylesheet" href="assets/css/variables.css" />
 
@@ -58,6 +59,184 @@
 
     <div id="website-content">
       <header>
+        <!--chat box-->
+
+        <section>
+          <!-- AI CHATBOX -->
+          <div class="ai-chatbox">
+            <!-- Nút mở chat -->
+            <button class="ai-chat-button" id="aiChatButton">
+              <span class="ai-icon">🤖</span>
+              <span class="ai-notification">1</span>
+            </button>
+
+            <!-- Khung chat -->
+            <div class="ai-chat-window" id="aiChatWindow">
+              <!-- Header -->
+              <div class="ai-chat-header">
+                <div class="ai-header-info">
+                  <div class="ai-avatar">🤖</div>
+
+                  <div>
+                    <h3>Trợ lý Tân Huê Viên</h3>
+                    <span> <i></i> Đang trực tuyến </span>
+                  </div>
+                </div>
+
+                <button class="ai-close" id="aiClose">×</button>
+              </div>
+
+              <!-- Nội dung chat -->
+              <div class="ai-chat-body" id="aiChatBody">
+                <!-- Tin nhắn AI -->
+                <div class="ai-message bot">
+                  <div class="message-avatar">🤖</div>
+
+                  <div class="message-content">
+                    <div class="message-bubble">
+                      Xin chào 👋<br />
+                      Tôi là trợ lý AI của Tân Huê Viên. Tôi có thể giúp bạn tìm
+                      hiểu về bánh Pía, sản phẩm, giá bán và giao hàng.
+                    </div>
+
+                    <span class="message-time"> Vừa xong </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Gợi ý -->
+              <div class="ai-suggestions">
+                <button data-question="Bánh nào ngon?">
+                  🍰 Bánh nào ngon?
+                </button>
+
+                <button data-question="Có những loại nào?">
+                  🥮 Các loại bánh
+                </button>
+
+                <button data-question="Chính sách giao hàng như thế nào?">
+                  🚚 Giao hàng
+                </button>
+
+                <button data-question="Hướng dẫn bảo quản">
+                  📦 Cách bảo quản
+                </button>
+              </div>
+
+              <!-- Input -->
+              <div class="ai-chat-input">
+                <input
+                  type="text"
+                  id="aiMessageInput"
+                  placeholder="Nhập câu hỏi..."
+                  autocomplete="off"
+                />
+
+                <button id="aiSendButton">➤</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- =========================================
+     AI CHAT WINDOW
+========================================= -->
+
+          <div id="aiChatWindow" class="ai-chat-window">
+            <!-- HEADER -->
+
+            <div class="ai-chat-header">
+              <div class="ai-chat-header-left">
+                <div class="ai-avatar">🤖</div>
+
+                <div>
+                  <div class="ai-chat-title">Trợ lý Tân Huê Viên</div>
+
+                  <div class="ai-chat-status">
+                    <span></span>
+                    Đang trực tuyến
+                  </div>
+                </div>
+              </div>
+
+              <button id="aiClose" class="ai-close">×</button>
+            </div>
+
+            <!-- BODY -->
+
+            <div id="aiChatBody" class="ai-chat-body">
+              <!-- Tin nhắn mặc định -->
+
+              <div class="ai-message bot">
+                <div class="message-avatar">🤖</div>
+
+                <div class="message-content">
+                  <div class="message-bubble">
+                    Xin chào bạn 👋
+
+                    <br /><br />
+
+                    Mình là
+                    <b>Trợ lý Tân Huê Viên</b>.
+
+                    <br /><br />
+
+                    Mình có thể giúp bạn:
+
+                    <br /><br />
+
+                    🥮 Tìm bánh phù hợp
+                    <br />
+                    💰 Xem giá sản phẩm
+                    <br />
+                    🆕 Tìm sản phẩm mới
+                    <br />
+                    🎁 Tư vấn mua làm quà
+                    <br />
+                    📦 Tư vấn mua số lượng lớn
+
+                    <br /><br />
+
+                    Bạn muốn tìm gì hôm nay?
+                  </div>
+
+                  <span class="message-time"> Vừa xong </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GỢI Ý -->
+
+            <div id="aiSuggestions" class="ai-suggestions">
+              <button data-question="Bánh nào ngon?">🥮 Bánh nào ngon?</button>
+
+              <button data-question="Các loại bánh">🥮 Các loại bánh</button>
+
+              <button data-question="Sản phẩm mới">🆕 Sản phẩm mới</button>
+
+              <button data-question="Bánh dưới 100k">💰 Dưới 100k</button>
+
+              <button data-question="Tôi muốn mua nhiều">
+                📦 Mua số lượng lớn
+              </button>
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="ai-chat-input-area">
+              <input
+                id="aiMessageInput"
+                type="text"
+                placeholder="Nhập câu hỏi..."
+                autocomplete="off"
+              />
+
+              <button id="aiSendButton" class="ai-send-button" aria-label="Gửi">
+                ➤
+              </button>
+            </div>
+          </div>
+        </section>
+
         <!-- Top Bar -->
 
         <!--==================== TOP HEADER ====================-->
@@ -1131,6 +1310,70 @@
         </div>
       </section>
       <!---->
+
+      <!--Map-->
+      <section class="location-section">
+        <div class="location-container">
+          <!-- Cột 1: Thẻ thông tin (Chiếm 35% chiều rộng) -->
+          <div class="location-info-card">
+            <div>
+              <h3 class="location-title">VỊ TRÍ & LIÊN HỆ</h3>
+
+              <div class="info-group">
+                <div class="info-item">
+                  <strong>Địa chỉ:</strong>
+                  <span
+                    >Số 123 Đường Hai Bà Trưng, TP. Sóc Trăng, Tỉnh Sóc Trăng,
+                    Việt Nam.</span
+                  >
+                </div>
+
+                <div class="info-item">
+                  <strong>Địa chỉ mới:</strong>
+                  <span
+                    >Số 153 QL1A, ấp Phụng Hiệp, An Ninh, Cần Thơ, Việt
+                    Nam.</span
+                  >
+                </div>
+
+                <div class="info-item">
+                  <strong>Điện thoại:</strong>
+                  <span>1900 xxxx</span>
+                </div>
+
+                <div class="info-item">
+                  <strong>Giờ làm việc:</strong>
+                  <span>07:00 AM - 18:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/wLm8kQXvYCiwtmzDA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-directions"
+            >
+              CHỈ ĐƯỜNG ON GOOGLE MAPS
+            </a>
+          </div>
+
+          <!-- Cột 2: Bản đồ (Chiếm 65% chiều rộng, kích thước to vượt trội) -->
+          <div class="location-map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31468.650090047686!2d105.92876329135747!3d9.631275686788955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a051e98dcaeef5%3A0x7aa06bbc14bc164c!2zQ8O0bmcgVHkgVMOibiBIdcOqIFZpw6pu!5e0!3m2!1svi!2s!4v1787040604164!5m2!1svi!2s"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!--end map-->
+
       <!-- ================= FOOTER ================= -->
       <footer class="footer">
         <div class="container">
@@ -1230,6 +1473,7 @@
 
     <script src="assets/js/header.js"></script>
     <script src="assets/js/data.js"></script>
+    <script src="assets/js/ai-chat.js"></script>
 
     <script src="assets/js/cart.js"></script>
 
