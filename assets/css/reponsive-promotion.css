@@ -85,10 +85,6 @@
     max-width: 360px;
   }
 
-  .promo-content h3 {
-    font-size: 34px;
-  }
-
   /*Promotion card rigth*/
   .promo-section-grid,
   .row {
@@ -304,11 +300,11 @@
     padding: 7px 14px;
   }
 
-  .promo-content h3 {
+  /* .promo-content h3 {
     font-size: 28px;
 
     line-height: 1.3;
-  }
+  } */
 
   .promo-content p {
     font-size: 15px;
@@ -562,10 +558,6 @@
     font-size: 28px;
   }
 
-  .promo-content p {
-    font-size: 15px;
-  }
-
   /*Small card*/
   .small-card {
     padding: 28px;
@@ -658,7 +650,7 @@
   }
 
   .promo-content h3 {
-    font-size: 22px;
+    font-size: 26px !important;
 
     line-height: 1.35;
 
@@ -666,7 +658,7 @@
   }
 
   .promo-content p {
-    font-size: 14px;
+    font-size: 13px !important;
 
     line-height: 1.6;
   }

@@ -71,6 +71,7 @@ const userPreferences = {
   awaitingDeliveryArea: false,
   lastShippingQuestion: false,
 
+  awaitingProductInfo: false,
   awaitingTasteProduct: false,
   awaitingProductFollowUp: false,
   awaitingProductAttribute: null,
@@ -82,6 +83,13 @@ const userPreferences = {
   // ID sản phẩm vừa hiển thị
   lastProductIds: [],
 };
+
+let isAIChatMode = false;
+
+// ======================================
+// TRẠNG THÁI AI ĐANG TRẢ LỜI
+// ======================================
+let isAIResponding = false;
 
 //
 
@@ -136,7 +144,7 @@ function getProductsByFilling(filling) {
   // const keyword = normalizeText(filling);
   const fillingKeywords = {
     "kim sa": ["trung muoi", "kim sa"],
-    "dau xanh": ["dau xanh"],
+    "dau xanh": ["dau xanh", "dau xah"],
     "sau rieng": ["sau rieng"],
     "khoai mon": ["khoai mon"],
   };
@@ -173,6 +181,76 @@ function getProductsByFilling(filling) {
   );
 
   return result.slice(0, 3);
+}
+
+function findExactProductFromMessage(message) {
+  const productData =
+    typeof window.products !== "undefined" && Array.isArray(window.products)
+      ? window.products
+      : typeof products !== "undefined" && Array.isArray(products)
+        ? products
+        : [];
+
+  if (!productData.length) {
+    return null;
+  }
+
+  const text = normalizeText(message);
+
+  // ======================================
+  // 1. TÌM THEO TÊN SẢN PHẨM
+  // ======================================
+
+  let product = productData.find((item) => {
+    if (!item.name) return false;
+
+    const productName = normalizeText(item.name);
+
+    return text.includes(productName);
+  });
+
+  if (product) {
+    return product;
+  }
+
+  // ======================================
+  // 2. TÌM THEO SLUG
+  // ======================================
+
+  product = productData.find((item) => {
+    if (!item.slug) return false;
+
+    const slugText = normalizeText(String(item.slug).replace(/-/g, " "));
+
+    return text.includes(slugText);
+  });
+
+  return product || null;
+}
+function isAIChatRequest(message) {
+  const text = normalizeText(message);
+
+  const keywords = [
+    "toi muon chat voi ai",
+    "toi muon chat ai",
+    "toi muon noi chuyen voi ai",
+    "toi muon noi chuyen voi ai",
+    "cho toi chat voi ai",
+    "cho toi noi chuyen voi ai",
+    "bat che do ai",
+    "bat ai",
+    "mo che do ai",
+    "toi muon hoi ai",
+    "toi muon hoi tri tue nhan tao",
+    "toi muon noi chuyen voi tri tue nhan tao",
+    "chat voi tri tue nhan tao",
+    "tro chuyen voi ai",
+    "noi chuyen voi ai",
+    "chat voi ai",
+    "goi ai",
+  ];
+
+  return keywords.some((keyword) => text.includes(keyword));
 }
 function detectFilling(text) {
   const normalized = normalizeText(text);
@@ -841,6 +919,7 @@ function detectPriceDirection(message) {
     text.includes("gia cao nua") ||
     text.includes("sang hon") ||
     text.includes("xin hon") ||
+    text.includes("dac hon") ||
     text.includes("tang gia")
   ) {
     return "more_expensive";
@@ -851,12 +930,108 @@ function detectPriceDirection(message) {
 
 async function sendMessage() {
   // ======================================
+  // KHÔNG CHO GỬI THÊM KHI AI ĐANG TRẢ LỜI
+  // ======================================
+
+  if (isAIResponding) {
+    return;
+  }
+
+  // ======================================
   // CÂU KHÁCH HÀNG NHẬP
   // ======================================
 
   const message = input.value.trim();
 
   if (!message) return;
+
+  // ======================================
+  // KHÓA KHUNG NHẬP
+  // ======================================
+
+  setAIResponding(true);
+
+  // ======================================
+  // 🤖 KIỂM TRA KHÁCH MUỐN CHAT VỚI AI
+  // ======================================
+
+  if (isAIChatRequest(message)) {
+    isAIChatMode = true;
+
+    addMessage(message, "user");
+
+    conversationHistory.push({
+      role: "user",
+      content: message,
+      timestamp: Date.now(),
+    });
+
+    input.value = "";
+
+    // Hiển thị AI đang suy nghĩ
+    showTyping();
+
+    setTimeout(() => {
+      removeTyping();
+
+      sendAIResponse(`
+      🤖 <b>Đã chuyển sang chế độ Chat với AI</b>
+
+      <br><br>
+
+      Từ bây giờ, mọi câu hỏi của bạn
+      sẽ được <b>AI trực tiếp trả lời</b> nhé.
+
+      <br><br>
+
+      Bạn có thể hỏi mình bất cứ điều gì.
+    `);
+    }, 800);
+
+    return;
+  }
+
+  // ======================================
+  // 🤖 ĐANG CHAT TRỰC TIẾP VỚI AI
+  // ======================================
+
+  if (isAIChatMode) {
+    addMessage(message, "user");
+
+    conversationHistory.push({
+      role: "user",
+      content: message,
+      timestamp: Date.now(),
+    });
+
+    input.value = "";
+
+    showTyping();
+
+    try {
+      const response = await askGeneralAI(message);
+
+      removeTyping();
+
+      sendAIResponse(response);
+    } catch (error) {
+      removeTyping();
+
+      console.error("❌ AI ERROR:", error);
+
+      sendAIResponse(`
+        😔 Xin lỗi bạn, hiện tại AI đang gặp sự cố.
+        <br><br>
+        Bạn vui lòng thử lại sau nhé.
+      `);
+    }
+
+    return;
+  }
+
+  // ======================================
+  // ⬇️ TỪ ĐÂY TRỞ XUỐNG GIỮ NGUYÊN CODE CŨ
+  // ======================================
 
   // ======================================
   // HIỂN THỊ USER MESSAGE
@@ -871,6 +1046,7 @@ async function sendMessage() {
   conversationHistory.push({
     role: "user",
     content: message,
+    timestamp: Date.now(),
   });
 
   saveChatHistory();
@@ -895,88 +1071,9 @@ async function sendMessage() {
 
     // const intent = analyzeUserIntent(message);
 
-    // const currentIntent = analyzeUserIntent(message);
-
-    // const intent = mergeIntentWithMemory(currentIntent);
-
     const currentIntent = analyzeUserIntent(message);
 
-    // ======================================
-    // 🔎 KIỂM TRA HƯỚNG GIÁ CỦA CÂU HIỆN TẠI
-    // ======================================
-
-    const currentPriceDirection = detectPriceDirection(message);
-
-    // ======================================
-    // 🧹 XÁC ĐỊNH CÓ CHUYỂN SANG CHỦ ĐỀ KHÁC
-    // ======================================
-
-    const isNewTopic =
-      currentIntent.isShipping ||
-      currentIntent.isProductUsageQuestion ||
-      currentIntent.isProductTasteQuestion ||
-      currentIntent.isGreetingQuestion ||
-      currentIntent.isThanksQuestion ||
-      currentIntent.isGeneralQuestion ||
-      currentIntent.isRecommendedQuestion ||
-      currentIntent.isProductTypeQuestion ||
-      currentIntent.isProductInfoQuestion ||
-      currentIntent.isNewProduct ||
-      currentIntent.isSaleQuestion ||
-      currentIntent.isBestSellerQuestion ||
-      currentIntent.isTopRatedQuestion ||
-      currentIntent.isSearchProductQuestion ||
-      currentIntent.isShopAddressQuestion ||
-      currentIntent.isDirectorQuestion ||
-      currentIntent.isShopPhoneQuestion ||
-      currentIntent.isShopOpeningHoursQuestion ||
-      currentIntent.isPaymentQuestion ||
-      currentIntent.isReturnPolicyQuestion ||
-      currentIntent.isProductIssueQuestion ||
-      currentIntent.isOrderQuestion ||
-      currentIntent.isOrderStatusQuestion ||
-      currentIntent.isBulkDiscountQuestion;
-
-    // ======================================
-    // 🧹 NẾU CHUYỂN CHỦ ĐỀ
-    // THÌ XÓA CONTEXT GIÁ CŨ
-    // ======================================
-
-    if (isNewTopic && !currentPriceDirection) {
-      console.log("🧹 XÓA CONTEXT GIÁ CŨ");
-
-      userPreferences.budget = null;
-      userPreferences.minBudget = null;
-      userPreferences.maxBudget = null;
-
-      userPreferences.priceDirection = null;
-      userPreferences.lastFollowUpPrice = null;
-      userPreferences.lastReferencePrice = null;
-
-      userPreferences.lastDisplayedMaxPrice = null;
-      userPreferences.lastDisplayedMinPrice = null;
-
-      userPreferences.lastProductFilter = null;
-    }
-
-    // ======================================
-    // 🧠 SAU KHI ĐÃ XỬ LÝ CONTEXT
-    // MỚI MERGE MEMORY
-    // ======================================
-
     const intent = mergeIntentWithMemory(currentIntent);
-
-    // ======================================
-    // 🔎 GHI NHẬN HƯỚNG GIÁ CỦA CÂU HIỆN TẠI
-    // ======================================
-
-    if (currentPriceDirection) {
-      intent.priceDirection = currentPriceDirection;
-    }
-
-    console.log("🧠 CURRENT INTENT:", currentIntent);
-    console.log("💰 CURRENT PRICE:", currentPriceDirection);
-    console.log("🧠 FINAL INTENT:", intent);
 
     //for shiping
 
@@ -1487,7 +1584,7 @@ async function sendMessage() {
       <br><br>
 
       😔 Rất tiếc, hiện tại Tân Huê Viên
-      <b>chưa hỗ trợ giao hàng đến khu vực này</b>.
+      <b>chưa hỗ trợ giao hàng đến khu vực "${message}"</b>.
 
       <br><br>
 
@@ -1611,7 +1708,7 @@ async function sendMessage() {
       <br><br>
 
       😔 Rất tiếc, hiện tại Tân Huê Viên
-      <b>chưa hỗ trợ giao hàng đến khu vực này</b>.
+      <b>chưa hỗ trợ giao hàng đến khu vực "${message}"này</b>.
 
       <br><br>
 
@@ -1727,6 +1824,142 @@ async function sendMessage() {
       userPreferences.lastInfoProduct = followUpProduct;
 
       // ======================================
+      // ⭐ XEM THÔNG TIN ĐẦY ĐỦ SẢN PHẨM
+      // ======================================
+
+      //   if (attribute === "info") {
+      //     const responseText = `
+      //   🥮 <b>${followUpProduct.name}</b>
+
+      //   <br><br>
+
+      //   💰 Giá:
+      //   <b>${Number(followUpProduct.price).toLocaleString("vi-VN")}đ</b>
+
+      //   <br><br>
+
+      //   📦 Quy cách:
+      //   <b>${followUpProduct.shortDescription || "Đang cập nhật"}</b>
+
+      //   <br><br>
+
+      //   📝 Mô tả:
+      //   ${followUpProduct.description || "Thông tin sản phẩm đang được cập nhật."}
+
+      //   <br><br>
+
+      //   🌿 Thành phần:
+      //   <b>${
+      //     Array.isArray(followUpProduct.ingredients)
+      //       ? followUpProduct.ingredients.join(", ")
+      //       : "Đang cập nhật"
+      //   }</b>
+
+      //   <br><br>
+
+      //   🍯 Độ ngọt:
+      //   <b>${followUpProduct.taste || "Đang cập nhật"}</b>
+
+      //   <br><br>
+
+      //   📦 Tình trạng:
+      //   <b>${
+      //     Number(followUpProduct.stock) > 0
+      //       ? `Còn ${followUpProduct.stock} sản phẩm`
+      //       : "Hết hàng"
+      //   }</b>
+      // `;
+
+      //     sendAIResponse(responseText);
+
+      //     return;
+      //   }
+
+      if (attribute === "info") {
+        const product = findProductFromMessage(message);
+
+        console.log("📦 PRODUCT INFO MODE");
+        console.log("📦 MESSAGE:", message);
+        console.log("📦 PRODUCT RESULT:", product);
+
+        // ======================================
+        // 1. TÌM THẤY SẢN PHẨM
+        // ======================================
+
+        if (product) {
+          userPreferences.lastInfoProduct = product;
+          // ⭐ RẤT QUAN TRỌNG
+          userPreferences.lastProductAttribute = "info";
+
+          const responseText = `
+      🥮 <b>${product.name}</b>
+
+      <br><br>
+
+      💰 Giá:
+      <b>${Number(product.price).toLocaleString("vi-VN")}đ</b>
+
+      <br><br>
+
+      📦 Quy cách:
+      <b>${product.shortDescription || "Đang cập nhật"}</b>
+
+      <br><br>
+
+      📝 Mô tả:
+      ${product.description || "Thông tin sản phẩm đang được cập nhật."}
+
+      <br><br>
+
+      🌿 Thành phần:
+      <b>${
+        Array.isArray(product.ingredients)
+          ? product.ingredients.join(", ")
+          : "Đang cập nhật"
+      }</b>
+
+      <br><br>
+
+      🍯 Độ ngọt:
+      <b>${product.taste || "Đang cập nhật"}</b>
+
+      <br><br>
+
+      📦 Tình trạng:
+      <b>${
+        Number(product.stock) > 0 ? `Còn ${product.stock} sản phẩm` : "Hết hàng"
+      }</b>
+    `;
+
+          sendAIResponse(responseText);
+
+          return;
+        }
+
+        // ======================================
+        // 2. KHÔNG TÌM THẤY SẢN PHẨM
+        // ======================================
+
+        sendAIResponse(`
+    🔎 <b>Mình chưa tìm thấy sản phẩm này.</b>
+
+    <br><br>
+
+    Hiện tại Tân Huê Viên chưa có
+    sản phẩm <b>${message}</b>
+    trong danh sách sản phẩm.
+
+    <br><br>
+
+    Bạn có thể nhập lại
+    <b>tên bánh chính xác</b>
+    để mình kiểm tra nhé.
+  `);
+
+        return;
+      }
+
+      // ======================================
       // ĐỘ NGỌT
       // ======================================
 
@@ -1812,15 +2045,15 @@ async function sendMessage() {
 
       <br><br>
 
-      📦 <b>Tình trạng:</b>
+      📦 Tình trạng:
 
-      <br><br>
 
+<b>
       ${
         Number(followUpProduct.stock) > 0
           ? `Còn ${followUpProduct.stock} sản phẩm`
           : "Hết hàng"
-      }
+      }</b>
     `;
 
         sendAIResponse(responseText);
@@ -2192,11 +2425,77 @@ async function sendMessage() {
 
     //     return;
     //   }
-    if (userPreferences.awaitingProductInfo && !intent.isProductInfoQuestion) {
+    // if (userPreferences.awaitingProductInfo && !intent.isProductInfoQuestion) {
+    //   const product = findProductFromMessage(message);
+
+    //   if (product) {
+    //     userPreferences.awaitingProductInfo = false;
+    //     userPreferences.lastInfoProduct = product;
+
+    //     const responseText = `
+    //   🥮 <b>${product.name}</b>
+
+    //   <br><br>
+
+    //   💰 Giá:
+    //   <b>${Number(product.price).toLocaleString("vi-VN")}đ</b>
+
+    //   <br><br>
+
+    //   📦 Quy cách:
+    //   <b>${product.shortDescription || "Đang cập nhật"}</b>
+
+    //   <br><br>
+
+    //   📝 Mô tả:
+    //   ${product.description || "Đang cập nhật"}
+
+    //   <br><br>
+
+    //   🌿 Thành phần:
+    //   <b>${
+    //     Array.isArray(product.ingredients)
+    //       ? product.ingredients.join(", ")
+    //       : "Đang cập nhật"
+    //   }</b>
+
+    //   <br><br>
+
+    //   🍯 Độ ngọt:
+    //   <b>${product.taste || "Đang cập nhật"}</b>
+
+    //   <br><br>
+
+    //   📦 Tình trạng:
+    //   <b>${
+    //     Number(product.stock) > 0 ? `Còn ${product.stock} sản phẩm` : "Hết hàng"
+    //   }</b>
+    // `;
+
+    //     sendAIResponse(responseText);
+
+    //     return;
+    //   }
+    // }
+
+    // ======================================
+    // 🔎 ĐANG CHỜ KHÁCH NHẬP TÊN SẢN PHẨM
+    // ======================================
+
+    if (userPreferences.awaitingProductInfo) {
       const product = findProductFromMessage(message);
+
+      console.log("🔎 AWAITING PRODUCT INFO:", message);
+      console.log("🔎 PRODUCT RESULT:", product);
+
+      // ======================================
+      // 1. TÌM THẤY SẢN PHẨM
+      // ======================================
 
       if (product) {
         userPreferences.awaitingProductInfo = false;
+        // ⭐ GHI NHỚ ĐANG Ở CHẾ ĐỘ XEM THÔNG TIN SẢN PHẨM
+        userPreferences.lastProductAttribute = "info";
         userPreferences.lastInfoProduct = product;
 
         const responseText = `
@@ -2243,7 +2542,32 @@ async function sendMessage() {
 
         return;
       }
+
+      // ======================================
+      // 2. KHÔNG TÌM THẤY SẢN PHẨM
+      // ======================================
+
+      // userPreferences.awaitingProductInfo = false;
+
+      sendAIResponse(`
+    🔎 <b>Mình chưa tìm thấy sản phẩm này.</b>
+
+    <br><br>
+
+    Hiện tại Tân Huê Viên chưa có
+    sản phẩm <b>${message}</b>
+    trong danh sách sản phẩm.
+
+    <br><br>
+
+    Bạn có thể nhập lại
+    <b>tên bánh chính xác</b>
+    để mình kiểm tra nhé.
+  `);
+
+      return;
     }
+
     if (intent.isProductInfoQuestion) {
       console.log(
         "📦 DEBUG PRODUCT INFO QUESTION:",
@@ -2259,6 +2583,9 @@ async function sendMessage() {
       if (product) {
         userPreferences.lastInfoProduct = product;
         userPreferences.awaitingProductInfo = false;
+
+        // ⭐ ĐANG Ở CHẾ ĐỘ XEM THÔNG TIN SẢN PHẨM
+        userPreferences.lastProductAttribute = "info";
 
         console.log("📦 PRODUCT INFO:", product);
 
@@ -2406,8 +2733,7 @@ async function sendMessage() {
       }
 
       let responseText = `
-    🥮 Đây là những sản phẩm
-    có nhân <b>${intent.filling}</b>
+    🥮 Đây là những sản phẩm có nhân <b>${intent.filling}</b>
     mình tìm thấy cho bạn:
     
     <br><br>
@@ -3229,6 +3555,8 @@ async function sendMessage() {
     sendAIResponse(response);
   } finally {
     removeTyping();
+    // Đảm bảo luôn mở lại ô nhập nếu xảy ra lỗi
+    setAIResponding(false);
   }
 }
 function getNewProducts(intent) {
@@ -3569,32 +3897,74 @@ function getFollowUpProducts(intent) {
 // GỬI CÂU TRẢ LỜI CỦA AI
 // ======================================
 
-function sendAIResponse(response) {
-  // Nếu không có câu trả lời
-  if (!response) return;
+// function sendAIResponse(response) {
+//   // Nếu không có câu trả lời
+//   if (!response) return;
 
-  // ==================================
+//   // ==================================
+//   // LƯU LỊCH SỬ HỘI THOẠI
+//   // ==================================
+
+//   conversationHistory.push({
+//     role: "assistant",
+//     content: response,
+//   });
+
+//   // ==================================
+//   // HIỂN THỊ CHATBOX
+//   // ==================================
+
+//   addMessage(response, "bot");
+//   saveChatHistory();
+// }
+
+function sendAIResponse(response) {
+  // ======================================
+  // NẾU KHÔNG CÓ CÂU TRẢ LỜI
+  // ======================================
+
+  if (!response) {
+    setAIResponding(false);
+    return;
+  }
+
+  // ======================================
   // LƯU LỊCH SỬ HỘI THOẠI
-  // ==================================
+  // ======================================
 
   conversationHistory.push({
     role: "assistant",
     content: response,
+    timestamp: Date.now(),
   });
 
-  // ==================================
-  // HIỂN THỊ CHATBOX
-  // ==================================
+  // ======================================
+  // HIỂN THỊ CÂU TRẢ LỜI
+  // ======================================
 
-  addMessage(response, "bot");
+  addMessage(response, "bot", Date.now());
+
   saveChatHistory();
+
+  // ======================================
+  // AI TRẢ LỜI XONG
+  // → MỞ LẠI Ô NHẬP
+  // ======================================
+
+  setAIResponding(false);
 }
+
 // ======================================
 // ENTER ĐỂ GỬI
 // ======================================
 
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
+    event.preventDefault();
+
+    if (isAIResponding) {
+      return;
+    }
     sendMessage();
   }
 });
@@ -3605,45 +3975,99 @@ sendButton.addEventListener("click", sendMessage);
 // THÊM MESSAGE
 // ======================================
 
-function addMessage(message, type) {
+// function addMessage(message, type) {
+//   const messageElement = document.createElement("div");
+
+//   messageElement.classList.add("ai-message", type);
+
+//   if (type === "bot") {
+//     messageElement.innerHTML = `
+//             <div class="message-avatar">
+//                 🤖
+//             </div>
+
+//             <div class="message-content">
+
+//                 <div class="message-bubble">
+//                     ${message}
+//                 </div>
+
+//                 <span class="message-time">
+//                     Vừa xong
+//                 </span>
+
+//             </div>
+//         `;
+//   } else {
+//     messageElement.innerHTML = `
+
+//             <div class="message-content">
+
+//                 <div class="message-bubble">
+//                     ${message}
+//                 </div>
+
+//                 <span class="message-time">
+//                     Vừa xong
+//                 </span>
+
+//             </div>
+
+//         `;
+//   }
+
+//   chatBody.appendChild(messageElement);
+
+//   scrollToBottom();
+// }
+
+// ======================================
+// THÊM MESSAGE
+// ======================================
+
+function addMessage(message, type, timestamp = Date.now()) {
   const messageElement = document.createElement("div");
 
   messageElement.classList.add("ai-message", type);
 
+  messageElement.dataset.timestamp = timestamp;
+
+  const timeText = timeAgo(timestamp);
+
   if (type === "bot") {
     messageElement.innerHTML = `
-            <div class="message-avatar">
-                🤖
-            </div>
+      <div class="message-avatar">
+        🤖
+      </div>
 
-            <div class="message-content">
+      <div class="message-content">
 
-                <div class="message-bubble">
-                    ${message}
-                </div>
+        <div class="message-bubble">
+          ${message}
+        </div>
 
-                <span class="message-time">
-                    Vừa xong
-                </span>
+        <span class="message-time">
+          ${timeText}
+        </span>
 
-            </div>
-        `;
+      </div>
+    `;
   } else {
     messageElement.innerHTML = `
 
-            <div class="message-content">
+      <div class="message-content">
 
-                <div class="message-bubble">
-                    ${message}
-                </div>
+        <div class="message-bubble">
+          ${message}
+        </div>
 
-                <span class="message-time">
-                    Vừa xong
-                </span>
+        <span class="message-time">
+          ${timeText}
+        </span>
 
-            </div>
+      </div>
 
-        `;
+    `;
   }
 
   chatBody.appendChild(messageElement);
@@ -4553,6 +4977,24 @@ function findProductFromMessage(message) {
 
   return null;
 }
+function isSpecificProductInfoRequest(message) {
+  const text = normalizeText(message);
+
+  const keywords = [
+    "thong tin banh",
+    "thong tin san pham",
+    "chi tiet banh",
+    "chi tiet san pham",
+    "xem thong tin",
+    "xem chi tiet",
+    "cho toi thong tin",
+    "cho toi chi tiet",
+    "muon xem thong tin",
+    "muon xem chi tiet",
+  ];
+
+  return keywords.some((keyword) => text.includes(keyword));
+}
 
 function hasExplicitProductReference(message) {
   const productData =
@@ -4804,7 +5246,9 @@ function analyzeUserIntent(message) {
 
   const isShopOpeningHoursQuestion =
     text.includes("gio mo cua") ||
+    text.includes("gio lam") ||
     text.includes("gio mo ") ||
+    text.includes("mo cua") ||
     text.includes("mo cua may gio") ||
     text.includes("shop mo cua luc may gio") ||
     text.includes("cua hang mo cua luc may gio") ||
@@ -5071,8 +5515,10 @@ function analyzeUserIntent(message) {
 
   const isShopInfoQuestion =
     text.includes("shop o dau") ||
+    text.includes("dia chi") ||
     text.includes("dia chi shop") ||
     text.includes("cua hang o dau") ||
+    text.includes("dia chi o dau") ||
     text.includes("shop ban o dau");
 
   const isRecommendedQuestion =
@@ -5120,9 +5566,10 @@ function analyzeUserIntent(message) {
   //Infor product
   const isProductInfoQuestion =
     text.includes("thong tin san pham") ||
+    text.includes("thong tin cua san pham") ||
     text.includes("thong tin banh") ||
     text.includes("tat ca thong tin") ||
-    text.includes("tat ca thong tin") ||
+    text.includes("banh co nhung gi") ||
     // ==============================
     // HỎI GIÁ
     // ==============================
@@ -6783,7 +7230,7 @@ function restoreChatHistory() {
 
     const type = item.role === "user" ? "user" : "bot";
 
-    addMessage(item.content, type);
+    addMessage(item.content, type, item.timestamp || Date.now());
   });
 }
 
@@ -6829,6 +7276,20 @@ function scrollToBottom() {
   }
 }
 
+document.addEventListener("keydown", function (event) {
+  if (event.key !== "Escape") {
+    return;
+  }
+  const chatBox = document.getElementById("aiChatWindow");
+
+  if (!chatBox) {
+    return;
+  }
+
+  chatBox.classList.remove("active");
+  chatBox.classList.remove("open");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const suggestionContainer = document.querySelector(".ai-suggestions");
 
@@ -6852,6 +7313,145 @@ document.addEventListener("DOMContentLoaded", () => {
     suggestionContainer.appendChild(aiButton);
   }
 
+  //tooltip
+  const chatBtn = document.getElementById("aiChatButton");
+
+  if (chatBtn) {
+    // 2. Tạo phần tử span cho Tooltip
+    const tooltip = document.createElement("span");
+    tooltip.className = "chat-tooltip";
+    tooltip.textContent = "CÓ GÌ HÃY HỎI TÔI";
+
+    // 3. Chèn Tooltip vào bên trong nút Chat
+    chatBtn.appendChild(tooltip);
+  }
+
   loadAIMemoryFromSession();
   restoreChatHistory();
+
+  initMessageTimestamps();
+
+  // Cập nhật mỗi 30 giây
+  setInterval(updateMessageTimes, 60000);
 });
+
+function timeAgo(timestamp) {
+  if (!timestamp) return "Vừa xong";
+
+  const now = Date.now();
+  const secondsPast = Math.floor((now - new Date(timestamp).getTime()) / 1000);
+
+  if (secondsPast < 30) return "Vừa xong";
+  if (secondsPast < 60) return `${secondsPast} giây trước`;
+
+  const minutesPast = Math.floor(secondsPast / 60);
+  if (minutesPast < 60) return `${minutesPast} phút trước`;
+
+  const hoursPast = Math.floor(minutesPast / 60);
+  if (hoursPast < 24) return `${hoursPast} giờ trước`;
+
+  const daysPast = Math.floor(hoursPast / 24);
+  if (daysPast < 30) return `${daysPast} ngày trước`;
+
+  return new Date(timestamp).toLocaleDateString("vi-VN");
+}
+
+// ======================================
+// KHÓA / MỞ KHUNG NHẬP KHI AI ĐANG TRẢ LỜI
+// ======================================
+
+function setAIResponding(status) {
+  isAIResponding = status;
+
+  if (input) {
+    input.disabled = status;
+
+    if (status) {
+      input.placeholder = "AI đang trả lời...";
+    } else {
+      input.placeholder = "Nhập câu hỏi...";
+
+      // AI trả lời xong → đưa con trỏ trở lại ô nhập
+      setTimeout(() => {
+        input.focus();
+      }, 50);
+    }
+  }
+
+  if (sendButton) {
+    sendButton.disabled = status;
+  }
+}
+
+// ======================================
+// CẬP NHẬT THỜI GIAN MESSAGE
+// ======================================
+
+function updateMessageTimes() {
+  const messages = document.querySelectorAll(
+    "#aiChatBody .ai-message[data-timestamp]",
+  );
+
+  messages.forEach((messageElement) => {
+    const timestamp = Number(messageElement.dataset.timestamp);
+
+    const timeElement = messageElement.querySelector(".message-time");
+
+    if (!timeElement || !timestamp) {
+      return;
+    }
+
+    timeElement.textContent = timeAgo(timestamp);
+  });
+}
+
+function initMessageTimestamps() {
+  const messages = document.querySelectorAll(".ai-message");
+
+  messages.forEach((messageElement) => {
+    // Nếu đã có timestamp thì bỏ qua
+    if (messageElement.dataset.timestamp) {
+      return;
+    }
+
+    // Gắn thời gian hiện tại
+    messageElement.dataset.timestamp = Date.now();
+  });
+
+  updateMessageTimes();
+}
+
+function isBackToChatbotRequest(message) {
+  const text = normalizeText(message);
+
+  const keywords = [
+    "quay lai chatbot",
+    "quay lai chat bot",
+    "tro lai chatbot",
+    "tro lai chat bot",
+    "tat che do ai",
+    "thoat che do ai",
+    "dung chat voi ai",
+    "khong chat voi ai nua",
+    "chatbot",
+    "chat bot",
+  ];
+
+  return keywords.some((keyword) => text.includes(keyword));
+}
+
+function isStaffRequest(message) {
+  const text = normalizeText(message);
+
+  const keywords = [
+    "nhan vien",
+    "nhan vien tu van",
+    "tu van vien",
+    "chat voi nhan vien",
+    "noi chuyen voi nhan vien",
+    "goi nhan vien",
+    "gap nhan vien",
+  ];
+
+  return keywords.some((keyword) => text.includes(keyword));
+}

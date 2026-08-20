@@ -353,6 +353,15 @@
 /* Small Mobile */
 
 @media (max-width: 576px) {
+  .hero-section .carousel img {
+    height: 100%;
+  }
+  .right-banner img {
+    height: 100%;
+  }
+  .hero-section {
+    padding-bottom: 0px;
+  }
   .old-price {
     font-size: 13px;
   }

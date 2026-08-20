@@ -2655,9 +2655,9 @@ async function sendMessage() {
     <br>
     • Bánh Pía Kim Sa
     <br>
-    • Bánh Pía Mè Đen
+    • Bánh Pía Đậu Xanh
     <br>
-    • Bánh Pía Truyền Thống
+    • Bánh Pía Sầu Riêng
   `);
 
       return;

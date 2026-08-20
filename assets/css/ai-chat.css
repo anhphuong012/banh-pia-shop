@@ -21,7 +21,7 @@
   border: none;
   border-radius: 50%;
 
-  background: #d90012;
+  background: #fff;
   color: white;
 
   display: flex;
@@ -37,6 +37,9 @@
 
 .ai-chat-button:hover {
   transform: scale(1.08);
+  background: #bd0010;
+}
+body:has(.ai-chat-window.active) .ai-chat-button {
   background: #bd0010;
 }
 
@@ -478,7 +481,7 @@
   .ai-chat-window {
     position: fixed;
 
-    right: 50px;
+    right: 32px;
 
     /* left: 10px; */
 
