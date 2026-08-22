@@ -3158,8 +3158,7 @@ async function sendMessage() {
       }
 
       let responseText = `
-        🔥 Đây là những sản phẩm
-        đang có ưu đãi mà mình tìm thấy
+        🔥 Đây là những sản phẩm đang có <b> ưu đãi </b> mà mình tìm thấy
         cho bạn:
       `;
 
@@ -3189,6 +3188,15 @@ async function sendMessage() {
       `;
 
       sendAIResponse(responseText);
+      sendAIResponse(` <b>📢 Ngoài ra còn các ưu đãi khác như: </b>
+        </br> </br>
+        • 🚚 <b>Miễn phí giao hàng </b> cho đơn từ 500k.
+           </br>
+           </br>
+        • 🎁 <b>Tặng túi giấy cao cấp </b> cho đơn từ 2 sản phẩm.
+           </br>  </br>
+        • ⭐ <b>Tích lũy điểm thành viên </b> khi tham gia mua sắm và còn nhiều ưu đãi khác đang đợi bạn.
+        `);
 
       return;
     }

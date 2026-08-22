@@ -69,6 +69,8 @@ function openCart() {
 
   // THÊM DÒNG NÀY: Bật class để ẩn nút floating giỏ hàng
   document.body.classList.add("cart-open");
+
+  hideAIChat();
 }
 function closeCartDrawer() {
   cartDrawer.classList.remove("show");
@@ -79,6 +81,29 @@ function closeCartDrawer() {
 
   // THÊM DÒNG NÀY: Xóa class khi đóng giỏ hàng
   document.body.classList.remove("cart-open");
+
+  showAIChat();
+}
+
+function hideAIChat() {
+  const chatButton = document.getElementById("aiChatButton");
+  const chatWindow = document.getElementById("aiChatWindow");
+
+  if (chatButton) {
+    chatButton.style.display = "none";
+  }
+
+  if (chatWindow) {
+    chatWindow.classList.remove("active");
+  }
+}
+
+function showAIChat() {
+  const chatButton = document.getElementById("aiChatButton");
+
+  if (chatButton) {
+    chatButton.style.display = "flex";
+  }
 }
 
 //Event

@@ -35,6 +35,27 @@ function resetAuthModal() {
   showLoginPanel();
 }
 
+function hideAIChat() {
+  const chatButton = document.getElementById("aiChatButton");
+  const chatWindow = document.getElementById("aiChatWindow");
+
+  if (chatButton) {
+    chatButton.style.display = "none";
+  }
+
+  if (chatWindow) {
+    chatWindow.classList.remove("active");
+  }
+}
+
+function showAIChat() {
+  const chatButton = document.getElementById("aiChatButton");
+
+  if (chatButton) {
+    chatButton.style.display = "flex";
+  }
+}
+
 /* ============================
    MODAL
 ============================ */
@@ -43,18 +64,24 @@ function openLoginModal() {
   resetAuthModal();
 
   loginModal.classList.add("show");
+
+  hideAIChat();
 }
 
 function closeLoginModal() {
   loginModal.classList.remove("show");
 
   resetAuthModal();
+
+  showAIChat();
 }
 
 function openRegisterModal() {
   loginModal.classList.add("show");
 
   showRegisterPanel();
+
+  hideAIChat();
 }
 /* ============================
    EVENT
