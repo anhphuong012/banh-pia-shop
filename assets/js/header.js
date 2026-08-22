@@ -540,3 +540,5 @@ window.addEventListener("scroll", function () {
 function forwardToCheckOut() {
   window.location.href = "checkout.html";
 }
+
+//for search

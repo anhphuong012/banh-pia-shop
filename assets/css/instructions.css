@@ -1480,7 +1480,7 @@ TEXT
 }
 
 .storage-item.active .storage-icon {
-  background: linear-gradient(135deg, #d62828, #f25d32);
+  background: var(--primary-color);
 
   color: #fff;
 
@@ -2089,8 +2089,9 @@ TEXT
   justify-content: center;
 
   border-radius: 17px;
+  background-color: var(--primary-color);
 
-  background: linear-gradient(135deg, #d62828, #f25d32);
+  /* background: linear-gradient(135deg, #d62828, #f25d32); */
 
   color: #fff;
 
@@ -2205,7 +2206,8 @@ TEXT
 
   border-radius: 18px;
 
-  background: linear-gradient(135deg, #d62828, #f25d32);
+  /* background: linear-gradient(135deg, #d62828, #f25d32); */
+  background-color: var(--primary-color);
 
   color: #fff;
 
@@ -2224,7 +2226,8 @@ TEXT
 }
 
 .serving-choice.featured .choice-icon {
-  background: linear-gradient(135deg, #d62828, #f25d32);
+  /* background: linear-gradient(135deg, #d62828, #f25d32); */
+  background-color: var(--primary-color);
 
   color: #fff;
 }

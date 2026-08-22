@@ -142,7 +142,8 @@ body:has(.ai-chat-window.active) .ai-chat-button {
 
   padding: 0 18px;
 
-  background: linear-gradient(135deg, #d90012, #b9000f);
+  /* background: linear-gradient(135deg, #d90012, #b9000f); */
+  background-color: var(--primary-color);
 
   color: white;
 
